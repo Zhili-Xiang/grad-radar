@@ -20,18 +20,40 @@ KEEP = ["category", "school", "schoolShort", "institute", "title", "degree", "ur
         "snippet", "source", "dateEstimated"]
 CAMP_DEGREES = {"夏令营", "冬令营", "暑校", "学习班"}
 
-# 大类关键词分类器：按顺序首个命中生效；先判生物医学（名称最具辨识度），
-# 再把"工程硕博士/联培基地"等多领域混合专项直接归入其他交叉
+# 大类分类：1) 精确覆盖表（多领域专项、机构定向）2) 标题+学院关键词（强信号）
+# 3) 兜底：整校章程/简章归其他交叉 4) 正文关键词（弱信号）
+TI_SPECIFIC = [
+    ("医学部", "生物医学"),
+    ("数据科学学院", "计科软工"),
+    ("理工学院（SSE）", "计科软工"),
+    ("海洋学院", "其他交叉"),
+    ("统考名额", "其他交叉"),
+    ("工程硕博士", "其他交叉"),
+    ("卓越工程师", "其他交叉"),
+    ("联培基地", "其他交叉"),
+    ("钱塘", "其他交叉"),
+    ("南方科技大学联合培养", "其他交叉"),
+    ("科学史", "其他交叉"),
+    ("计算社会科学", "其他交叉"),
+    ("精密测量", "数学物理"),
+]
+TI_GENERIC = [
+    ("招生章程", "其他交叉"),
+    ("博士研究生招生简章", "其他交叉"),
+    ("硕士研究生招生简章", "其他交叉"),
+    ("校本部", "其他交叉"),
+    ("各学院学科招生简章", "其他交叉"),
+    ("普博生第一批报名通知", "其他交叉"),
+]
 FIELD_RULES = [
-    ("生物医学", ["生命", "医", "药", "农", "脑", "神经", "类脑", "NIBS", "TIMBR",
-                 "CLS", "PTN", "生物", "护理", "健康"]),
-    ("其他交叉", ["工程硕博士", "卓越工程师", "联培基地", "创新学院联合"]),
+    ("生物医学", ["生命", "医学", "医药", "药", "农", "脑", "神经", "类脑", "NIBS",
+                 "TIMBR", "CLS", "PTN", "生物", "护理", "健康", "植物"]),
     ("化学材料", ["化学", "材料", "应化", "催化", "高分子", "纳米", "化物", "有机所"]),
     ("数学物理", ["数学", "物理", "天文", "量子", "高能", "核科学", "核工程", "核技术",
-                 "精密测量", "光学", "力学", "数学院", "应物所"]),
+                 "光学", "力学", "数学院", "应物所"]),
     ("其他交叉", ["机械", "制造", "土木", "水利", "环境", "海洋", "地球", "地学", "能源",
                  "动力", "交通", "航空", "法律", "经济", "金融", "管理", "教育", "社科",
-                 "历史", "科学史", "碳中和", "计算社会"]),
+                 "历史", "碳中和"]),
     ("电子信息", ["电子", "集成电路", "微电子", "通信", "信通", "光电", "半导体", "电磁",
                  "控制", "自动化", "机器人", "电气", "仪器", "微波"]),
     ("计科软工", ["计算机", "软件", "人工智能", "智能", "机器学习", "大数据", "数据科学",
@@ -40,11 +62,20 @@ FIELD_RULES = [
 
 
 def classify_field(e):
-    text = " ".join(str(e.get(k) or "") for k in
-                    ("institute", "title", "degree", "highlights", "snippet", "school"))
-    text += " " + " ".join(t for t in (e.get("tags") or []) if isinstance(t, str))
+    ti = (e.get("title") or "") + (e.get("institute") or "")
+    weak = " ".join(str(e.get(k) or "") for k in ("highlights", "snippet", "school"))
+    weak += " " + " ".join(t for t in (e.get("tags") or []) if isinstance(t, str))
+    for pat, field in TI_SPECIFIC:
+        if pat in ti:
+            return field
     for field, kws in FIELD_RULES:
-        if any(k in text for k in kws):
+        if any(k in ti for k in kws):
+            return field
+    for pat, field in TI_GENERIC:
+        if pat in ti:
+            return field
+    for field, kws in FIELD_RULES:
+        if any(k in weak for k in kws):
             return field
     return "其他交叉"
 

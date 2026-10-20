@@ -1,6 +1,6 @@
 {
  "fetchedAt": "2026-10-20",
- "generatedAt": "2026-10-20T15:19:38",
+ "generatedAt": "2026-10-20T15:24:06",
  "counts": {
   "programs": 101,
   "camps": 39,
@@ -28,7 +28,7 @@
    "snippet": "2027年招生开始日期：2026年9月1日；截止日期：2027年5月31日（名额有限，滚动录取，录满截止）",
    "source": "香港中文大学（深圳）数据科学学院官网",
    "dateEstimated": true,
-   "field": "生物医学",
+   "field": "计科软工",
    "lastCycle": false,
    "id": "p001",
    "firstSeen": "2026-10-20"
@@ -78,7 +78,7 @@
    "snippet": "我校2027年采用优秀本科毕业生推荐免试直接攻读博士学位、硕博连读和\"申请-考核\"三种招生方式招收攻读博士学位研究生。",
    "source": "北京大学研究生招生网",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p003",
    "firstSeen": "2026-10-20"
@@ -200,7 +200,7 @@
    "snippet": "2027年预计招收45名左右全日制统考硕士研究生，其中学术型硕士23名左右，专业学位硕士22名左右。",
    "source": "中国科学院微电子研究所官网",
    "dateEstimated": false,
-   "field": "数学物理",
+   "field": "电子信息",
    "lastCycle": false,
    "id": "p009",
    "firstSeen": "2026-10-20"
@@ -324,7 +324,7 @@
    "snippet": "理学院数学（复旦联培）；未来生物医药学院生物学-生物医药领军人才专项；西湖大学-深圳医学科学院联培项目生物学",
    "source": "西湖大学官网（博士生招生）",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p014",
    "firstSeen": "2026-10-20"
@@ -374,7 +374,7 @@
    "snippet": "在国内率先设立海洋技术与工程博士点，覆盖应用海洋科学、海洋技术、海洋工程三个方向",
    "source": "浙江大学海洋学院官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p016",
    "firstSeen": "2026-10-20"
@@ -427,7 +427,7 @@
    "snippet": "上海科技大学各院所2027年硕士统考名额预计如下（详见链接，具体名额以下达实际计划为准）",
    "source": "上海科技大学研究生招生网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p018",
    "firstSeen": "2026-10-20"
@@ -479,7 +479,7 @@
    "snippet": "第二轮在2026年秋季学期，申请系统于2026年10月初开放；第三轮在2027年春季学期",
    "source": "西湖大学官网（博士生招生）",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p020",
    "firstSeen": "2026-10-20"
@@ -555,7 +555,7 @@
    "snippet": "第三轮申请时间为2026年12月7日上午10:00至12月28日上午10:00，面试考核拟安排在2027年1月下旬",
    "source": "西湖大学工学院官网",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p023",
    "firstSeen": "2026-10-20"
@@ -624,7 +624,7 @@
    "snippet": "2027年少数民族高层次骨干人才计划招收医学专业研究生约20名（含喀什专项），理工专业约20名",
    "source": "上海交通大学研究生招生网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p026",
    "firstSeen": "2026-10-20"
@@ -676,7 +676,7 @@
    "snippet": "2027级联培硕士生全学程需在大湾区大学住宿，采用单导师制，由大湾区大学安排导师",
    "source": "大湾区大学官网",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p028",
    "firstSeen": "2026-10-20"
@@ -698,7 +698,7 @@
    "snippet": "我校采用推荐免试和全国统一考试两种选拔方式招收全日制攻读硕士学位研究生。",
    "source": "北京大学研究生招生网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p029",
    "firstSeen": "2026-10-20"
@@ -1409,7 +1409,7 @@
    "snippet": "由我校与合作单位联合培养，拟招收专业学位硕士推免生、直接攻博生共170余人",
    "source": "复旦大学研究生招生网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p059",
    "firstSeen": "2026-10-20"
@@ -1461,7 +1461,7 @@
    "snippet": "本专项招收的博士生前2年在校学习，后3年在企业实践。",
    "source": "北京大学未来技术学院",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p061",
    "firstSeen": "2026-10-20"
@@ -1487,7 +1487,7 @@
    "snippet": "材料提交截止2026年9月14日，未按时提交或材料不全，将不予受理。",
    "source": "国科大密码学院官网",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "计科软工",
    "lastCycle": false,
    "id": "p062",
    "firstSeen": "2026-10-20"
@@ -1512,7 +1512,7 @@
    "snippet": "2027年我院接收推荐免试研究生，包括硕士生和直博生。",
    "source": "中国科学院长春应用化学研究所教育处官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "化学材料",
    "lastCycle": false,
    "id": "p063",
    "firstSeen": "2026-10-20"
@@ -1640,7 +1640,7 @@
    "snippet": "即日起至8月31日上午10:00（北京时间），逾期不再接受申请",
    "source": "西湖大学官网（博士生招生）",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p069",
    "firstSeen": "2026-10-20"
@@ -1925,7 +1925,7 @@
    "snippet": "申请时间2：2026年11月1日10:00-2026年11月30日15:00",
    "source": "南方科技大学研究生院官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p083",
    "firstSeen": "2026-10-20"
@@ -1952,7 +1952,7 @@
    "snippet": "本项目招生方式包括本科直博和普通招考，培养全日制非定向工程博士研究生，招生专业为电子信息（085400）",
    "source": "清华大学深圳国际研究生院",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p084",
    "firstSeen": "2026-10-20"
@@ -2053,7 +2053,7 @@
    "snippet": "课程学习在清华大学深圳国际研究生院进行，其余时间在鹏城实验室进行。",
    "source": "清华大学研究生申请服务系统",
    "dateEstimated": false,
-   "field": "电子信息",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "p088",
    "firstSeen": "2026-10-20"
@@ -2180,7 +2180,7 @@
    "snippet": "2027级联培博士招生工作现已启动，诚邀有志于人工智能基础理论与关键技术研究的优秀学子加入",
    "source": "上海人工智能实验室官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "计科软工",
    "lastCycle": false,
    "id": "p107",
    "firstSeen": "2026-10-20"
@@ -2366,7 +2366,7 @@
    "snippet": "高研院与浙江大学共同设立联合培养博士研究生专项（简称“联培专项”）",
    "source": "高校人才网（转载钱塘高等研究院公告）",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": true,
    "id": "p131",
    "firstSeen": "2026-10-20"
@@ -2417,7 +2417,7 @@
    "snippet": "2026-2027学年秋季入学申请时间为：2025年10月9日至2026年5月31日",
    "source": "香港中文大学（深圳）理工学院官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "计科软工",
    "lastCycle": true,
    "id": "p133",
    "firstSeen": "2026-10-20"
@@ -2863,7 +2863,7 @@
    "snippet": "有志于从事科学史、技术史、科技与社会、科技考古等研究方向，拟招募不超过20人",
    "source": "中国科学院自然科学史研究所官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "c092",
    "firstSeen": "2026-10-20"
@@ -2889,7 +2889,7 @@
    "snippet": "报名窗口为2026年7月1日-7月5日，xspt.ustc.edu.cn推免生预报名",
    "source": "中国科大先进技术研究院官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "c094",
    "firstSeen": "2026-10-20"
@@ -2994,7 +2994,7 @@
    "snippet": "面向有兴趣运用计算仿真、数据驱动范式和相关研究方法从事学术研究的教师和学生",
    "source": "宁夏大学经济管理学院官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "c099",
    "firstSeen": "2026-10-20"
@@ -3044,7 +3044,7 @@
    "snippet": "为发掘优秀学子、搭建科研交流桥梁，现正式启动2026年\"溯光明理\"优秀大学生夏令营",
    "source": "中国教育在线吉林站（转载官方邀请函）",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "数学物理",
    "lastCycle": false,
    "id": "c102",
    "firstSeen": "2026-10-20"
@@ -3096,7 +3096,7 @@
    "snippet": "预计将于2026年7月上旬举行大学生夏令营（线下），预计接收营员350名",
    "source": "中国科学院大学能源学院（大连化物所研究生部）官网",
    "dateEstimated": false,
-   "field": "生物医学",
+   "field": "化学材料",
    "lastCycle": false,
    "id": "c104",
    "firstSeen": "2026-10-20"
@@ -3175,7 +3175,7 @@
    "snippet": "为帮助有志于从事高能物理及其交叉学科研究的优秀大学生了解、加入高能所",
    "source": "中国科学院高能物理研究所官网",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "数学物理",
    "lastCycle": false,
    "id": "c110",
    "firstSeen": "2026-10-20"
@@ -3468,7 +3468,7 @@
    "snippet": "广州地化所成功举办2026年\"资源环境与宜居地球\"大学生冬令营，35名大学生参加。",
    "source": "中国科学院广州地球化学研究所官网（结营报道）",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "其他交叉",
    "lastCycle": false,
    "id": "c124",
    "firstSeen": "2026-10-20"
@@ -3497,7 +3497,7 @@
    "snippet": "拟于2026年1月27日（线上）举行，报名即日起至2026年1月8日，拟招收约150名营员。",
    "source": "中国科学院上海应用物理研究所官网",
    "dateEstimated": false,
-   "field": "化学材料",
+   "field": "数学物理",
    "lastCycle": true,
    "id": "c125",
    "firstSeen": "2026-10-20"
@@ -3552,7 +3552,7 @@
    "snippet": "清华大学智能产业研究院（AIR）2026冬令营开启报名，深入学术核心，与领军学者面对面。",
    "source": "清华大学智能产业研究院官网",
    "dateEstimated": false,
-   "field": "电子信息",
+   "field": "计科软工",
    "lastCycle": true,
    "id": "c129",
    "firstSeen": "2026-10-20"
