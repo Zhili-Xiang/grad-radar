@@ -35,6 +35,7 @@ TI_SPECIFIC = [
     ("联培基地", "其他交叉"),
     ("钱塘", "其他交叉"),
     ("南方科技大学联合培养", "其他交叉"),
+    ("IDEA", "计科软工"),
     ("科学史", "其他交叉"),
     ("计算社会科学", "其他交叉"),
     ("精密测量", "数学物理"),
@@ -152,7 +153,8 @@ def clean(x):
         o["schoolShort"] = o["school"][:6]
     o["field"] = classify_field(o)
     pub = o.get("publishedAt") or ""
-    o["lastCycle"] = bool(pub and pub < "2026-01-01")
+    o["lastCycle"] = bool(pub and pub < "2026-01-01"
+                          and "长期开放" not in o["tags"] and "长期" not in " ".join(o["tags"]))
     return o
 
 
