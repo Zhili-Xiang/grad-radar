@@ -185,10 +185,12 @@ function renderDigest(all) {
     const d = daysUntil(e.deadline);
     const cls = d <= 7 ? 'urgent' : 'soon';
     const label = d === 0 ? '今天' : `剩 ${d} 天`;
+    const school = e.schoolShort || e.school || '';
+    const name = e.title.includes(school) ? e.title : school + e.title;
     return `
 <a class="hd-row" href="#programs">
   <span class="hd-days ${cls}">${label}</span>
-  <span class="hd-name"><span class="hd-school">${esc(e.schoolShort || e.school || '')}</span>${esc(e.title)}</span>
+  <span class="hd-name">${esc(name)}</span>
   <span class="hd-date">${fmtMD(e.deadline)} 截止</span>
 </a>`;
   };
