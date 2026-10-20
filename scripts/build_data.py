@@ -17,7 +17,7 @@ TODAY = datetime.date.today().isoformat()
 
 KEEP = ["category", "school", "schoolShort", "institute", "title", "degree", "url",
         "publishedAt", "deadline", "startDate", "location", "highlights", "tags",
-        "snippet", "source", "dateEstimated"]
+        "snippet", "source", "dateEstimated", "requirements"]
 CAMP_DEGREES = {"夏令营", "冬令营", "暑校", "学习班"}
 
 # 大类分类：1) 精确覆盖表（多领域专项、机构定向）2) 标题+学院关键词（强信号）
@@ -138,6 +138,8 @@ def clean(x):
         o["degree"] = "冬令营" if is_camp else "博士"
     tags = o.get("tags")
     o["tags"] = [t for t in (tags if isinstance(tags, list) else []) if isinstance(t, str)]
+    reqs = o.get("requirements")
+    o["requirements"] = [r for r in (reqs if isinstance(reqs, list) else []) if isinstance(r, str)]
     if not o.get("url"):
         return None
     for k in ("publishedAt", "deadline", "startDate"):

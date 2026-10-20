@@ -117,6 +117,7 @@ function cardHTML(e, i) {
   <h3 class="card-title">${esc(e.title)}</h3>
   ${e.institute ? `<p class="card-inst">${esc(e.institute)}</p>` : ''}
   <p class="card-hl">${esc(e.highlights || e.snippet || '')}</p>
+  ${(e.requirements || []).length ? `<p class="card-req"><span class="req-label">报名条件</span>${esc(e.requirements.join('；'))}</p>` : ''}
   ${tags.length ? `<div class="card-tags">${tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>` : ''}
   <div class="card-foot">
     ${deadlineChip(e)}
@@ -275,7 +276,7 @@ function buildContext(question) {
 
 function systemPrompt(ctx) {
   const lines = ctx.map((e, i) =>
-    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${e.field || ''}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}｜${e.url}`);
+    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${e.field || ''}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}${(e.requirements || []).length ? '｜报名条件:' + e.requirements.join('；') : ''}｜${e.url}`);
   return `你是"升学雷达"网站的招生咨询助手。今天是 ${todayISO()}。
 【站内数据库】以下是本周抓取的招生/冬夏令营条目（编号、截止日期、原文链接）：
 ${lines.join('\n')}
