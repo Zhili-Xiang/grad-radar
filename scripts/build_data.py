@@ -96,17 +96,18 @@ def main():
         try:
             prev = json.loads(OUT.read_text(encoding="utf-8"))
             for e in prev.get("programs", []) + prev.get("camps", []):
-                k = norm_url(e.get("url"))
-                if k:
+                k = (norm_url(e.get("url")), e.get("title"))
+                if k[0]:
                     old_first_seen[k] = e.get("firstSeen") or TODAY
         except Exception:
             pass
 
+    # 去重键 = URL + 标题：同一通知页允许拆出多个专项条目（如联培方向）
     merged = {}
     for it in (clean(x) for x in load_raw()):
         if not it:
             continue
-        k = norm_url(it["url"])
+        k = (norm_url(it["url"]), it.get("title"))
         cur = merged.get(k)
         if cur is None or len(json.dumps(it, ensure_ascii=False)) > len(json.dumps(cur, ensure_ascii=False)):
             merged[k] = it
