@@ -19,9 +19,9 @@ scripts/build_data.py 合并脚本：raw -> programs.json（去重、日期规�
 
 1. 按 `data/raw/` 下现有文件划分的口径（北大、清华、复交、浙大西湖、国科大总体、中科院重点所、中科大南科大、新势力、冬令营专项、暑校专项、联培横搜），派检索 agent 重新抓取当周信息，覆盖写回对应 `data/raw/*.json`。
 2. `python3 scripts/build_data.py` 重新合并。
-3. `git add -A && git commit -m "data: YYYY-MM-DD 抓取" && git push`，GitHub Pages 自动更新。
+3. `git add -A && git commit -m "data: YYYY-MM-DD 抓取" && git push`，GitHub Pages 自动更新（仓库：jiayuan-bio/grad-radar，https://jiayuan-bio.github.io/grad-radar/ ）。
 
-条目字段规范见 `scripts/build_data.py` 顶部注释。所有条目必须带官网原文 URL。
+条目字段规范见 `scripts/build_data.py` 顶部注释；`data/requirements.json` 是报名硬条件的 sidecar（按 URL 索引），weekly 覆盖 raw 文件不会影响它，人工核实新条件后在此增补。
 
 ## DeepSeek 问答
 
