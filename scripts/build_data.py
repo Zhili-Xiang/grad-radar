@@ -34,7 +34,6 @@ TI_SPECIFIC = [
     ("卓越工程师", "其他交叉"),
     ("联培基地", "其他交叉"),
     ("钱塘", "其他交叉"),
-    ("南方科技大学联合培养", "其他交叉"),
     ("IDEA", "计科软工"),
     ("科学史", "其他交叉"),
     ("计算社会科学", "其他交叉"),
@@ -51,7 +50,7 @@ TI_GENERIC = [
 FIELD_RULES = [
     ("生物医学", ["生命", "医学", "医药", "药", "农", "脑", "神经", "类脑", "NIBS",
                  "TIMBR", "CLS", "PTN", "生物", "护理", "健康", "植物"]),
-    ("化学材料", ["化学", "材料科学", "材料与化工", "新材料", "先进材料", "材料学院",
+    ("化学材料", ["化学", "材料", "材料科学", "材料与化工", "新材料", "先进材料", "材料学院",
                  "应化", "催化", "高分子", "纳米", "化物", "有机所"]),
     ("数学物理", ["数学", "物理", "天文", "量子", "高能", "核科学", "核工程", "核技术",
                  "光学", "力学", "数学院", "应物所"]),
@@ -65,23 +64,30 @@ FIELD_RULES = [
 ]
 
 
-def classify_field(e):
+def classify_fields(e):
+    """多标签分类：跨学科联培（如大湾区-南科大覆盖数理化计电）同时挂多个大类。
+    TI_SPECIFIC 命中视为唯一归属；否则标题/学院层全量匹配，空则整校章程兜底，
+    再叠加正文层匹配（排除"其他交叉"关键词，避免"智能制造"式列举污染），最多 4 个。"""
     ti = (e.get("title") or "") + (e.get("institute") or "")
-    weak = " ".join(str(e.get(k) or "") for k in ("highlights", "snippet", "school"))
-    weak += " " + " ".join(t for t in (e.get("tags") or []) if isinstance(t, str))
     for pat, field in TI_SPECIFIC:
         if pat in ti:
-            return field
+            return [field]
+    weak = " ".join(str(e.get(k) or "") for k in ("highlights", "snippet", "school"))
+    weak += " " + " ".join(t for t in (e.get("tags") or []) if isinstance(t, str))
+    # 消歧："申请材料/书面材料/相关材料"等无学科含义
+    deambig = lambda s: re.sub(r"(申请|报名|提交|审核|公示|评审|名单|书面|纸质|支撑|证明|随附|相关|报考|需要|所需)材料", "", s)
+    ti_c, weak_c = deambig(ti), deambig(weak)
+    fields = [field for field, kws in FIELD_RULES if any(k in ti_c for k in kws)]
+    if not fields:
+        for pat, field in TI_GENERIC:
+            if pat in ti:
+                return [field]
     for field, kws in FIELD_RULES:
-        if any(k in ti for k in kws):
-            return field
-    for pat, field in TI_GENERIC:
-        if pat in ti:
-            return field
-    for field, kws in FIELD_RULES:
-        if any(k in weak for k in kws):
-            return field
-    return "其他交叉"
+        if field == "其他交叉" or field in fields:
+            continue
+        if any(k in weak_c for k in kws):
+            fields.append(field)
+    return fields[:4] or ["其他交叉"]
 
 
 def norm_date(v):
@@ -152,7 +158,8 @@ def clean(x):
         o["school"] = o.get("schoolShort") or "未知单位"
     if not o.get("schoolShort"):
         o["schoolShort"] = o["school"][:6]
-    o["field"] = classify_field(o)
+    o["fields"] = classify_fields(o)
+    o["field"] = o["fields"][0]
     pub = o.get("publishedAt") or ""
     o["lastCycle"] = bool(pub and pub < "2026-01-01"
                           and "长期开放" not in o["tags"] and "长期" not in " ".join(o["tags"]))

@@ -109,7 +109,8 @@ function cardHTML(e, i) {
 <article class="card reveal${expired ? ' expired' : ''}" style="transition-delay:${Math.min((i % 9) * 45, 360)}ms">
   <div class="card-top">
     <span class="chip-school">${esc(e.schoolShort || e.school || '')}</span>
-    ${e.field ? `<span class="chip-field f-${esc(e.field)}">${esc(e.field)}</span>` : ''}
+    ${(e.fields || [e.field]).filter(Boolean).slice(0, 2).map(f => `<span class="chip-field f-${esc(f)}">${esc(f)}</span>`).join('')}
+    ${(e.fields || []).length > 2 ? `<span class="chip-field f-其他交叉">+${(e.fields || []).length - 2}</span>` : ''}
     ${degree ? `<span class="chip-degree d-${esc(degree)}">${esc(degree)}</span>` : ''}
     ${isNew ? '<span class="badge-new">新</span>' : ''}
     ${pastBadge}
@@ -127,8 +128,14 @@ function cardHTML(e, i) {
 </article>`;
 }
 
+function matchField(e, f) {
+  if (f === '全部') return true;
+  if (Array.isArray(e.fields)) return e.fields.includes(f);
+  return e.field === f;
+}
+
 function searchable(e) {
-  return [e.school, e.schoolShort, e.institute, e.title, e.highlights, e.snippet, e.degree, (e.tags || []).join(' ')].join(' ').toLowerCase();
+  return [e.school, e.schoolShort, e.institute, e.title, e.highlights, e.snippet, e.degree, (e.fields || [e.field]).join(' '), (e.tags || []).join(' ')].join(' ').toLowerCase();
 }
 
 function renderPrograms() {
@@ -136,7 +143,7 @@ function renderPrograms() {
   let list = (DATA.programs || []).filter(e =>
     (state.school === '全部' || e.schoolShort === state.school || e.school === state.school) &&
     (state.degree === '全部' || e.degree === state.degree || (e.tags || []).includes(state.degree)) &&
-    (state.field === '全部' || e.field === state.field));
+    matchField(e, state.field));
   if (state.q) list = list.filter(e => searchable(e).includes(state.q.toLowerCase()));
   if (state.hideExpired) list = list.filter(e => { const d = daysUntil(e.deadline); return d === null || d >= 0; });
   if (state.sort === 'urgency') {
@@ -160,7 +167,7 @@ function renderCamps() {
   if (!DATA) return;
   let list = (DATA.camps || []).filter(e =>
     (state.camp === '全部' || e.degree === state.camp) &&
-    (state.campField === '全部' || e.field === state.campField));
+    matchField(e, state.campField));
   list.sort((a, b) => {
     const ka = daysUntil(a.startDate) ?? daysUntil(a.deadline);
     const kb = daysUntil(b.startDate) ?? daysUntil(b.deadline);
@@ -278,7 +285,7 @@ function buildContext(question) {
 
 function systemPrompt(ctx) {
   const lines = ctx.map((e, i) =>
-    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${e.field || ''}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}${(e.requirements || []).length ? '｜报名条件:' + e.requirements.join('；') : ''}｜${e.url}`);
+    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${(e.fields || [e.field]).join('/')}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}${(e.requirements || []).length ? '｜报名条件:' + e.requirements.join('；') : ''}｜${e.url}`);
   return `你是"升学雷达"网站的招生咨询助手。今天是 ${todayISO()}。
 【站内数据库】以下是本周抓取的招生/冬夏令营条目（编号、截止日期、原文链接）：
 ${lines.join('\n')}
