@@ -174,8 +174,8 @@ def load_requirements():
 
 
 def load_display():
-    """sidecar：data/display/*.json，url -> {title, highlights}。
-    展示层覆盖：title 用"学校-机构"式命名，highlights 用简介；原title存为 srcTitle。"""
+    """sidecar：data/display/*.json，元素 {url, title, highlights, srcTitle?}。
+    同一 URL 可挂多个条目（如总简章页拆出的联培方向），用 srcTitle 与原题匹配消歧。"""
     out = {}
     ddir = ROOT / "data" / "display"
     if not ddir.exists():
@@ -189,8 +189,19 @@ def load_display():
         if isinstance(arr, list):
             for x in arr:
                 if isinstance(x, dict) and x.get("url"):
-                    out[norm_url(x["url"])] = x
+                    out.setdefault(norm_url(x["url"]), []).append(x)
     return out
+
+
+def pick_display(cands, src_title):
+    if not cands:
+        return None
+    for x in cands:
+        st = x.get("srcTitle")
+        if st and src_title and st in src_title:
+            return x
+    plain = [x for x in cands if not x.get("srcTitle")]
+    return (plain or cands)[-1]
 
 
 def main():
@@ -212,7 +223,7 @@ def main():
     for it in (clean(x) for x in load_raw()):
         if not it:
             continue
-        disp = display.get(norm_url(it["url"]))
+        disp = pick_display(display.get(norm_url(it["url"])), it.get("title"))
         if disp:
             if disp.get("title"):
                 it["srcTitle"] = it["title"]
