@@ -20,6 +20,34 @@ KEEP = ["category", "school", "schoolShort", "institute", "title", "degree", "ur
         "snippet", "source", "dateEstimated"]
 CAMP_DEGREES = {"夏令营", "冬令营", "暑校", "学习班"}
 
+# 大类关键词分类器：按顺序首个命中生效；先判生物医学（名称最具辨识度），
+# 再把"工程硕博士/联培基地"等多领域混合专项直接归入其他交叉
+FIELD_RULES = [
+    ("生物医学", ["生命", "医", "药", "农", "脑", "神经", "类脑", "NIBS", "TIMBR",
+                 "CLS", "PTN", "生物", "护理", "健康"]),
+    ("其他交叉", ["工程硕博士", "卓越工程师", "联培基地", "创新学院联合"]),
+    ("化学材料", ["化学", "材料", "应化", "催化", "高分子", "纳米", "化物", "有机所"]),
+    ("数学物理", ["数学", "物理", "天文", "量子", "高能", "核科学", "核工程", "核技术",
+                 "精密测量", "光学", "力学", "数学院", "应物所"]),
+    ("其他交叉", ["机械", "制造", "土木", "水利", "环境", "海洋", "地球", "地学", "能源",
+                 "动力", "交通", "航空", "法律", "经济", "金融", "管理", "教育", "社科",
+                 "历史", "科学史", "碳中和", "计算社会"]),
+    ("电子信息", ["电子", "集成电路", "微电子", "通信", "信通", "光电", "半导体", "电磁",
+                 "控制", "自动化", "机器人", "电气", "仪器", "微波"]),
+    ("计科软工", ["计算机", "软件", "人工智能", "智能", "机器学习", "大数据", "数据科学",
+                 "密码", "网络", "算法", "计算"]),
+]
+
+
+def classify_field(e):
+    text = " ".join(str(e.get(k) or "") for k in
+                    ("institute", "title", "degree", "highlights", "snippet", "school"))
+    text += " " + " ".join(t for t in (e.get("tags") or []) if isinstance(t, str))
+    for field, kws in FIELD_RULES:
+        if any(k in text for k in kws):
+            return field
+    return "其他交叉"
+
 
 def norm_date(v):
     if not v:
@@ -87,6 +115,9 @@ def clean(x):
         o["school"] = o.get("schoolShort") or "未知单位"
     if not o.get("schoolShort"):
         o["schoolShort"] = o["school"][:6]
+    o["field"] = classify_field(o)
+    pub = o.get("publishedAt") or ""
+    o["lastCycle"] = bool(pub and pub < "2026-01-01")
     return o
 
 

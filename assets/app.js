@@ -15,8 +15,8 @@ const fmtMD = d => d ? `${+d.slice(5, 7)}/${+d.slice(8, 10)}` : '';
 
 let DATA = null;
 const state = {
-  school: '全部', degree: '全部', q: '', sort: 'urgency', hideExpired: true,
-  camp: '全部',
+  school: '全部', degree: '全部', field: '全部', q: '', sort: 'urgency', hideExpired: true,
+  camp: '全部', campField: '全部',
 };
 
 /* ---------- 数据加载 ---------- */
@@ -69,14 +69,24 @@ function buildChips(all) {
   chipRow($('#degree-chips'), degrees, state.degree, v => {
     state.degree = v; syncChips();
   });
+  const fields = ['全部', '数学物理', '生物医学', '化学材料', '计科软工', '电子信息', '其他交叉'];
+  chipRow($('#field-chips'), fields, state.field, v => {
+    state.field = v; syncChips();
+  });
+  chipRow($('#camp-field-chips'), fields, state.campField, v => {
+    state.campField = v;
+    $$('#camp-field-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.campField));
+    renderCamps();
+  });
   const campTypes = ['全部', '冬令营', '夏令营', '暑校', '学习班'];
   chipRow($('#camp-chips'), campTypes, state.camp, v => {
-    state.camp = v; syncChips(); renderCamps();
+    state.camp = v; renderCamps();
   });
 }
 function syncChips() {
   $$('#school-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.school));
   $$('#degree-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.degree));
+  $$('#field-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.field));
   renderPrograms();
 }
 
@@ -98,13 +108,17 @@ function cardHTML(e, i) {
   const isPast = (e.tags || []).includes('往期参考');
   const degree = e.degree || '';
   const tags = (e.tags || []).filter(t => t !== '往期参考').slice(0, 3);
+  const pastBadge = e.lastCycle
+    ? '<span class="badge-past">去年版 · 今年未发</span>'
+    : (isPast ? '<span class="badge-past">往期参考</span>' : '');
   return `
 <article class="card reveal${expired ? ' expired' : ''}" style="transition-delay:${Math.min((i % 9) * 45, 360)}ms">
   <div class="card-top">
     <span class="chip-school">${esc(e.schoolShort || e.school || '')}</span>
+    ${e.field ? `<span class="chip-field f-${esc(e.field)}">${esc(e.field)}</span>` : ''}
     ${degree ? `<span class="chip-degree d-${esc(degree)}">${esc(degree)}</span>` : ''}
     ${isNew ? '<span class="badge-new">新</span>' : ''}
-    ${isPast ? '<span class="badge-past">往期参考</span>' : ''}
+    ${pastBadge}
   </div>
   <h3 class="card-title">${esc(e.title)}</h3>
   ${e.institute ? `<p class="card-inst">${esc(e.institute)}</p>` : ''}
@@ -126,7 +140,8 @@ function renderPrograms() {
   if (!DATA) return;
   let list = (DATA.programs || []).filter(e =>
     (state.school === '全部' || e.schoolShort === state.school || e.school === state.school) &&
-    (state.degree === '全部' || e.degree === state.degree || (e.tags || []).includes(state.degree)));
+    (state.degree === '全部' || e.degree === state.degree || (e.tags || []).includes(state.degree)) &&
+    (state.field === '全部' || e.field === state.field));
   if (state.q) list = list.filter(e => searchable(e).includes(state.q.toLowerCase()));
   if (state.hideExpired) list = list.filter(e => { const d = daysUntil(e.deadline); return d === null || d >= 0; });
   if (state.sort === 'urgency') {
@@ -149,9 +164,8 @@ function renderPrograms() {
 function renderCamps() {
   if (!DATA) return;
   let list = (DATA.camps || []).filter(e =>
-    state.camp === '全部' || e.degree === state.camp ||
-    (e.degree === '夏令营' && state.camp === '冬令营' && false));
-  if (state.camp !== '全部') list = list.filter(e => e.degree === state.camp);
+    (state.camp === '全部' || e.degree === state.camp) &&
+    (state.campField === '全部' || e.field === state.campField));
   list.sort((a, b) => {
     const ka = daysUntil(a.startDate) ?? daysUntil(a.deadline);
     const kb = daysUntil(b.startDate) ?? daysUntil(b.deadline);
@@ -240,7 +254,7 @@ function buildContext(question) {
 
 function systemPrompt(ctx) {
   const lines = ctx.map((e, i) =>
-    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}｜${e.url}`);
+    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${e.field || ''}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}｜${e.url}`);
   return `你是"升学雷达"网站的招生咨询助手。今天是 ${todayISO()}。
 【站内数据库】以下是本周抓取的招生/冬夏令营条目（编号、截止日期、原文链接）：
 ${lines.join('\n')}
