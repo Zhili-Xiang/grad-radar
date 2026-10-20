@@ -1,8 +1,8 @@
 {
  "fetchedAt": "2026-10-20",
- "generatedAt": "2026-10-20T17:03:46",
+ "generatedAt": "2026-10-20T17:09:37",
  "counts": {
-  "programs": 101,
+  "programs": 100,
   "camps": 39,
   "schools": 38
  },
@@ -168,38 +168,6 @@
   },
   {
    "category": "program",
-   "school": "清华大学",
-   "schoolShort": "清华",
-   "institute": "法学院",
-   "title": "清华法学院-法律领军人才专博",
-   "degree": "博士",
-   "url": "https://yzbm.tsinghua.edu.cn/publish/s03/s0302/detail/67e4754d-efa5-4822-a05d-dd532a4cf4bb?yxsdm=066",
-   "publishedAt": "2026-10-20",
-   "deadline": "2026-12-15",
-   "startDate": "2026-10-20",
-   "location": "北京",
-   "highlights": "面向资深法治实务人士的非全日制定向专业博士，要求法律职业资格加5年以上法治实务全职经历，每期不超15人，学费54万分四年缴纳。",
-   "tags": [
-    "专项计划"
-   ],
-   "snippet": "每位申请人只能申请一个项目，项目之间不接受调剂。",
-   "source": "清华大学研究生申请服务系统",
-   "dateEstimated": false,
-   "requirements": [
-    "须已取得法学学士学位或法学/法律硕士学位，或法律职业资格证书，且具有硕士学位",
-    "须有5年以上法治实务全职工作经历（截至2026-09-30）",
-    "学费共计54万元，分四年缴纳（每年13.5万元）",
-    "基本修业年限4年，非全日制定向，不转档案户口、不提供住宿",
-    "2027年招生不超过15人"
-   ],
-   "field": "其他交叉",
-   "lastCycle": false,
-   "id": "p007",
-   "firstSeen": "2026-10-20",
-   "srcTitle": "清华大学法学院法律领军人才（非全日制）专业博士项目2027年招生简章"
-  },
-  {
-   "category": "program",
    "school": "中国科学院",
    "schoolShort": "中科院",
    "institute": "微电子研究所",
@@ -220,7 +188,7 @@
    "requirements": [],
    "field": "电子信息",
    "lastCycle": false,
-   "id": "p008",
+   "id": "p007",
    "firstSeen": "2026-10-20",
    "srcTitle": "微电子研究所2027年春季入学博士招生网上报名公告"
   },
@@ -250,7 +218,7 @@
    ],
    "field": "电子信息",
    "lastCycle": false,
-   "id": "p009",
+   "id": "p008",
    "firstSeen": "2026-10-20",
    "srcTitle": "微电子研究所2027年招收攻读硕士学位研究生章程"
   },
@@ -280,7 +248,7 @@
    ],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p010",
+   "id": "p009",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学人工智能学院2027年硕士研究生招生章程"
   },
@@ -311,7 +279,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p011",
+   "id": "p010",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学2027年博士研究生招生章程"
   },
@@ -339,7 +307,7 @@
    ],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p012",
+   "id": "p011",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学2027年春季入学博士招生网上报名公告"
   },
@@ -371,7 +339,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p013",
+   "id": "p012",
    "firstSeen": "2026-10-20",
    "srcTitle": "2027年浙江大学博士研究生招生简章发布"
   },
@@ -398,7 +366,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p014",
+   "id": "p013",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学2027年各学院学科招生简章"
   },
@@ -424,7 +392,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p015",
+   "id": "p014",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海交通大学2027年专业学位硕士研究生联培基地招生简章"
   },
@@ -452,7 +420,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p016",
+   "id": "p015",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海科技大学2027年硕士研究生招生公告（统考名额汇总）"
   },
@@ -485,7 +453,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p017",
+   "id": "p016",
    "firstSeen": "2026-10-20",
    "srcTitle": "浙江大学海洋学院2027年博士生招生简章"
   },
@@ -520,7 +488,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p018",
+   "id": "p017",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学-深圳医学科学院联合培养博士研究生项目2027年招生简章"
   },
@@ -553,7 +521,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p019",
+   "id": "p018",
    "firstSeen": "2026-10-20",
    "srcTitle": "浙江大学2027年博士研究生招生简章"
   },
@@ -588,7 +556,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p020",
+   "id": "p019",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学2027年博士研究生招生简章"
   },
@@ -618,7 +586,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "p021",
+   "id": "p020",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学-复旦大学联培项目（数学一级学科，2027年招生）"
   },
@@ -651,7 +619,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p022",
+   "id": "p021",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学-深圳医学科学院联培项目2027年生物学博士生招生"
   },
@@ -684,7 +652,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p023",
+   "id": "p022",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学工学院2027年博士研究生招生简章"
   },
@@ -713,7 +681,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "p024",
+   "id": "p023",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院物理研究所2027年硕士研究生招生简章"
   },
@@ -741,7 +709,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p025",
+   "id": "p024",
    "firstSeen": "2026-10-20",
    "srcTitle": "复旦大学2027年少数民族高层次骨干人才计划硕士研究生招生说明"
   },
@@ -767,7 +735,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p026",
+   "id": "p025",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海交通大学2027年硕士研究生招生章程"
   },
@@ -797,7 +765,7 @@
    ],
    "field": "电子信息",
    "lastCycle": false,
-   "id": "p027",
+   "id": "p026",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海科技大学信息科学与技术学院2027年硕士研究生招生专业目录（统招，含招生人数）"
   },
@@ -825,7 +793,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p028",
+   "id": "p027",
    "firstSeen": "2026-10-20",
    "srcTitle": "大湾区大学与南方科技大学2027年联合培养硕士研究生招生通知"
   },
@@ -853,7 +821,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p029",
+   "id": "p028",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京大学2027年硕士研究生招生简章（校本部）"
   },
@@ -881,7 +849,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p030",
+   "id": "p029",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京大学医学部2027年硕士研究生招生简章"
   },
@@ -910,7 +878,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p031",
+   "id": "p030",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学2027年硕士研究生招生简章"
   },
@@ -939,7 +907,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p032",
+   "id": "p031",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学2027年硕士研究生招生章程"
   },
@@ -966,7 +934,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p033",
+   "id": "p032",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学2027年硕士研究生招生章程"
   },
@@ -997,7 +965,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p034",
+   "id": "p033",
    "firstSeen": "2026-10-20",
    "srcTitle": "南方科技大学2027年硕士研究生招生简章"
   },
@@ -1024,7 +992,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p035",
+   "id": "p034",
    "firstSeen": "2026-10-20",
    "srcTitle": "复旦大学2027年招收攻读硕士学位研究生章程"
   },
@@ -1055,7 +1023,7 @@
    ],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p036",
+   "id": "p035",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海科技大学物质科学与技术学院2027年硕士研究生招生公告（研招统考）"
   },
@@ -1087,7 +1055,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p037",
+   "id": "p036",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海科技大学生命科学与技术学院2027年硕士研究生招生公告（统考预计名额）"
   },
@@ -1118,7 +1086,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "p038",
+   "id": "p037",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学2027年丘成桐数学科学领军人才培养计划招生简章"
   },
@@ -1144,7 +1112,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p039",
+   "id": "p038",
    "firstSeen": "2026-10-20",
    "srcTitle": "复旦大学部分院系2027年推免生招生报名通知（持续更新中）"
   },
@@ -1173,7 +1141,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p040",
+   "id": "p039",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学2027年接收推荐免试生章程"
   },
@@ -1204,7 +1172,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "p041",
+   "id": "p040",
    "firstSeen": "2026-10-20",
    "srcTitle": "浦江国际学院2027年招收推免生综合考核实施细则"
   },
@@ -1230,7 +1198,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p042",
+   "id": "p041",
    "firstSeen": "2026-10-20",
    "srcTitle": "2027年推荐免试直硕、直博生履行正式报名手续的通知及资格复审要求"
   },
@@ -1259,7 +1227,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p043",
+   "id": "p042",
    "firstSeen": "2026-10-20",
    "srcTitle": "大湾区大学-哈尔滨工业大学2027年联合培养博士研究生秋季招生简介"
   },
@@ -1292,7 +1260,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p044",
+   "id": "p043",
    "firstSeen": "2026-10-20",
    "srcTitle": "南方科技大学2027级博士研究生招生优秀生源快响计划报考通知"
   },
@@ -1323,7 +1291,7 @@
    ],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p045",
+   "id": "p044",
    "firstSeen": "2026-10-20",
    "srcTitle": "南方科技大学接收2027级推荐免试研究生（含直博生）招生简章"
   },
@@ -1350,7 +1318,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p046",
+   "id": "p045",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院自动化研究所2026年推免面试（工程硕博士培养改革专项）通知"
   },
@@ -1379,7 +1347,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p047",
+   "id": "p046",
    "firstSeen": "2026-10-20",
    "srcTitle": "前沿交叉学科研究院-北京脑科学与类脑研究所联合培养项目2027年推荐免试研究生复试安排及复试名单"
   },
@@ -1412,7 +1380,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p048",
+   "id": "p047",
    "firstSeen": "2026-10-20",
    "srcTitle": "2027年浙江大学爱丁堡大学联合学院招收推免生综合考核实施细则"
   },
@@ -1441,7 +1409,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p049",
+   "id": "p048",
    "firstSeen": "2026-10-20",
    "srcTitle": "2027年浙江大学伊利诺伊大学厄巴纳香槟校区联合学院招收推免生综合考核实施细则"
   },
@@ -1469,7 +1437,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "p050",
+   "id": "p049",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学天文与空间科学学院（紫金山天文台）关于接收2027年推免生（含直博生）的通知"
   },
@@ -1499,7 +1467,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p052",
+   "id": "p051",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海交通大学人工智能学院2027年接收推荐免试研究生（含直博生）预推免办法"
   },
@@ -1527,7 +1495,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p053",
+   "id": "p052",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学2027年工程硕博士培养改革专项全日制工程硕博士研究生招生简章"
   },
@@ -1559,7 +1527,7 @@
    ],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p054",
+   "id": "p053",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学-北京通用人工智能研究院2027年联合培养博士生专项计划（“通计划”）招生简章"
   },
@@ -1588,7 +1556,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p055",
+   "id": "p054",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海交通大学2027年\"医工交叉平台\"博士研究生招生简章"
   },
@@ -1616,7 +1584,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p056",
+   "id": "p055",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学2027年推免生接收办法"
   },
@@ -1646,7 +1614,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p057",
+   "id": "p056",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京大学碳中和研究院关于接收2027年推荐免试（直博）研究生的说明"
   },
@@ -1678,7 +1646,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p059",
+   "id": "p058",
    "firstSeen": "2026-10-20",
    "srcTitle": "复旦大学2027年工程硕博士培养改革专项推免研究生招生报名通知"
   },
@@ -1708,7 +1676,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p060",
+   "id": "p059",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学与宁波东方理工大学2027年招收免试直博生预推免办法"
   },
@@ -1739,7 +1707,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p061",
+   "id": "p060",
    "firstSeen": "2026-10-20",
    "srcTitle": "未来技术学院2027年工程硕博士培养改革专项博士研究生招生说明"
   },
@@ -1769,7 +1737,7 @@
    ],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p062",
+   "id": "p061",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院大学密码学院2027年接收推荐免试研究生报名通知（第二轮）"
   },
@@ -1796,7 +1764,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p063",
+   "id": "p062",
    "firstSeen": "2026-10-20",
    "srcTitle": "2027年中国科大应用化学与工程学院（长春应化所）接收推荐免试研究生预报名通知"
   },
@@ -1824,7 +1792,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "p064",
+   "id": "p063",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学交叉信息研究院2027年博士研究生招生综合考核及录取办法"
   },
@@ -1851,7 +1819,7 @@
    "requirements": [],
    "field": "电子信息",
    "lastCycle": false,
-   "id": "p066",
+   "id": "p065",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院自动化研究所2027年接收推荐免试生简章及第二批推免面试通知"
   },
@@ -1878,7 +1846,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p067",
+   "id": "p066",
    "firstSeen": "2026-10-20",
    "srcTitle": "类脑智能科学与技术研究院2027级推免研究生复试入围名单"
   },
@@ -1911,7 +1879,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p068",
+   "id": "p067",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学-深圳医学科学院联合培养博士研究生项目2027年普博生招生第一批报名通知（9月批）"
   },
@@ -1941,7 +1909,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p069",
+   "id": "p068",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学2027年博士研究生招生普博生第一批报名通知（9月批）"
   },
@@ -1968,7 +1936,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p070",
+   "id": "p069",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院上海药物研究所2027年接收推荐免试研究生公告"
   },
@@ -1999,7 +1967,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p071",
+   "id": "p070",
    "firstSeen": "2026-10-20",
    "srcTitle": "ZJUI学院关于2027年接收外校推荐免试研究生工作安排的通知"
   },
@@ -2029,7 +1997,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p072",
+   "id": "p071",
    "firstSeen": "2026-10-20",
    "srcTitle": "浙江大学关于2027年接收外校推荐免试研究生工作安排的通知"
   },
@@ -2061,7 +2029,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p073",
+   "id": "p072",
    "firstSeen": "2026-10-20",
    "srcTitle": "西湖大学2027年接收推荐免试直博生报名通知"
   },
@@ -2092,7 +2060,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p074",
+   "id": "p073",
    "firstSeen": "2026-10-20",
    "srcTitle": "复旦大学生物技术学院2027级直博生招生报名通知"
   },
@@ -2122,7 +2090,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p077",
+   "id": "p076",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海交通大学2027级\"明志荣誉博士生\"招生简章"
   },
@@ -2153,7 +2121,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p078",
+   "id": "p077",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京生命科学研究所2027年推荐免试研究生招生简章（含清华大学的TIMBR项目）"
   },
@@ -2187,7 +2155,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p079",
+   "id": "p078",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学-深圳医学科学院联合培养专项计划2027年博士研究生招生简章"
   },
@@ -2214,7 +2182,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p081",
+   "id": "p080",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学2027年工程硕博士培养改革专项（全日制）招生简章"
   },
@@ -2244,7 +2212,7 @@
    ],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p082",
+   "id": "p081",
    "firstSeen": "2026-10-20",
    "srcTitle": "人工智能学院2027年接收推荐免试硕士（含直博生）招生公告"
   },
@@ -2276,7 +2244,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p083",
+   "id": "p082",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学深圳国际研究生院-南方科技大学联合培养专项计划2027年博士研究生招生简章"
   },
@@ -2309,7 +2277,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p084",
+   "id": "p083",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学深圳国际研究生院-鹏城国家实验室联合培养专项计划2027年博士研究生招生简章"
   },
@@ -2341,7 +2309,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p085",
+   "id": "p084",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学生命科学学院PTN项目2027年博士研究生招生简章"
   },
@@ -2372,7 +2340,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p086",
+   "id": "p085",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学2027年博士研究生招生简章"
   },
@@ -2403,7 +2371,7 @@
    ],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p087",
+   "id": "p086",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学人工智能学院2027年博士研究生招生简章"
   },
@@ -2433,7 +2401,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p088",
+   "id": "p087",
    "firstSeen": "2026-10-20",
    "srcTitle": "鹏城国家实验室联合培养专项计划2027年博士研究生招生简章"
   },
@@ -2459,7 +2427,7 @@
    "requirements": [],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p093",
+   "id": "p092",
    "firstSeen": "2026-10-20",
    "srcTitle": "智能学院2027年招生指南"
   },
@@ -2492,7 +2460,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "p098",
+   "id": "p097",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海科技大学2026年全日制生物学专项普招博士招生简章"
   },
@@ -2519,7 +2487,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p101",
+   "id": "p100",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院杭州医学研究所—天津大学2026年联合培养博士研究生专项计划招生简章"
   },
@@ -2545,7 +2513,7 @@
    "requirements": [],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p105",
+   "id": "p104",
    "firstSeen": "2026-10-20"
   },
   {
@@ -2573,7 +2541,7 @@
    "requirements": [],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "p107",
+   "id": "p106",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海人工智能实验室2027级联培博士招生启动"
   },
@@ -2601,7 +2569,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "p109",
+   "id": "p108",
    "firstSeen": "2026-10-20",
    "srcTitle": "中山大学2026年联合培养博士研究生专项计划春季网上报名通知（大湾区大学联培专项）"
   },
@@ -2630,7 +2598,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p112",
+   "id": "p111",
    "firstSeen": "2026-10-20",
    "srcTitle": "崂山国家实验室—中国科学技术大学2026年联合培养科研经费博士研究生专项计划招生简章"
   },
@@ -2658,7 +2626,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "p113",
+   "id": "p112",
    "firstSeen": "2026-10-20",
    "srcTitle": "崂山国家实验室—中国科学技术大学2026年联合培养科研经费博士研究生专项计划招生简章"
   },
@@ -2687,7 +2655,7 @@
    "requirements": [],
    "field": "电子信息",
    "lastCycle": false,
-   "id": "p116",
+   "id": "p115",
    "firstSeen": "2026-10-20",
    "srcTitle": "电子科技大学-乾元国家实验室2026年联合培养博士生专项计划招生报名通知"
   },
@@ -2716,7 +2684,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": true,
-   "id": "p127",
+   "id": "p126",
    "firstSeen": "2026-10-20",
    "srcTitle": "昌平实验室2026年“申请-考核制”联合培养博士研究生报考说明"
   },
@@ -2748,7 +2716,7 @@
    ],
    "field": "生物医学",
    "lastCycle": true,
-   "id": "p128",
+   "id": "p127",
    "firstSeen": "2026-10-20",
    "srcTitle": "生命科学联合中心（北大方面）与PTN项目（北大方面）2026级博士研究生第二批联合招生简章"
   },
@@ -2776,7 +2744,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": true,
-   "id": "p131",
+   "id": "p130",
    "firstSeen": "2026-10-20",
    "srcTitle": "浙江大学-钱塘高等研究院2026年联合培养博士研究生招生专项"
   },
@@ -2806,7 +2774,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": true,
-   "id": "p132",
+   "id": "p131",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年同济大学-南方科技大学联合培养博士研究生招生通知"
   },
@@ -2840,7 +2808,7 @@
    ],
    "field": "计科软工",
    "lastCycle": true,
-   "id": "p133",
+   "id": "p132",
    "firstSeen": "2026-10-20",
    "srcTitle": "港中大（深圳）理工学院2026-27学年研究型硕士-博士项目开放申请"
   },
@@ -2870,7 +2838,7 @@
    ],
    "field": "生物医学",
    "lastCycle": true,
-   "id": "p134",
+   "id": "p133",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院脑科学与智能技术卓越创新中心2026年博士学位研究生招生章程"
   },
@@ -2897,7 +2865,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": true,
-   "id": "p135",
+   "id": "p134",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学深圳国际研究生院2026年招收内地博士研究生目录（十一月份）"
   },
@@ -2925,7 +2893,7 @@
    "requirements": [],
    "field": "电子信息",
    "lastCycle": true,
-   "id": "p136",
+   "id": "p135",
    "firstSeen": "2026-10-20",
    "srcTitle": "鹏城国家实验室-中山大学2026年联合培养博士研究生专项计划招生简章"
   },
@@ -2955,7 +2923,7 @@
    ],
    "field": "电子信息",
    "lastCycle": true,
-   "id": "p137",
+   "id": "p136",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京大学集成电路学院2026年\"申请-考核制\"博士研究生招生说明"
   },
@@ -2986,7 +2954,7 @@
    ],
    "field": "计科软工",
    "lastCycle": true,
-   "id": "p139",
+   "id": "p138",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学—北京通用人工智能研究院2026年联合培养博士生专项计划（“通计划”）招生简章"
   },
@@ -3013,7 +2981,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": true,
-   "id": "p140",
+   "id": "p139",
    "firstSeen": "2026-10-20",
    "srcTitle": "清华大学深圳国际研究生院2026年接收优秀应届本科毕业生免试攻读研究生报名通知"
   }
@@ -3073,7 +3041,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c051",
+   "id": "c050",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年微分几何暑期学校"
   },
@@ -3100,7 +3068,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c058",
+   "id": "c057",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年生命科学学院与前沿交叉学科研究院\"大生命科学交叉\"联合夏令营优秀营员名单"
   },
@@ -3129,7 +3097,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c065",
+   "id": "c064",
    "firstSeen": "2026-10-20",
    "srcTitle": "2027年校园宇宙线观测暑期学校（承办单位已确定）"
   },
@@ -3157,7 +3125,7 @@
    "requirements": [],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "c075",
+   "id": "c074",
    "firstSeen": "2026-10-20",
    "srcTitle": "复旦深圳河套学院直博夏令营报名开启"
   },
@@ -3186,7 +3154,7 @@
    "requirements": [],
    "field": "电子信息",
    "lastCycle": false,
-   "id": "c076",
+   "id": "c075",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海创芯学院2026年优秀大学生夏令营活动报名通知"
   },
@@ -3214,7 +3182,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "c080",
+   "id": "c079",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年科学岛夏季科研训练营报名通知（第三批）"
   },
@@ -3245,7 +3213,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c089",
+   "id": "c088",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年物理基础学科国际暑期学校"
   },
@@ -3276,7 +3244,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c090",
+   "id": "c089",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海交通大学海洋学院2027年研究生优才夏令营通知"
   },
@@ -3307,7 +3275,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c091",
+   "id": "c090",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院深圳先进技术研究院2026年优秀大学生夏令营"
   },
@@ -3340,7 +3308,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c092",
+   "id": "c091",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年“科技历史与文化”大学生夏令营（第九届）"
   },
@@ -3368,7 +3336,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c094",
+   "id": "c093",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学技术大学国家卓越工程师学院（先进技术研究院）2026年创新应用科学营报名公告"
   },
@@ -3400,7 +3368,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c095",
+   "id": "c094",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京量子信息科学研究院2026年全国优秀大学生夏令营及暑期实践活动"
   },
@@ -3432,7 +3400,7 @@
    ],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "c096",
+   "id": "c095",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年北京大学化学学院和深研院化生学院联合举办“全国优秀大学生夏令营”"
   },
@@ -3459,7 +3427,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c097",
+   "id": "c096",
    "firstSeen": "2026-10-20",
    "srcTitle": "北京大学现代农学院2026年全国优秀大学生夏令营活动通知"
   },
@@ -3488,7 +3456,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c099",
+   "id": "c098",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院长春光机所2026年\"溯光明理\"夏令营邀请函"
   },
@@ -3518,7 +3486,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c100",
+   "id": "c099",
    "firstSeen": "2026-10-20",
    "srcTitle": "第八届“计算社会科学方法论”国际暑期学校"
   },
@@ -3547,7 +3515,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c102",
+   "id": "c101",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院生物物理研究所2026年生命科学希望之星夏令营报名通知"
   },
@@ -3578,7 +3546,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c103",
+   "id": "c102",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年清华大学生物医学交叉研究院（北京生命科学研究所）“暑期科研体验营”"
   },
@@ -3605,7 +3573,7 @@
    "requirements": [],
    "field": "化学材料",
    "lastCycle": false,
-   "id": "c104",
+   "id": "c103",
    "firstSeen": "2026-10-20",
    "srcTitle": "大连化物所2026年大学生夏令营第一轮通知"
   },
@@ -3634,7 +3602,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c106",
+   "id": "c105",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026清华大学脑与智能实验室音乐脑科学暑期训练营"
   },
@@ -3663,7 +3631,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c108",
+   "id": "c107",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年理论物理大学生夏令营"
   },
@@ -3695,7 +3663,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c110",
+   "id": "c109",
    "firstSeen": "2026-10-20",
    "srcTitle": "中国科学院高能物理研究所2026年全国大学生夏令营及暑期学校"
   },
@@ -3727,7 +3695,7 @@
    ],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "c111",
+   "id": "c110",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年清华大学人工智能学院大学生学术交流日"
   },
@@ -3756,7 +3724,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c114",
+   "id": "c113",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年\"探索生命的多样性\"暑期夏令营报名通知"
   },
@@ -3783,7 +3751,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c115",
+   "id": "c114",
    "firstSeen": "2026-10-20",
    "srcTitle": "ICTP-AP 2026年度\"大学生创新实践训练计划\"项目申请通知"
   },
@@ -3816,7 +3784,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c117",
+   "id": "c116",
    "firstSeen": "2026-10-20",
    "srcTitle": "深圳医学科学院2026年国际暑期学校"
   },
@@ -3843,7 +3811,7 @@
    "requirements": [],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c118",
+   "id": "c117",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年NIBS学生暑期训练计划（第二十期）"
   },
@@ -3877,7 +3845,7 @@
    ],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c119",
+   "id": "c118",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年“代数与数论”暑期学校"
   },
@@ -3909,7 +3877,7 @@
    ],
    "field": "生物医学",
    "lastCycle": false,
-   "id": "c120",
+   "id": "c119",
    "firstSeen": "2026-10-20",
    "srcTitle": "生命科学联合中心（北大方面）2026年暑期培训班"
   },
@@ -3938,7 +3906,7 @@
    "requirements": [],
    "field": "计科软工",
    "lastCycle": false,
-   "id": "c121",
+   "id": "c120",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026南京大学智能科学与技术学院具身智能本科生冬令营"
   },
@@ -3968,7 +3936,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": false,
-   "id": "c122",
+   "id": "c121",
    "firstSeen": "2026-10-20",
    "srcTitle": "近代物理所2026年度\"走进国家实验室，感受魅力核科学\"优秀大学生冬令营"
   },
@@ -3997,7 +3965,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c123",
+   "id": "c122",
    "firstSeen": "2026-10-20",
    "srcTitle": "第一届优秀大学生冬季科研训练营"
   },
@@ -4026,7 +3994,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": false,
-   "id": "c124",
+   "id": "c123",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年\"资源环境与宜居地球\"大学生冬令营"
   },
@@ -4057,7 +4025,7 @@
    "requirements": [],
    "field": "数学物理",
    "lastCycle": true,
-   "id": "c125",
+   "id": "c124",
    "firstSeen": "2026-10-20",
    "srcTitle": "上海应物所2026年\"应用物理\"冬令营招募通知"
   },
@@ -4091,7 +4059,7 @@
    ],
    "field": "其他交叉",
    "lastCycle": true,
-   "id": "c126",
+   "id": "c125",
    "firstSeen": "2026-10-20",
    "srcTitle": "关于举办2026年\"智慧赋能·创领未来\"优秀大学生冬令营通知"
   },
@@ -4120,7 +4088,7 @@
    "requirements": [],
    "field": "计科软工",
    "lastCycle": true,
-   "id": "c129",
+   "id": "c128",
    "firstSeen": "2026-10-20",
    "srcTitle": "WINTER@AIR 2026冬令营报名"
   },
@@ -4152,7 +4120,7 @@
    ],
    "field": "生物医学",
    "lastCycle": true,
-   "id": "c130",
+   "id": "c129",
    "firstSeen": "2026-10-20",
    "srcTitle": "2026年大学生\"菁英\"冬令营报名公告"
   },
@@ -4182,7 +4150,7 @@
    "requirements": [],
    "field": "其他交叉",
    "lastCycle": true,
-   "id": "c138",
+   "id": "c137",
    "firstSeen": "2026-10-20",
    "srcTitle": "2025年\"蓝色海洋\"优秀研究生冬令营活动通知"
   }
