@@ -202,11 +202,20 @@ def main():
         except Exception:
             pass
 
-    # 去重键 = URL + 标题：同一通知页允许拆出多个专项条目（如联培方向）
+    # 先应用展示层覆盖（title/highlights），再去重——避免同 URL 不同原题的条目
+    # 被改成同一展示标题后仍以两条存在（视觉重复）
+    display = load_display()
     merged = {}
     for it in (clean(x) for x in load_raw()):
         if not it:
             continue
+        disp = display.get(norm_url(it["url"]))
+        if disp:
+            if disp.get("title"):
+                it["srcTitle"] = it["title"]
+                it["title"] = disp["title"]
+            if disp.get("highlights"):
+                it["highlights"] = disp["highlights"]
         k = (norm_url(it["url"]), it.get("title"))
         cur = merged.get(k)
         if cur is None or len(json.dumps(it, ensure_ascii=False)) > len(json.dumps(cur, ensure_ascii=False)):
@@ -214,19 +223,11 @@ def main():
 
     programs, camps = [], []
     sidecar = load_requirements()
-    display = load_display()
     ranked = sorted(merged.items(), key=lambda kv: kv[1].get("publishedAt") or "", reverse=True)
     for i, (k, it) in enumerate(ranked):
         it["id"] = f"{'c' if it['category'] == 'camp' else 'p'}{i + 1:03d}"
         it["firstSeen"] = old_first_seen.get(k) or TODAY
         url_key = norm_url(it.get("url"))
-        disp = display.get(url_key)
-        if disp:
-            if disp.get("title"):
-                it["srcTitle"] = it.get("title")
-                it["title"] = disp["title"]
-            if disp.get("highlights"):
-                it["highlights"] = disp["highlights"]
         if url_key in sidecar and sidecar[url_key]:
             merged_reqs = sidecar[url_key]
             existing = it.get("requirements") or []
