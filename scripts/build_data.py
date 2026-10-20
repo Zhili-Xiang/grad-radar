@@ -154,6 +154,20 @@ def clean(x):
     return o
 
 
+def load_requirements():
+    """sidecar：data/requirements.json，键为规范化 URL。weekly 覆盖 raw 也不会丢人工核实条件。"""
+    path = ROOT / "data" / "requirements.json"
+    if not path.exists():
+        return {}
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        return {norm_url(k): v for k, v in raw.items()
+                if not k.startswith("_") and isinstance(v, list)}
+    except Exception as e:
+        print(f"requirements.json 解析失败: {e}")
+        return {}
+
+
 def main():
     old_first_seen = {}
     if OUT.exists():
@@ -177,10 +191,20 @@ def main():
             merged[k] = it
 
     programs, camps = [], []
+    sidecar = load_requirements()
     ranked = sorted(merged.items(), key=lambda kv: kv[1].get("publishedAt") or "", reverse=True)
     for i, (k, it) in enumerate(ranked):
         it["id"] = f"{'c' if it['category'] == 'camp' else 'p'}{i + 1:03d}"
         it["firstSeen"] = old_first_seen.get(k) or TODAY
+        url_key = norm_url(it.get("url"))
+        if url_key in sidecar and sidecar[url_key]:
+            merged_reqs = sidecar[url_key]
+            existing = it.get("requirements") or []
+            seen = {r for r in existing}
+            for r in merged_reqs:
+                if r not in seen:
+                    existing.append(r)
+            it["requirements"] = existing
         (camps if it["category"] == "camp" else programs).append(it)
 
     out = {
