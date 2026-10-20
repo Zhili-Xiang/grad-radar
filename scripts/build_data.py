@@ -170,6 +170,26 @@ def load_requirements():
         return {}
 
 
+def load_display():
+    """sidecar：data/display/*.json，url -> {title, highlights}。
+    展示层覆盖：title 用"学校-机构"式命名，highlights 用简介；原title存为 srcTitle。"""
+    out = {}
+    ddir = ROOT / "data" / "display"
+    if not ddir.exists():
+        return out
+    for f in sorted(ddir.glob("*.json")):
+        try:
+            arr = json.loads(f.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"display/{f.name} 解析失败: {e}")
+            continue
+        if isinstance(arr, list):
+            for x in arr:
+                if isinstance(x, dict) and x.get("url"):
+                    out[norm_url(x["url"])] = x
+    return out
+
+
 def main():
     old_first_seen = {}
     if OUT.exists():
@@ -194,11 +214,19 @@ def main():
 
     programs, camps = [], []
     sidecar = load_requirements()
+    display = load_display()
     ranked = sorted(merged.items(), key=lambda kv: kv[1].get("publishedAt") or "", reverse=True)
     for i, (k, it) in enumerate(ranked):
         it["id"] = f"{'c' if it['category'] == 'camp' else 'p'}{i + 1:03d}"
         it["firstSeen"] = old_first_seen.get(k) or TODAY
         url_key = norm_url(it.get("url"))
+        disp = display.get(url_key)
+        if disp:
+            if disp.get("title"):
+                it["srcTitle"] = it.get("title")
+                it["title"] = disp["title"]
+            if disp.get("highlights"):
+                it["highlights"] = disp["highlights"]
         if url_key in sidecar and sidecar[url_key]:
             merged_reqs = sidecar[url_key]
             existing = it.get("requirements") or []
