@@ -22,7 +22,7 @@ const state = {
 /* ---------- 数据加载 ---------- */
 async function boot() {
   try {
-    const res = await fetch('data/programs.json');
+    const res = await fetch('data/programs.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(res.status);
     DATA = await res.json();
   } catch (e) {
