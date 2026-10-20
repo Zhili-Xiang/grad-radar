@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>升学雷达 — 顶尖院校硕博与冬夏令营情报</title>
-<meta name="description" content="清北复交浙、中科院、中科大、西湖大学、SMART 及新势力院校的硕博简章、直博、联培、冬令营、暑校，每周扫描一次。">
+<title>升学雷达 — 2026–27 招生信息聚合</title>
+<meta name="description" content="聚合清北复交浙、中科院、中科大、西湖大学等院校 2026–27 招生周期的硕博简章、直博、联培、冬令营与暑校信息，每周一更新，每条附官网原文。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%230071e3' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%230071e3' stroke-width='2' opacity='.6'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%230071e3'/%3E%3Cpath d='M16 16 L28 7 A15 15 0 0 0 16 1 Z' fill='%230071e3' opacity='.28'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -17,9 +17,9 @@
       <span>升学雷达</span>
     </a>
     <div class="nav-links">
-      <a href="#programs">硕博项目</a>
+      <a href="#programs">招生项目</a>
       <a href="#camps">冬夏令营</a>
-      <a href="#ask">智能问答</a>
+      <a href="#ask">AI 问答</a>
       <a href="#about">关于</a>
     </div>
     <div class="nav-meta" id="nav-updated"></div>
@@ -27,18 +27,19 @@
 </nav>
 
 <header class="hero">
-  <p class="hero-eyebrow">2026–27 招生周期 · 每周一扫描</p>
-  <h1>别输在<br>信息差。</h1>
-  <p class="hero-sub">清北复交浙、中科院、中科大、西湖大学、SMART，再加一众新势力院校——硕博简章、直博、联培、小众学院、冬令营、暑校，全部替你盯着。</p>
+  <p class="hero-eyebrow">2026–27 招生周期 · 每周一更新</p>
+  <h1>升学雷达</h1>
+  <p class="hero-sub">聚合北大、清华、复旦、上交、浙大、中科院、中科大、西湖大学等院校的招生信息：硕博简章、直博、联培专项、冬令营、夏令营、暑校。每条附官网原文链接，可回源核实。</p>
   <div class="hero-cta">
-    <a class="btn btn-primary" href="#programs">看硕博项目</a>
-    <a class="btn btn-ghost" href="#ask">直接问 DeepSeek</a>
+    <a class="btn btn-primary" href="#programs">浏览招生项目</a>
+    <a class="btn btn-ghost" href="#ask">使用 AI 问答 →</a>
   </div>
+  <div class="hero-digest" id="hero-digest"></div>
 </header>
 
 <section class="stats" aria-label="数据概览">
-  <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">在库机会</span></div>
-  <div class="stat"><span class="stat-num" id="stat-schools">0</span><span class="stat-label">覆盖院校</span></div>
+  <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">收录条目</span></div>
+  <div class="stat"><span class="stat-num" id="stat-schools">0</span><span class="stat-label">覆盖单位</span></div>
   <div class="stat"><span class="stat-num" id="stat-urgent">0</span><span class="stat-label">七天内截止</span></div>
   <div class="stat"><span class="stat-num" id="stat-new">0</span><span class="stat-label">本周新增</span></div>
 </section>
@@ -46,15 +47,21 @@
 <main>
 <section class="section" id="programs">
   <div class="section-head reveal">
-    <h2>硕博项目。</h2>
-    <p class="section-sub">招生简章、直博、联培专项和小众学院，一处看全，全部可回原文。</p>
+    <h2>招生项目</h2>
+    <p class="section-sub">博士、硕士招生简章与直博、联培专项，默认按截止日期排序。</p>
   </div>
   <div class="filters reveal">
-    <div class="chip-row" id="school-chips" role="tablist" aria-label="按院校筛选"></div>
     <div class="chip-row" id="field-chips" role="tablist" aria-label="按大类筛选"></div>
-    <div class="chip-row" id="degree-chips" role="tablist" aria-label="按类型筛选"></div>
-    <div class="filter-tools">
+    <div class="toolbar">
       <input id="search" type="search" placeholder="搜索学院、项目、关键词…" autocomplete="off">
+      <select id="school-select" aria-label="按院校筛选"></select>
+      <select id="degree-select" aria-label="按类型筛选">
+        <option value="全部">全部类型</option>
+        <option value="直博">直博</option>
+        <option value="博士">博士</option>
+        <option value="硕士">硕士</option>
+        <option value="联培">联培</option>
+      </select>
       <select id="sort" aria-label="排序">
         <option value="urgency">截止临近优先</option>
         <option value="newest">最新发布</option>
@@ -63,17 +70,27 @@
     </div>
   </div>
   <div class="card-grid" id="program-grid"></div>
-  <p class="empty" id="program-empty" hidden>没有匹配的项目，换个筛选条件试试。</p>
+  <p class="empty" id="program-empty" hidden>没有匹配的条目，换个条件试试。</p>
 </section>
 
-<section class="section section-alt" id="camps">
+<section class="section section-white" id="camps">
   <div class="section-head reveal">
-    <h2>冬夏令营与暑校。</h2>
-    <p class="section-sub">冬令营、夏令营、暑期学校、学习班。往期条目留着，方便你摸清各家的发布节奏。</p>
+    <h2>冬令营 · 夏令营 · 暑校</h2>
+    <p class="section-sub">含学习班与科研训练营。往届条目用于参考各家的发布节奏，均已标注。</p>
   </div>
   <div class="filters reveal">
     <div class="chip-row" id="camp-chips" role="tablist" aria-label="按营类筛选"></div>
-    <div class="chip-row" id="camp-field-chips" role="tablist" aria-label="按大类筛选"></div>
+    <div class="toolbar">
+      <select id="camp-field-select" aria-label="按大类筛选">
+        <option value="全部">全部大类</option>
+        <option value="数学物理">数学物理</option>
+        <option value="生物医学">生物医学</option>
+        <option value="化学材料">化学材料</option>
+        <option value="计科软工">计科软工</option>
+        <option value="电子信息">电子信息</option>
+        <option value="其他交叉">其他交叉</option>
+      </select>
+    </div>
   </div>
   <div class="card-grid" id="camp-grid"></div>
   <p class="empty" id="camp-empty" hidden>没有匹配的条目。</p>
@@ -81,54 +98,54 @@
 
 <section class="section section-dark" id="ask">
   <div class="section-head reveal">
-    <h2>有问，就问。</h2>
-    <p class="section-sub">DeepSeek 驱动。截止日期这类硬信息只引站内数据、附编号来源；策略类问题自由聊，但会标明是一般性建议。</p>
+    <h2>AI 问答</h2>
+    <p class="section-sub">由 DeepSeek 驱动。截止日期、招生名额这类事实只引用站内条目并附链接；策略类回答会注明是一般性建议。</p>
   </div>
   <div class="chat-shell reveal">
     <div class="chat-messages" id="chat-messages"></div>
     <div class="key-panel" id="key-panel" hidden>
-      <p id="key-hint">填入你的 DeepSeek API Key（只保存在本机浏览器里）：</p>
+      <p id="key-hint">填入你的 DeepSeek API Key（只保存在本机浏览器）：</p>
       <div class="key-row">
         <input id="key-input" type="password" placeholder="sk-…" autocomplete="off">
         <button class="btn btn-primary btn-sm" id="key-save">保存</button>
         <button class="btn btn-ghost btn-sm btn-dark" id="key-clear" hidden>清除</button>
       </div>
-      <p class="key-note">没有 Key？去 <a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener">platform.deepseek.com</a> 申请，几块钱能用很久。</p>
+      <p class="key-note">没有 Key 的话，去 <a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener">platform.deepseek.com</a> 申请一个即可。</p>
     </div>
     <div class="suggest-row" id="suggest-row"></div>
     <form class="chat-input-row" id="chat-form">
-      <input id="chat-input" placeholder="例：核工程大三，有哪些联培直博适合我？" autocomplete="off">
+      <input id="chat-input" placeholder="例如：数学方向有哪些还没截止的直博项目？" autocomplete="off">
       <button class="btn btn-primary" type="submit" id="chat-send">发送</button>
     </form>
-    <p class="chat-note">回答可能出错，报名动作前一律以各校官网原文为准。</p>
+    <p class="chat-note">回答可能有误，报名前以各校官网原文为准。</p>
   </div>
 </section>
 
 <section class="section" id="about">
   <div class="section-head reveal">
-    <h2>怎么运转。</h2>
+    <h2>关于本站</h2>
   </div>
   <div class="about-grid">
     <div class="about-card reveal">
-      <h3>每周扫一遍</h3>
-      <p>每周一上午，自动任务派出十余路检索，把目标院校研究生院和招生网的新通知抓回来，合并、去重、入库。</p>
+      <h3>每周一更新</h3>
+      <p>定时任务抓取各校研究生院和招生网的新通知，合并去重后发布，无需手动刷新。</p>
     </div>
     <div class="about-card reveal">
       <h3>条条可溯源</h3>
-      <p>每个条目都带官网原文链接和发布日期。我们只做聚合，不改动原文；拿不准的信息标星号提醒你复核。</p>
+      <p>所有条目保留官网原文链接与发布日期。本站只做聚合，不改动原文；日期为推测的会打星号。</p>
     </div>
     <div class="about-card reveal">
-      <h3>AI 只做导航</h3>
-      <p>DeepSeek 负责把数据库讲成人话，硬事实被限制在站内数据内作答。替你省时间，不替你做决定。</p>
+      <h3>AI 有边界</h3>
+      <p>模型回答事实类问题时被限制在站内数据内，站内没有的会直说，而不是编一个日期。</p>
     </div>
   </div>
-  <p class="about-note reveal">覆盖范围：北京大学、清华大学、复旦大学、上海交通大学、浙江大学、中国科学院（含国科大及重点研究所）、中国科学技术大学、西湖大学、深圳医学科学院（SMART）、南方科技大学、上海科技大学、香港中文大学（深圳）、大湾区大学，以及它们参与的各类联合培养项目。数据与代码开源于 <a id="repo-link" href="#" target="_blank" rel="noopener">GitHub</a>。</p>
+  <p class="about-note reveal">覆盖：北京大学、清华大学、复旦大学、上海交通大学、浙江大学、中国科学院（含国科大及重点研究所）、中国科学技术大学、西湖大学、深圳医学科学院（SMART）、南方科技大学、上海科技大学、香港中文大学（深圳）、大湾区大学，以及它们参与的各类联合培养项目。数据与代码开源于 <a id="repo-link" href="https://github.com/Zhili-Xiang/grad-radar" target="_blank" rel="noopener">GitHub</a>。</p>
 </section>
 </main>
 
 <footer>
-  <p>升学雷达 · 数据抓取于 <span id="foot-date">—</span> · 仅供个人升学参考，不构成任何官方信息</p>
-  <p>所有招生信息以各校官网原文为准；本站不收集任何个人数据，API Key 仅存于你的浏览器本地。</p>
+  <p>升学雷达 · 数据抓取于 <span id="foot-date">—</span> · 仅供个人升学参考</p>
+  <p>所有招生信息以各校官网原文为准；本站不收集任何数据，API Key 仅存于你的浏览器本地。</p>
 </footer>
 
 <script src="assets/app.js"></script>

@@ -28,7 +28,7 @@ async function boot() {
   } catch (e) {
     $('#nav-updated').textContent = '数据尚未生成';
     ['program-grid', 'camp-grid'].forEach(id => {
-      $('#' + id).innerHTML = `<p class="empty">数据文件还没就绪（可能正在首次抓取）。稍后刷新重试。</p>`;
+      $('#' + id).innerHTML = `<p class="empty">数据文件还没就绪（可能正在首次抓取），稍后刷新重试。</p>`;
     });
     return;
   }
@@ -37,14 +37,15 @@ async function boot() {
   $('#nav-updated').textContent = d ? `数据更新于 ${d}` : '';
   $('#foot-date').textContent = DATA.fetchedAt || '—';
 
-  buildChips(all);
+  buildFilters(all);
   renderPrograms();
   renderCamps();
   renderStats(all);
+  renderDigest(all);
   observeReveals();
 }
 
-/* ---------- 筛选 chips ---------- */
+/* ---------- 筛选 ---------- */
 function chipRow(el, items, active, onPick) {
   el.innerHTML = items.map(t =>
     `<button class="chip${t === active ? ' on' : ''}" data-v="${esc(t)}">${esc(t)}</button>`).join('');
@@ -55,39 +56,32 @@ function chipRow(el, items, active, onPick) {
   };
 }
 
-function buildChips(all) {
+function buildFilters(all) {
   const schoolCount = new Map();
   all.forEach(e => {
     const k = e.schoolShort || e.school || '其他';
     schoolCount.set(k, (schoolCount.get(k) || 0) + 1);
   });
   const schools = [...schoolCount.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
-  chipRow($('#school-chips'), ['全部', ...schools], state.school, v => {
-    state.school = v; syncChips();
-  });
-  const degrees = ['全部', '直博', '博士', '硕士', '联培'];
-  chipRow($('#degree-chips'), degrees, state.degree, v => {
-    state.degree = v; syncChips();
-  });
+  const schoolSel = $('#school-select');
+  schoolSel.innerHTML = `<option value="全部">全部院校（${schools.length}）</option>` +
+    schools.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
+  schoolSel.onchange = () => { state.school = schoolSel.value; renderPrograms(); };
+
+  $('#degree-select').onchange = e => { state.degree = e.target.value; renderPrograms(); };
+
   const fields = ['全部', '数学物理', '生物医学', '化学材料', '计科软工', '电子信息', '其他交叉'];
   chipRow($('#field-chips'), fields, state.field, v => {
-    state.field = v; syncChips();
+    state.field = v;
+    $$('#field-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.field));
+    renderPrograms();
   });
-  chipRow($('#camp-field-chips'), fields, state.campField, v => {
-    state.campField = v;
-    $$('#camp-field-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.campField));
-    renderCamps();
-  });
+
   const campTypes = ['全部', '冬令营', '夏令营', '暑校', '学习班'];
   chipRow($('#camp-chips'), campTypes, state.camp, v => {
     state.camp = v; renderCamps();
   });
-}
-function syncChips() {
-  $$('#school-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.school));
-  $$('#degree-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.degree));
-  $$('#field-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.field));
-  renderPrograms();
+  $('#camp-field-select').onchange = e => { state.campField = e.target.value; renderCamps(); };
 }
 
 /* ---------- 卡片 ---------- */
@@ -97,7 +91,7 @@ function deadlineChip(e) {
   if (days < 0) return `<span class="chip-dl dl-none">已截止</span>`;
   if (days === 0) return `<span class="chip-dl dl-urgent">今天截止</span>`;
   if (days <= 7) return `<span class="chip-dl dl-urgent">剩 ${days} 天</span>`;
-  if (days <= 30) return `<span class="chip-dl dl-mid">${days} 天后截止</span>`;
+  if (days <= 30) return `<span class="chip-dl dl-soon">${days} 天后截止</span>`;
   return `<span class="chip-dl dl-far">${fmtMD(e.deadline)} 截止</span>`;
 }
 
@@ -109,7 +103,7 @@ function cardHTML(e, i) {
   const degree = e.degree || '';
   const tags = (e.tags || []).filter(t => t !== '往期参考').slice(0, 3);
   const pastBadge = e.lastCycle
-    ? '<span class="badge-past">去年版 · 今年未发</span>'
+    ? '<span class="badge-past">去年通知 · 今年未发</span>'
     : (isPast ? '<span class="badge-past">往期参考</span>' : '');
   return `
 <article class="card reveal${expired ? ' expired' : ''}" style="transition-delay:${Math.min((i % 9) * 45, 360)}ms">
@@ -178,6 +172,30 @@ function renderCamps() {
   observeReveals();
 }
 
+/* ---------- hero 摘要卡 ---------- */
+function renderDigest(all) {
+  const box = $('#hero-digest');
+  if (!box) return;
+  const soon = all
+    .filter(e => { const d = daysUntil(e.deadline); return d !== null && d >= 0 && d <= 30; })
+    .sort((a, b) => daysUntil(a.deadline) - daysUntil(b.deadline))
+    .slice(0, 3);
+  const row = e => {
+    const d = daysUntil(e.deadline);
+    const cls = d <= 7 ? 'urgent' : 'soon';
+    const label = d === 0 ? '今天' : `剩 ${d} 天`;
+    return `
+<a class="hd-row" href="#programs">
+  <span class="hd-days ${cls}">${label}</span>
+  <span class="hd-name"><span class="hd-school">${esc(e.schoolShort || e.school || '')}</span>${esc(e.title)}</span>
+  <span class="hd-date">${fmtMD(e.deadline)} 截止</span>
+</a>`;
+  };
+  box.innerHTML = soon.length
+    ? `<div class="hd-title"><span>30 天内截止</span><a href="#programs">查看全部 →</a></div>${soon.map(row).join('')}`
+    : `<div class="hd-title"><span>30 天内暂无截止条目</span></div>`;
+}
+
 /* ---------- 统计 ---------- */
 function countUp(el, n) {
   if (n <= 0) { el.textContent = '0'; return; }
@@ -200,6 +218,9 @@ function renderStats(all) {
 $('#search').addEventListener('input', e => { state.q = e.target.value.trim(); renderPrograms(); });
 $('#sort').addEventListener('change', e => { state.sort = e.target.value; renderPrograms(); });
 $('#hide-expired').addEventListener('change', e => { state.hideExpired = e.target.checked; renderPrograms(); });
+addEventListener('scroll', () => {
+  $('#nav').classList.toggle('scrolled', scrollY > 8);
+}, { passive: true });
 
 let io = null;
 function observeReveals() {
@@ -214,7 +235,7 @@ function observeReveals() {
 const DS_URL = 'https://api.deepseek.com/chat/completions';
 const KEY_NAME = 'gradar_ds_key';
 const getKey = () => localStorage.getItem(KEY_NAME) || '';
-const history = []; // {role, content}
+const history = [];
 
 const ALIAS = {
   '清华': '清华大学', '北大': '北京大学', '复旦': '复旦大学', '上交': '上海交通大学', '交大': '上海交通大学',
@@ -360,7 +381,7 @@ async function send(question) {
 
 function refreshKeyPanel() {
   const has = !!getKey();
-  $('#key-hint').textContent = has ? '已配置 DeepSeek Key（仅存本机浏览器）。' : '填入你的 DeepSeek API Key（只保存在本机浏览器里）：';
+  $('#key-hint').textContent = has ? '已配置 DeepSeek Key（仅存本机浏览器）。' : '填入你的 DeepSeek API Key（只保存在本机浏览器）：';
   $('#key-clear').hidden = !has;
 }
 $('#key-save').addEventListener('click', () => {
@@ -380,10 +401,10 @@ $('#chat-form').addEventListener('submit', e => {
 });
 
 const SUGGESTS = [
-  '核工程大三，规划一下 2028 保研路线',
-  '西湖大学和中科大直博怎么选',
-  '现在还有哪些没截止的冬令营',
-  '有哪些联培博士项目值得关注',
+  '30 天内截止的项目有哪些',
+  '有哪些联培博士项目',
+  '西湖大学博士怎么申请',
+  '数学方向有哪些暑校可以关注',
 ];
 $('#suggest-row').innerHTML = SUGGESTS.map(s => `<button class="suggest">${esc(s)}</button>`).join('');
 $('#suggest-row').addEventListener('click', e => {
@@ -396,5 +417,5 @@ $('#suggest-row').addEventListener('click', e => {
 /* ---------- 启动 ---------- */
 refreshKeyPanel();
 if (!getKey()) $('#key-panel').hidden = false;
-addMsg('msg-ai', '你好。截止日期、名额这类硬信息我只引站内数据；择校和规划的事随便聊。先配好 Key（如果还没配），然后提问。');
+addMsg('msg-ai', '先在下方填入 DeepSeek API Key（platform.deepseek.com 可申请，只存在本机浏览器）。之后直接提问：涉及截止日期、名额等事实，我只引用站内收录的条目并附原文链接。');
 boot();
