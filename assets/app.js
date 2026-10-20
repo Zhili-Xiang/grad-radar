@@ -57,8 +57,12 @@ function chipRow(el, items, active, onPick) {
 }
 
 function buildFilters(all) {
+  // 院校下拉只列“招生项目”区可见条目（未过期）出现过的院校，
+  // 避免只有夏令营/已截止条目的单位点了显示为空
   const schoolCount = new Map();
-  all.forEach(e => {
+  (DATA.programs || []).forEach(e => {
+    const d = daysUntil(e.deadline);
+    if (d !== null && d < 0) return;
     const k = e.schoolShort || e.school || '其他';
     schoolCount.set(k, (schoolCount.get(k) || 0) + 1);
   });
