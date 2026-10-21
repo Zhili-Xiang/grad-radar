@@ -6,7 +6,7 @@
 <title>升学雷达 — 2026–27 招生信息聚合</title>
 <meta name="description" content="聚合清北复交浙、中科院、中科大、西湖大学等院校 2026–27 招生周期的硕博简章、直博、联培、冬令营与暑校信息，每周一更新，每条附官网原文。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%230071e3' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%230071e3' stroke-width='2' opacity='.6'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%230071e3'/%3E%3Cpath d='M16 16 L28 7 A15 15 0 0 0 16 1 Z' fill='%230071e3' opacity='.28'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css?v=4">
+<link rel="stylesheet" href="assets/style.css?v=5">
 </head><body id="top">
 
 <nav id="nav">
@@ -69,7 +69,7 @@
       <label class="check"><input type="checkbox" id="hide-expired" checked>隐藏已截止</label>
     </div>
   </div>
-  <div class="card-grid" id="program-grid"></div>
+  <div class="mods" id="program-mods"></div>
   <p class="empty" id="program-empty" hidden>没有匹配的条目，换个条件试试。</p>
 </section>
 
@@ -78,14 +78,26 @@
     <h2>联培专区</h2>
     <p class="section-sub">按机构聚合：国家实验室、新型研究型大学与研究所同各高校的联合培养项目，点击机构查看合作明细。</p>
   </div>
-  <div id="joint-grid" class="hub-grid reveal"></div>
+  <div class="reveal" id="joint-wrap">
+    <div id="joint-grid" class="hub-grid"></div>
+    <div class="pg-ctl" id="joint-grid-pager" data-mod="joint-hubs" hidden>
+      <button class="pg-btn pg-prev" aria-label="上一页">‹</button>
+      <span class="pg-ind"></span>
+      <button class="pg-btn pg-next" aria-label="下一页">›</button>
+    </div>
+  </div>
   <div id="joint-detail" hidden>
     <button class="btn btn-ghost joint-back" id="joint-back">← 返回全部机构</button>
     <div class="joint-hub-head">
       <h3 id="joint-hub-name"></h3>
       <p class="joint-hub-sub" id="joint-hub-sub"></p>
     </div>
-    <div class="card-grid" id="joint-cards"></div>
+    <div class="card-grid pg-grid" id="joint-cards"></div>
+    <div class="pg-ctl" id="joint-cards-pager" hidden>
+      <button class="pg-btn pg-prev" aria-label="上一页">‹</button>
+      <span class="pg-ind"></span>
+      <button class="pg-btn pg-next" aria-label="下一页">›</button>
+    </div>
   </div>
 </section>
 
@@ -108,7 +120,7 @@
       </select>
     </div>
   </div>
-  <div class="card-grid" id="camp-grid"></div>
+  <div class="mods" id="camp-mods"></div>
   <p class="empty" id="camp-empty" hidden>没有匹配的条目。</p>
 </section>
 
@@ -164,6 +176,6 @@
   <p>所有招生信息以各校官网原文为准；本站不收集任何数据，API Key 仅存于你的浏览器本地。</p>
 </footer>
 
-<script src="assets/app.js?v=6"></script>
+<script src="assets/app.js?v=7"></script>
 </body>
 </html>

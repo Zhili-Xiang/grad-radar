@@ -338,6 +338,40 @@ footer{
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
 .reveal.in{opacity:1;transform:none}
 
+/* ---------- 可折叠模块 + 横向翻页 ---------- */
+.mods{display:flex;flex-direction:column;gap:14px}
+.mod{
+  background:rgba(0,0,0,.02);
+  border:1px solid rgba(0,0,0,.05);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.mod-head{
+  width:100%;display:flex;align-items:center;gap:12px;
+  padding:15px 22px;background:transparent;border:0;cursor:pointer;
+  font:inherit;color:var(--ink);text-align:left;
+}
+.mod-head:hover{background:rgba(0,0,0,.03)}
+.mod-name{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.mod-count{font-size:12px;color:var(--ink-3);background:rgba(0,0,0,.05);border-radius:980px;padding:3px 10px;white-space:nowrap}
+.mod-chev{margin-left:auto;color:var(--ink-3);display:flex;transition:transform .35s cubic-bezier(.2,.7,.3,1)}
+.mod.open .mod-chev{transform:rotate(180deg)}
+.mod-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.2,.7,.3,1)}
+.mod.open .mod-body{grid-template-rows:1fr}
+.mod-clip{overflow:hidden;min-height:0;padding:0 16px}
+.mod.open .mod-clip{padding-bottom:14px}
+.pg-grid{scroll-margin-top:calc(var(--nav-h) + 14px)}
+.pg-ctl{display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 4px}
+.pg-btn{
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-2);font-size:18px;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,border-color .2s,color .2s;
+}
+.pg-btn:hover:not(:disabled){background:var(--blue);border-color:var(--blue);color:#fff}
+.pg-btn:disabled{opacity:.32;cursor:default}
+.pg-ind{font-size:13px;color:var(--ink-3);min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
+
 /* ---------- responsive ---------- */
 @media (max-width:760px){
   .nav-links{display:none}
@@ -350,6 +384,9 @@ footer{
   .msg{max-width:94%}
   .toolbar{flex-direction:column;align-items:stretch}
   .toolbar select{max-width:none;width:100%}
+  .mod-head{padding:13px 16px}
+  .mod-clip{padding:0 12px}
+  .mod.open .mod-clip{padding-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}

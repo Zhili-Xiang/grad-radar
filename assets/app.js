@@ -27,7 +27,7 @@ async function boot() {
     DATA = await res.json();
   } catch (e) {
     $('#nav-updated').textContent = '数据尚未生成';
-    ['program-grid', 'camp-grid'].forEach(id => {
+    ['program-mods', 'camp-mods'].forEach(id => {
       $('#' + id).innerHTML = `<p class="empty">数据文件还没就绪（可能正在首次抓取），稍后刷新重试。</p>`;
     });
     return;
@@ -145,6 +145,7 @@ function searchable(e) {
 
 function renderPrograms() {
   if (!DATA) return;
+  [...pgPages.keys()].filter(k => k.startsWith('pf-')).forEach(k => pgPages.delete(k));
   let list = (DATA.programs || []).filter(e =>
     (state.school === '全部' || e.schoolShort === state.school || e.school === state.school) &&
     (state.degree === '全部' || e.degree === state.degree || (e.tags || []).includes(state.degree)) &&
@@ -163,13 +164,20 @@ function renderPrograms() {
   } else {
     list.sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''));
   }
-  $('#program-grid').innerHTML = list.map(cardHTML).join('');
+  const groups = state.field === '全部'
+    ? FIELDS.map(f => [f, list.filter(e => e.field === f)]).filter(g => g[1].length)
+    : [[state.field, list]];
+  const forceOpen = !!state.q || state.field !== '全部';
+  $('#program-mods').innerHTML = groups.length
+    ? groups.map(([name, items], i) => moduleHTML('pf-' + name, name, items, forceOpen || i === 0)).join('')
+    : '';
+  registerGrids($('#program-mods'));
   $('#program-empty').hidden = list.length > 0;
-  observeReveals();
 }
 
 function renderCamps() {
   if (!DATA) return;
+  [...pgPages.keys()].filter(k => k.startsWith('cf-')).forEach(k => pgPages.delete(k));
   let list = (DATA.camps || []).filter(e =>
     (state.camp === '全部' || e.degree === state.camp) &&
     matchField(e, state.campField));
@@ -180,10 +188,119 @@ function renderCamps() {
     const vb = kb === null ? 1e9 : (kb < 0 ? 1e9 + kb : kb);
     return va - vb;
   });
-  $('#camp-grid').innerHTML = list.map(cardHTML).join('');
+  const types = ['冬令营', '夏令营', '暑校', '学习班'];
+  const groups = state.camp === '全部'
+    ? [...types, ...[...new Set(list.map(e => e.degree))].filter(d => !types.includes(d))]
+        .map(t => [t, list.filter(e => e.degree === t)]).filter(g => g[1].length)
+    : [[state.camp, list]];
+  $('#camp-mods').innerHTML = groups.length
+    ? groups.map(([name, items], i) => moduleHTML('cf-' + name, name, items, i === 0)).join('')
+    : '';
+  registerGrids($('#camp-mods'));
   $('#camp-empty').hidden = list.length > 0;
+}
+
+/* ---------- 可折叠模块 + 横向翻页 ---------- */
+const FIELDS = ['数学物理', '生物医学', '化学材料', '计科软工', '电子信息', '其他交叉'];
+const modOpen = new Set();     // 用户主动展开/收起过的模块
+const modTouched = new Set();  // 是否被用户操作过（用于默认展开第一个模块）
+const pgPages = new Map();     // 模块 → 当前页码（从 0 计）
+const pgRegistry = new Map();  // 模块 → { items, pp, grid }
+
+function perPageFor(w) {
+  if (w >= 980) return 6;
+  if (w >= 640) return 4;
+  return 2;
+}
+const pagesOf = rec => Math.max(1, Math.ceil(rec.items.length / rec.pp));
+
+function moduleHTML(key, name, items, open) {
+  open = modTouched.has(key) ? modOpen.has(key) : open;
+  if (!pgPages.has(key)) pgPages.set(key, 0);
+  const pp = perPageFor(innerWidth);
+  const reg = { items, pp, grid: null };
+  pgRegistry.set(key, reg);
+  const pages = pagesOf(reg);
+  const page = Math.min(pgPages.get(key), pages - 1);
+  pgPages.set(key, page);
+  const slice = items.slice(page * pp, page * pp + pp);
+  return `
+<section class="mod${open ? ' open' : ''}" data-mod="${esc(key)}">
+  <button class="mod-head" aria-expanded="${open}">
+    <span class="mod-name">${esc(name)}</span>
+    <span class="mod-count">${items.length} 条</span>
+    <span class="mod-chev" aria-hidden="true"><svg viewBox="0 0 12 8" width="12" height="8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </button>
+  <div class="mod-body"><div class="mod-clip">
+    <div class="pg-grid card-grid">${slice.map((e, i) => cardHTML(e, i)).join('')}</div>
+    ${pages > 1 ? `
+    <div class="pg-ctl">
+      <button class="pg-btn pg-prev"${page === 0 ? ' disabled' : ''} aria-label="上一页">‹</button>
+      <span class="pg-ind">${page + 1} / ${pages} 页</span>
+      <button class="pg-btn pg-next"${page === pages - 1 ? ' disabled' : ''} aria-label="下一页">›</button>
+    </div>` : ''}
+  </div></div>
+</section>`;
+}
+
+function registerGrids(root) {
+  root.querySelectorAll('.mod').forEach(mod => {
+    const key = mod.dataset.mod;
+    const reg = pgRegistry.get(key);
+    if (reg) reg.grid = mod.querySelector('.pg-grid');
+  });
   observeReveals();
 }
+
+function goPage(key, dir) {
+  const reg = pgRegistry.get(key);
+  if (!reg || !reg.grid) return;
+  const pages = pagesOf(reg);
+  const p = Math.max(0, Math.min(pages - 1, (pgPages.get(key) || 0) + dir));
+  pgPages.set(key, p);
+  reg.grid.innerHTML = reg.items.slice(p * reg.pp, p * reg.pp + reg.pp).map((e, i) => cardHTML(e, i)).join('');
+  reg.grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const mod = document.querySelector(`[data-mod="${CSS.escape(key)}"]`);
+  if (mod) {
+    const ind = mod.querySelector('.pg-ind');
+    if (ind) ind.textContent = `${p + 1} / ${pages} 页`;
+    const prev = mod.querySelector('.pg-prev'), next = mod.querySelector('.pg-next');
+    if (prev) prev.disabled = p === 0;
+    if (next) next.disabled = p === pages - 1;
+  }
+  observeReveals();
+}
+
+document.addEventListener('click', e => {
+  const head = e.target.closest('.mod-head');
+  if (head) {
+    const mod = head.closest('.mod');
+    const key = mod.dataset.mod;
+    mod.classList.toggle('open');
+    const nowOpen = mod.classList.contains('open');
+    head.setAttribute('aria-expanded', nowOpen);
+    modTouched.add(key);
+    nowOpen ? modOpen.add(key) : modOpen.delete(key);
+    return;
+  }
+  const btn = e.target.closest('.pg-btn');
+  if (btn && !btn.disabled) {
+    const holder = btn.closest('[data-mod]');
+    const key = holder && holder.dataset.mod;
+    const reg = key && pgRegistry.get(key);
+    if (reg && reg.grid && reg.items.length) goPage(key, btn.classList.contains('pg-next') ? 1 : -1);
+  }
+});
+
+let rsTimer = null;
+addEventListener('resize', () => {
+  clearTimeout(rsTimer);
+  rsTimer = setTimeout(() => {
+    pgPages.clear();
+    renderPrograms(); renderCamps();
+    if (curHub) openHub(curHub); else renderJoint();
+  }, 180);
+});
 
 /* ---------- 联培专区 ---------- */
 const HUB_TEST = {
@@ -201,6 +318,12 @@ function partnerOf(e, hub) {
   const m = (e.title || '').split(/[-—－]/).map(s => s.trim()).filter(s => s && (!re || !re.test(s)));
   return m[0] || '';
 }
+function hubPerPageFor(w) {
+  if (w >= 980) return 12;
+  if (w >= 640) return 8;
+  return 4;
+}
+let curHub = null;
 function renderJoint() {
   if (!DATA) return;
   const all = [...(DATA.programs || []), ...(DATA.camps || [])].filter(e => e.hub);
@@ -210,7 +333,7 @@ function renderJoint() {
     groups.get(e.hub).push(e);
   });
   const hubs = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
-  $('#joint-grid').innerHTML = hubs.map(([hub, list]) => {
+  const cards = hubs.map(([hub, list]) => {
     const partners = [...new Set(list.map(e => partnerOf(e, hub)).filter(Boolean))];
     const shown = partners.slice(0, 5);
     const more = partners.length - shown.length;
@@ -220,17 +343,37 @@ function renderJoint() {
   <span class="hub-count">合作高校/机构 ${partners.length} 家</span>
   <div class="hub-partners">${shown.map(p => `<span>${esc(p)}</span>`).join('')}${more > 0 ? `<span class="more">等 ${partners.length} 家</span>` : ''}</div>
 </button>`;
-  }).join('');
+  });
+  renderPaged('joint-hubs', $('#joint-grid'), cards, hubPerPageFor(innerWidth));
   $('#joint-grid').onclick = e => {
     const b = e.target.closest('.hub-card');
     if (!b) return;
     openHub(b.dataset.hub);
   };
 }
+function renderPaged(key, gridEl, html, pp) {
+  // 字符串分页：切片渲染 + 更新同容器内的翻页控件
+  if (!pgPages.has(key)) pgPages.set(key, 0);
+  const pages = Math.ceil(html.length / pp) || 1;
+  const page = Math.min(pgPages.get(key), pages - 1);
+  pgPages.set(key, page);
+  gridEl.innerHTML = html.slice(page * pp, page * pp + pp).join('');
+  const ctl = gridEl.parentElement.querySelector('.pg-ctl[data-mod="' + key + '"]');
+  if (ctl) {
+    ctl.hidden = pages <= 1;
+    const ind = ctl.querySelector('.pg-ind');
+    if (ind) ind.textContent = `${page + 1} / ${pages} 页`;
+    const prev = ctl.querySelector('.pg-prev'), next = ctl.querySelector('.pg-next');
+    if (prev) prev.disabled = page === 0;
+    if (next) next.disabled = page === pages - 1;
+  }
+}
 function openHub(hub) {
+  curHub = hub;
   const all = [...(DATA.programs || []), ...(DATA.camps || [])].filter(e => e.hub === hub);
   const partners = [...new Set(all.map(e => partnerOf(e, hub)).filter(Boolean))];
   $('#joint-grid').hidden = true;
+  $('#joint-grid-pager').hidden = true;
   const detail = $('#joint-detail');
   detail.hidden = false;
   $('#joint-hub-name').textContent = hub;
@@ -241,13 +384,37 @@ function openHub(hub) {
     const vb = db === null ? 1e9 : (db < 0 ? 1e9 + db : db);
     return va - vb;
   });
-  $('#joint-cards').innerHTML = all.map((e, i) => cardHTML(e, i)).join('');
+  const pp = perPageFor(innerWidth);
+  const key = 'jd-' + hub;
+  if (!pgPages.has(key)) pgPages.set(key, 0);
+  const reg = { items: all, pp, grid: $('#joint-cards') };
+  pgRegistry.set(key, reg);
+  const pages = pagesOf(reg);
+  const page = Math.min(pgPages.get(key), pages - 1);
+  pgPages.set(key, page);
+  reg.grid.innerHTML = all.slice(page * pp, page * pp + pp).map((e, i) => cardHTML(e, i)).join('');
+  const ctl = $('#joint-cards-pager');
+  ctl.hidden = pages <= 1;
+  ctl.dataset.mod = key;
+  ctl.querySelector('.pg-ind').textContent = `${page + 1} / ${pages} 页`;
+  ctl.querySelector('.pg-prev').disabled = page === 0;
+  ctl.querySelector('.pg-next').disabled = page === pages - 1;
   observeReveals();
   detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 $('#joint-back').addEventListener('click', () => {
+  curHub = null;
   $('#joint-detail').hidden = true;
   $('#joint-grid').hidden = false;
+  $('#joint-grid-pager').hidden = false;
+  renderJoint();
+  $('#joint').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+$('#joint-grid-pager').addEventListener('click', e => {
+  const btn = e.target.closest('.pg-btn');
+  if (!btn || btn.disabled) return;
+  pgPages.set('joint-hubs', (pgPages.get('joint-hubs') || 0) + (btn.classList.contains('pg-next') ? 1 : -1));
+  renderJoint();
   $('#joint-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 

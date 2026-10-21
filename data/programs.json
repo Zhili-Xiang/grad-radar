@@ -1,10 +1,10 @@
 {
  "fetchedAt": "2026-10-21",
- "generatedAt": "2026-10-21T22:35:49",
+ "generatedAt": "2026-10-21T23:19:03",
  "counts": {
-  "programs": 263,
+  "programs": 265,
   "camps": 45,
-  "schools": 70
+  "schools": 72
  },
  "programs": [
   {
@@ -8773,6 +8773,78 @@
   },
   {
    "category": "program",
+   "school": "香港科技大学",
+   "schoolShort": "港科大",
+   "institute": "深圳湾实验室（深圳医学科学院） × 香港科技大学",
+   "title": "深圳湾-港科大2025联培博士",
+   "degree": "联培",
+   "url": "https://www.szbl.ac.cn/info/2012/8321.htm",
+   "publishedAt": "2024-11-11",
+   "deadline": null,
+   "startDate": null,
+   "location": "深圳/香港",
+   "highlights": "深圳湾实验室与香港科技大学联合培养博士（SZBL-HKUST Joint PhD Program）：双导师指导，颁发香港科技大学博士学位。方向覆盖生物医学科学、公共卫生、微生物学、神经科学等医学与生命科学领域。学生向港科大缴纳学费，深圳湾实验室资助年限最长 4 年，在深圳湾实验室与港科大两地开展研究。2025 年批次已结束，2026/2027 版简章留意深圳湾实验室招生网。",
+   "tags": [
+    "联培",
+    "博士",
+    "港校"
+   ],
+   "snippet": "深圳湾实验室官网预报名＋港科大系统申请；往期批次为 11 月发布。",
+   "source": "深圳湾实验室官网",
+   "dateEstimated": false,
+   "requirements": [
+    "学历：认可院校学士及以上（硕士起点或本科起点直读）",
+    "GPA：硕士起点本科及硕士均 3.0/4；本科起点申请港科大 3.0/4",
+    "英语（其一）：托福 iBT≥80；雅思 6.5（单科≥5.5）；不接受家考托福",
+    "须符合香港科技大学全部入学要求；学费缴港科大，超 4 年费用自理"
+   ],
+   "fields": [
+    "生物医学"
+   ],
+   "field": "生物医学",
+   "hub": "深圳医学科学院",
+   "lastCycle": true,
+   "id": "p304",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "香港大学",
+   "schoolShort": "港大",
+   "institute": "深圳湾实验室（深圳医学科学院） × 香港大学",
+   "title": "深圳湾-港大2025联培博士",
+   "degree": "联培",
+   "url": "https://www.szbl.ac.cn/info/2012/8321.htm",
+   "publishedAt": "2024-11-11",
+   "deadline": null,
+   "startDate": null,
+   "location": "深圳/香港",
+   "highlights": "深圳湾实验室与香港大学联合培养博士（SZBL-HKU Joint PhD Program）：双导师指导，颁发香港大学博士学位。方向含精准口腔医学、癌症生物学、生物信息与系统生物学、微生物组学、生物材料、3D 生物打印等。学生向港大缴纳学费，深圳湾实验室资助年限最长 4 年。2025 年批次已结束，2026/2027 版简章留意深圳湾实验室招生网。",
+   "tags": [
+    "联培",
+    "博士",
+    "港校"
+   ],
+   "snippet": "深圳湾实验室官网预报名＋港大系统申请；往期批次为 11 月发布。",
+   "source": "深圳湾实验室官网",
+   "dateEstimated": false,
+   "requirements": [
+    "学历：认可院校学士及以上（硕士起点或本科起点直读）",
+    "GPA：硕士起点本科及硕士均 3.0/4；本科起点申请港大须 3.6/4",
+    "英语（其一）：托福 iBT≥85（不接受家考与纸考）；雅思 6.5（单科≥6.0，不接受单科重考）；GCE/IGCSE/CPE 达 C 级亦可",
+    "须符合香港大学全部入学要求；学费缴港大，超 4 年费用自理"
+   ],
+   "fields": [
+    "生物医学"
+   ],
+   "field": "生物医学",
+   "hub": "深圳医学科学院",
+   "lastCycle": true,
+   "id": "p305",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
    "school": "香港科技大学（广州）",
    "schoolShort": "港科大",
    "institute": "香港科技大学（广州）与IDEA研究院联合培养",
@@ -8804,7 +8876,7 @@
    "field": "计科软工",
    "hub": "IDEA研究院",
    "lastCycle": false,
-   "id": "p304",
+   "id": "p306",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8840,7 +8912,7 @@
    "field": "数学物理",
    "hub": "港中深",
    "lastCycle": false,
-   "id": "p305",
+   "id": "p307",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8871,7 +8943,7 @@
    "field": "其他交叉",
    "hub": "港中文",
    "lastCycle": false,
-   "id": "p306",
+   "id": "p308",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8906,7 +8978,7 @@
    "field": "其他交叉",
    "hub": "崂山实验室",
    "lastCycle": false,
-   "id": "p307",
+   "id": "p309",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8941,7 +9013,7 @@
    "field": "其他交叉",
    "hub": "张江实验室",
    "lastCycle": false,
-   "id": "p308",
+   "id": "p310",
    "firstSeen": "2026-10-20"
   }
  ],
