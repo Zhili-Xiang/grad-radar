@@ -212,7 +212,8 @@ function renderDigest(all) {
 
 /* ---------- 统计 ---------- */
 function countUp(el, n) {
-  if (n <= 0) { el.textContent = '0'; return; }
+  el.textContent = n;
+  if (n <= 0 || document.hidden) return;
   const t0 = performance.now(), dur = 900;
   const tick = t => {
     const p = Math.min((t - t0) / dur, 1);
