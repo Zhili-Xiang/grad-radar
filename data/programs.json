@@ -1,10 +1,10 @@
 {
  "fetchedAt": "2026-10-21",
- "generatedAt": "2026-10-21T22:11:15",
+ "generatedAt": "2026-10-21T22:35:49",
  "counts": {
-  "programs": 246,
+  "programs": 263,
   "camps": 45,
-  "schools": 64
+  "schools": 70
  },
  "programs": [
   {
@@ -3180,6 +3180,39 @@
   },
   {
    "category": "program",
+   "school": "哈尔滨工业大学",
+   "schoolShort": "哈工大（深圳）",
+   "institute": "鹏城国家实验室 × 哈尔滨工业大学（深圳）",
+   "title": "鹏城-哈工大2027联培博士",
+   "degree": "联培",
+   "url": "https://yzw.pcl.ac.cn",
+   "publishedAt": "2026-09-19",
+   "deadline": null,
+   "startDate": null,
+   "location": "深圳",
+   "highlights": "鹏城实验室研究生招生网2026年9月已发布\"2027年鹏城国家实验室-哈尔滨工业大学联合培养博士研究生专项计划招生导师名单（秋招）\"，哈工大（深圳）研招网同步发布\"与国家实验室联培——2027年鹏城国家实验室博士秋季招生简介\"（2026-09-17）。培养模式为课程在哈工大（深圳）、论文结合鹏城实验室国家重大科研任务，学籍学位归哈工大。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "2027秋招导师名单已公布，报名按鹏城实验室招生网与哈工大博士招生系统进行。",
+   "source": "鹏城实验室研究生招生网",
+   "dateEstimated": true,
+   "requirements": [
+    "以鹏城实验室招生网2027秋招导师名单及哈工大2027年博士招生简章为准"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "鹏城实验室",
+   "lastCycle": false,
+   "id": "p095",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
    "school": "上海交通大学",
    "schoolShort": "上交",
    "institute": "巴黎卓越工程师学院（原巴黎高科卓越工程师学院）",
@@ -3208,7 +3241,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p095",
+   "id": "p096",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3242,7 +3275,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "p096",
+   "id": "p097",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3278,7 +3311,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "浦江国际学院2027年招收推免生综合考核实施细则",
-   "id": "p097",
+   "id": "p098",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3308,7 +3341,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2027年推荐免试直硕、直博生履行正式报名手续的通知及资格复审要求",
-   "id": "p098",
+   "id": "p099",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3343,7 +3376,7 @@
    "hub": "大湾区大学",
    "lastCycle": false,
    "srcTitle": "大湾区大学-哈尔滨工业大学2027年联合培养博士研究生秋季招生简介",
-   "id": "p099",
+   "id": "p100",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3380,7 +3413,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "南方科技大学2027级博士研究生招生优秀生源快响计划报考通知",
-   "id": "p100",
+   "id": "p101",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3415,7 +3448,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "南方科技大学接收2027级推荐免试研究生（含直博生）招生简章",
-   "id": "p101",
+   "id": "p102",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3446,7 +3479,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院自动化研究所2026年推免面试（工程硕博士培养改革专项）通知",
-   "id": "p102",
+   "id": "p103",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3479,7 +3512,7 @@
    "hub": "北大",
    "lastCycle": false,
    "srcTitle": "前沿交叉学科研究院-北京脑科学与类脑研究所联合培养项目2027年推荐免试研究生复试安排及复试名单",
-   "id": "p103",
+   "id": "p104",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3516,7 +3549,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2027年浙江大学爱丁堡大学联合学院招收推免生综合考核实施细则",
-   "id": "p104",
+   "id": "p105",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3552,7 +3585,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": false,
-   "id": "p105",
+   "id": "p106",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3588,7 +3621,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p106",
+   "id": "p107",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3621,7 +3654,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2027年浙江大学伊利诺伊大学厄巴纳香槟校区联合学院招收推免生综合考核实施细则",
-   "id": "p107",
+   "id": "p108",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3653,7 +3686,7 @@
    "hub": "中科大",
    "lastCycle": false,
    "srcTitle": "中国科学技术大学天文与空间科学学院（紫金山天文台）关于接收2027年推免生（含直博生）的通知",
-   "id": "p108",
+   "id": "p109",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3686,7 +3719,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": false,
-   "id": "p109",
+   "id": "p110",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3721,7 +3754,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p110",
+   "id": "p111",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3758,7 +3791,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "p112",
+   "id": "p113",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3796,7 +3829,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p113",
+   "id": "p114",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3832,7 +3865,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": false,
-   "id": "p114",
+   "id": "p115",
    "firstSeen": "2026-10-21"
   },
   {
@@ -3867,7 +3900,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "上海交通大学人工智能学院2027年接收推荐免试研究生（含直博生）预推免办法",
-   "id": "p115",
+   "id": "p116",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3899,7 +3932,7 @@
    "hub": "国科大",
    "lastCycle": false,
    "srcTitle": "中国科学院大学2027年工程硕博士培养改革专项全日制工程硕博士研究生招生简章",
-   "id": "p116",
+   "id": "p117",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3935,7 +3968,7 @@
    "hub": "中科大",
    "lastCycle": false,
    "srcTitle": "中国科学技术大学-北京通用人工智能研究院2027年联合培养博士生专项计划（“通计划”）招生简章",
-   "id": "p117",
+   "id": "p118",
    "firstSeen": "2026-10-20"
   },
   {
@@ -3965,7 +3998,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "p118",
+   "id": "p119",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4002,7 +4035,7 @@
    "field": "计科软工",
    "hub": null,
    "lastCycle": false,
-   "id": "p119",
+   "id": "p120",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4038,7 +4071,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": false,
-   "id": "p120",
+   "id": "p121",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4076,7 +4109,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p121",
+   "id": "p122",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4112,7 +4145,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "上海交通大学2027年\"医工交叉平台\"博士研究生招生简章",
-   "id": "p122",
+   "id": "p123",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4145,7 +4178,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "p123",
+   "id": "p124",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4175,7 +4208,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p124",
+   "id": "p125",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4213,7 +4246,7 @@
    "field": "化学材料",
    "hub": "深圳理工大学",
    "lastCycle": false,
-   "id": "p125",
+   "id": "p126",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4251,7 +4284,7 @@
    "field": "生物医学",
    "hub": "深圳理工大学",
    "lastCycle": false,
-   "id": "p126",
+   "id": "p127",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4283,7 +4316,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学技术大学2027年推免生接收办法",
-   "id": "p127",
+   "id": "p128",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4317,7 +4350,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "北京大学碳中和研究院关于接收2027年推荐免试（直博）研究生的说明",
-   "id": "p128",
+   "id": "p129",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4353,7 +4386,7 @@
    "field": "计科软工",
    "hub": "深圳理工大学",
    "lastCycle": false,
-   "id": "p130",
+   "id": "p131",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4388,7 +4421,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": false,
-   "id": "p131",
+   "id": "p132",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4418,7 +4451,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p132",
+   "id": "p133",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4449,7 +4482,7 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": false,
-   "id": "p133",
+   "id": "p134",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4485,8 +4518,42 @@
    "hub": "复旦",
    "lastCycle": false,
    "srcTitle": "复旦大学2027年工程硕博士培养改革专项推免研究生招生报名通知",
-   "id": "p134",
+   "id": "p135",
    "firstSeen": "2026-10-20"
+  },
+  {
+   "category": "program",
+   "school": "复旦大学",
+   "schoolShort": "复旦",
+   "institute": "张江国家实验室 × 复旦大学（工程硕博士培养改革专项）",
+   "title": "张江-复旦2027工程硕博专项",
+   "degree": "联培",
+   "url": "https://gsao.fudan.edu.cn/0a/23/c15014a789027/page.htm",
+   "publishedAt": "2026-08-31",
+   "deadline": null,
+   "startDate": null,
+   "location": "上海",
+   "highlights": "张江实验室2026-2027周期未单独发布公开联培简章，其博士联培主要挂靠合作高校专项进行：复旦大学2027年工程硕博士培养改革专项推免招生（拟招专业学位硕士推免生与直博生共170余人）将张江国家实验室列为联合培养合作单位，2026年9月1日设张江专场宣讲。张江实验室官网说明其与复旦、上交、浙大、南大、国科大、上科大等十余所高校常年联合招生培养专项计划博士（每年约200人，重点面向光子、微纳电子领域）。",
+   "tags": [
+    "联培",
+    "博士",
+    "推免"
+   ],
+   "snippet": "经复旦工程硕博士改革专项推免渠道申请，正式简章见复旦研究生院通知公告。",
+   "source": "复旦大学研究生招生",
+   "dateEstimated": false,
+   "requirements": [
+    "通过复旦大学2027年工程硕博士培养改革专项推免生招生渠道申请",
+    "张江实验室为该专项联合培养单位之一，具体名额方向以简章附表为准"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "张江实验室",
+   "lastCycle": false,
+   "id": "p136",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -4520,7 +4587,7 @@
    "hub": "东方理工",
    "lastCycle": false,
    "srcTitle": "中国科学技术大学与宁波东方理工大学2027年招收免试直博生预推免办法",
-   "id": "p135",
+   "id": "p137",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4555,7 +4622,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "未来技术学院2027年工程硕博士培养改革专项博士研究生招生说明",
-   "id": "p136",
+   "id": "p138",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4590,7 +4657,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院大学密码学院2027年接收推荐免试研究生报名通知（第二轮）",
-   "id": "p137",
+   "id": "p139",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4621,7 +4688,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p138",
+   "id": "p140",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4654,7 +4721,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p139",
+   "id": "p141",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4687,7 +4754,7 @@
    "hub": "中科大",
    "lastCycle": false,
    "srcTitle": "2027年中国科大应用化学与工程学院（长春应化所）接收推荐免试研究生预报名通知",
-   "id": "p140",
+   "id": "p142",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4720,7 +4787,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "清华大学交叉信息研究院2027年博士研究生招生综合考核及录取办法",
-   "id": "p141",
+   "id": "p143",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4758,7 +4825,42 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p142",
+   "id": "p144",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "宁波诺丁汉大学",
+   "schoolShort": "宁诺",
+   "institute": "甬江实验室 × 宁波诺丁汉大学",
+   "title": "甬江-宁诺2027联培博士",
+   "degree": "联培",
+   "url": "https://www.ylab.ac.cn/news/yJ_news/08-21/1412150113.html",
+   "publishedAt": "2026-08-21",
+   "deadline": "2026-09-30",
+   "startDate": null,
+   "location": "宁波",
+   "highlights": "甬江实验室-宁波诺丁汉大学2027年春季入学联培博士招生，学籍在宁诺、享受双方双师资与科研资源。设全额奖学金：免3年学费（共33万元），甬江实验室另提供每月不低于4500元助学金。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "2027年春季入学申请截止暂定2026-09-30（北京时间）。",
+   "source": "甬江实验室官网",
+   "dateEstimated": true,
+   "requirements": [
+    "按宁诺研究型博士申请要求执行",
+    "申请截止2026-09-30（暂定）",
+    "全额奖学金免3年学费33万元 + 月助研≥4500元"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "甬江实验室",
+   "lastCycle": false,
+   "id": "p146",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4789,7 +4891,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院自动化研究所2027年接收推荐免试生简章及第二批推免面试通知",
-   "id": "p144",
+   "id": "p147",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4821,7 +4923,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "类脑智能科学与技术研究院2027级推免研究生复试入围名单",
-   "id": "p145",
+   "id": "p148",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4858,7 +4960,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p146",
+   "id": "p149",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4895,7 +4997,7 @@
    "hub": "深圳医学科学院",
    "lastCycle": false,
    "srcTitle": "西湖大学-深圳医学科学院联合培养博士研究生项目2027年普博生招生第一批报名通知（9月批）",
-   "id": "p147",
+   "id": "p150",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4929,7 +5031,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "西湖大学2027年博士研究生招生普博生第一批报名通知（9月批）",
-   "id": "p148",
+   "id": "p151",
    "firstSeen": "2026-10-20"
   },
   {
@@ -4960,7 +5062,7 @@
    "field": "计科软工",
    "hub": null,
    "lastCycle": false,
-   "id": "p149",
+   "id": "p152",
    "firstSeen": "2026-10-21"
   },
   {
@@ -4991,7 +5093,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p150",
+   "id": "p153",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5022,7 +5124,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院上海药物研究所2027年接收推荐免试研究生公告",
-   "id": "p151",
+   "id": "p154",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5058,7 +5160,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "ZJUI学院关于2027年接收外校推荐免试研究生工作安排的通知",
-   "id": "p152",
+   "id": "p155",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5092,7 +5194,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "浙江大学关于2027年接收外校推荐免试研究生工作安排的通知",
-   "id": "p153",
+   "id": "p156",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5124,7 +5226,7 @@
    "field": "生物医学",
    "hub": "广州实验室",
    "lastCycle": false,
-   "id": "p154",
+   "id": "p157",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5161,7 +5263,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "西湖大学2027年接收推荐免试直博生报名通知",
-   "id": "p155",
+   "id": "p158",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5196,7 +5298,7 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": false,
-   "id": "p156",
+   "id": "p159",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5226,7 +5328,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p157",
+   "id": "p160",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5262,7 +5364,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "复旦大学生物技术学院2027级直博生招生报名通知",
-   "id": "p158",
+   "id": "p161",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5296,7 +5398,7 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": false,
-   "id": "p159",
+   "id": "p162",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5328,7 +5430,7 @@
    "field": "生物医学",
    "hub": "复旦",
    "lastCycle": false,
-   "id": "p162",
+   "id": "p165",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5363,7 +5465,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "上海交通大学2027级\"明志荣誉博士生\"招生简章",
-   "id": "p163",
+   "id": "p166",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5396,7 +5498,7 @@
    "field": "数学物理",
    "hub": "南科大",
    "lastCycle": false,
-   "id": "p164",
+   "id": "p167",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5432,7 +5534,7 @@
    "hub": "NIBS/北生所",
    "lastCycle": false,
    "srcTitle": "北京生命科学研究所2027年推荐免试研究生招生简章（含清华大学的TIMBR项目）",
-   "id": "p165",
+   "id": "p168",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5462,7 +5564,7 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": false,
-   "id": "p166",
+   "id": "p169",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5500,7 +5602,7 @@
    "hub": "深圳医学科学院",
    "lastCycle": false,
    "srcTitle": "清华大学-深圳医学科学院联合培养专项计划2027年博士研究生招生简章",
-   "id": "p167",
+   "id": "p170",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5531,7 +5633,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "清华大学2027年工程硕博士培养改革专项（全日制）招生简章",
-   "id": "p169",
+   "id": "p172",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5562,7 +5664,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p170",
+   "id": "p173",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5596,7 +5698,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "人工智能学院2027年接收推荐免试硕士（含直博生）招生公告",
-   "id": "p171",
+   "id": "p174",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5632,7 +5734,7 @@
    "hub": "南科大",
    "lastCycle": false,
    "srcTitle": "清华大学深圳国际研究生院-南方科技大学联合培养专项计划2027年博士研究生招生简章",
-   "id": "p172",
+   "id": "p175",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5669,7 +5771,7 @@
    "hub": "鹏城实验室",
    "lastCycle": false,
    "srcTitle": "清华大学深圳国际研究生院-鹏城国家实验室联合培养专项计划2027年博士研究生招生简章",
-   "id": "p173",
+   "id": "p176",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5705,7 +5807,7 @@
    "hub": "NIBS/北生所",
    "lastCycle": false,
    "srcTitle": "清华大学生命科学学院PTN项目2027年博士研究生招生简章",
-   "id": "p174",
+   "id": "p177",
    "firstSeen": "2026-10-20"
   },
   {
@@ -5737,7 +5839,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p175",
+   "id": "p178",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5771,7 +5873,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p176",
+   "id": "p179",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5805,7 +5907,7 @@
    "field": "化学材料",
    "hub": "清华",
    "lastCycle": false,
-   "id": "p177",
+   "id": "p180",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5840,7 +5942,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p178",
+   "id": "p181",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5874,7 +5976,7 @@
    "field": "生物医学",
    "hub": "CLS/PTN项目",
    "lastCycle": false,
-   "id": "p179",
+   "id": "p182",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5903,7 +6005,7 @@
    "field": "计科软工",
    "hub": null,
    "lastCycle": false,
-   "id": "p180",
+   "id": "p183",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5932,7 +6034,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p181",
+   "id": "p184",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5961,7 +6063,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p182",
+   "id": "p185",
    "firstSeen": "2026-10-21"
   },
   {
@@ -5994,7 +6096,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p183",
+   "id": "p186",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6027,7 +6129,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p184",
+   "id": "p187",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6057,7 +6159,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p185",
+   "id": "p188",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6090,7 +6192,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p186",
+   "id": "p189",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6120,7 +6222,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p187",
+   "id": "p190",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6150,7 +6252,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "p188",
+   "id": "p191",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6179,7 +6281,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p189",
+   "id": "p192",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6208,7 +6310,7 @@
    "field": "计科软工",
    "hub": null,
    "lastCycle": false,
-   "id": "p190",
+   "id": "p193",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6237,7 +6339,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p191",
+   "id": "p194",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6268,7 +6370,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "p192",
+   "id": "p195",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6297,7 +6399,7 @@
    "field": "计科软工",
    "hub": null,
    "lastCycle": false,
-   "id": "p193",
+   "id": "p196",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6326,7 +6428,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "p194",
+   "id": "p197",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6356,7 +6458,7 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": false,
-   "id": "p195",
+   "id": "p198",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6391,7 +6493,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "清华大学2027年博士研究生招生简章",
-   "id": "p196",
+   "id": "p199",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6426,7 +6528,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "清华大学人工智能学院2027年博士研究生招生简章",
-   "id": "p197",
+   "id": "p200",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6460,7 +6562,7 @@
    "hub": "鹏城实验室",
    "lastCycle": false,
    "srcTitle": "鹏城国家实验室联合培养专项计划2027年博士研究生招生简章",
-   "id": "p198",
+   "id": "p201",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6490,8 +6592,43 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "智能学院2027年招生指南",
-   "id": "p205",
+   "id": "p208",
    "firstSeen": "2026-10-20"
+  },
+  {
+   "category": "program",
+   "school": "广州医科大学",
+   "schoolShort": "广医",
+   "institute": "广州国家实验室 × 广州医科大学",
+   "title": "广州实验室-广医2026联培博士",
+   "degree": "联培",
+   "url": "https://yjs.gzhmu.edu.cn/info/1003/38912.htm",
+   "publishedAt": "2026-05-21",
+   "deadline": "2026-06-01",
+   "startDate": null,
+   "location": "广州",
+   "highlights": "广州医科大学联合培养博士专项计划2026年第二批招生，方向为呼吸系统疾病及其防控相关生命科学领域。初审由广州国家实验室组织，采取考生撰写攻读博士学位研究计划加专家组评分的方式，再进行学科背景综合考核。此前2025年9月已先行招收同专项推免直博生（5年制，第一阶段课程在广医、第二阶段科研在广州实验室）。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "第二批研招网（yz.chsi.com.cn/bsbm）网报2026-05-20至06-01。",
+   "source": "广州医科大学研究生院",
+   "dateEstimated": false,
+   "requirements": [
+    "通过中国研究生招生信息网博士报名系统报名",
+    "初审需提交攻读博士学位研究计划",
+    "综合考核考察学科背景与科研潜质"
+   ],
+   "fields": [
+    "生物医学"
+   ],
+   "field": "生物医学",
+   "hub": "广州实验室",
+   "lastCycle": false,
+   "id": "p212",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -6524,7 +6661,7 @@
    "field": "电子信息",
    "hub": "中关村实验室",
    "lastCycle": false,
-   "id": "p211",
+   "id": "p215",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6561,7 +6698,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "上海科技大学2026年全日制生物学专项普招博士招生简章",
-   "id": "p212",
+   "id": "p216",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6592,7 +6729,7 @@
    "hub": "杭州医学所",
    "lastCycle": false,
    "srcTitle": "中国科学院杭州医学研究所—天津大学2026年联合培养博士研究生专项计划招生简章",
-   "id": "p215",
+   "id": "p219",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6621,7 +6758,7 @@
    "field": "计科软工",
    "hub": null,
    "lastCycle": false,
-   "id": "p219",
+   "id": "p223",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6655,7 +6792,7 @@
    "hub": "上海AI实验室",
    "lastCycle": false,
    "srcTitle": "上海人工智能实验室2027级联培博士招生启动",
-   "id": "p221",
+   "id": "p225",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6689,7 +6826,7 @@
    "hub": "大湾区大学",
    "lastCycle": false,
    "srcTitle": "中山大学2026年联合培养博士研究生专项计划春季网上报名通知（大湾区大学联培专项）",
-   "id": "p223",
+   "id": "p227",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6722,7 +6859,7 @@
    "hub": "崂山实验室",
    "lastCycle": false,
    "srcTitle": "崂山国家实验室—中国科学技术大学2026年联合培养科研经费博士研究生专项计划招生简章",
-   "id": "p227",
+   "id": "p231",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6754,7 +6891,7 @@
    "hub": "崂山实验室",
    "lastCycle": false,
    "srcTitle": "崂山国家实验室—中国科学技术大学2026年联合培养科研经费博士研究生专项计划招生简章",
-   "id": "p228",
+   "id": "p232",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6792,8 +6929,42 @@
    "field": "生物医学",
    "hub": "深圳理工大学",
    "lastCycle": false,
-   "id": "p229",
+   "id": "p233",
    "firstSeen": "2026-10-20"
+  },
+  {
+   "category": "program",
+   "school": "天津大学",
+   "schoolShort": "天大",
+   "institute": "崂山国家实验室 × 天津大学",
+   "title": "崂山-天大2026联培博士",
+   "degree": "联培",
+   "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202604/t20260415_324598.htm",
+   "publishedAt": "2026-04-15",
+   "deadline": null,
+   "startDate": null,
+   "location": "青岛",
+   "highlights": "2026年天津大学-崂山国家实验室联合培养科研经费博士研究生专项计划招生简章，由天大研招网2026年4月发布。崂山实验室为中央管理的新型科研机构，联培博士培养成本全部由科研经费承担，课程在天大、科研结合崂山实验室任务，天大颁发学历学位。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "按天津大学2026年博士招生及本专项简章报名，简章详见天大研招网。",
+   "source": "天津大学研招网",
+   "dateEstimated": false,
+   "requirements": [
+    "符合天津大学2026年博士招生报考条件",
+    "科研经费博士专项，全日制非定向"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "崂山实验室",
+   "lastCycle": false,
+   "id": "p234",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -6825,41 +6996,262 @@
    "hub": "乾元实验室",
    "lastCycle": false,
    "srcTitle": "电子科技大学-乾元国家实验室2026年联合培养博士生专项计划招生报名通知",
-   "id": "p232",
+   "id": "p237",
    "firstSeen": "2026-10-20"
   },
   {
    "category": "program",
-   "school": "昌平实验室",
-   "schoolShort": "昌平实验室",
-   "institute": "昌平实验室与北京大学、北京协和医学院、中国科学院大学联合培养",
-   "title": "昌平实验室-北大等三校联培博士",
+   "school": "南开大学",
+   "schoolShort": "南开",
+   "institute": "广州国家实验室 × 南开大学（生命科学学院、电光学院、统计与数据科学学院、药学院、化学学院）",
+   "title": "广州实验室-南开2026联培博士",
    "degree": "联培",
-   "url": "https://www.cpl.ac.cn/join_us/education/4028c1f19b09da40019b0c589fe30003.html",
-   "publishedAt": "2025-12-11",
-   "deadline": "2026-01-09",
+   "url": "https://yzb.nankai.edu.cn/2026/0311/c2971a590685/page.htm",
+   "publishedAt": "2026-03-11",
+   "deadline": "2026-04-15",
    "startDate": null,
-   "location": "北京",
-   "highlights": "生命科学方向“申请-考核”制联培博士，合作高校为北大前沿交叉学科研究院、北京协和医学院和国科大医学院，需分别通过各校研究生系统报名考核。",
+   "location": "广州/天津",
+   "highlights": "2026年南开大学-广州国家实验室联培博士专项，拟招学术学位博士约15名，依托南开生科院、电光学院、统计与数据科学学院、药学院、化学学院。全日制非定向，学制4年：第一阶段课程在南开，第二阶段科研与论文主要在广州国家实验室，南开颁发毕业证和学位证。选拔途径含直接攻博（推免生）、硕博连读和普通招考（申请-考核）。",
    "tags": [
     "联培",
     "博士",
-    "生命科学",
-    "国家实验室"
+    "推免",
+    "申请-考核"
    ],
-   "snippet": "本次招生的联合培养高校包括：北京大学、北京协和医学院、中国科学院大学",
+   "snippet": "报名2026-03-25至04-15，逾期不补报。",
+   "source": "南开大学研究生招生网",
+   "dateEstimated": false,
+   "requirements": [
+    "符合南开大学博士招生简章及报考院系细则要求",
+    "三种途径：直接攻博/硕博连读/普通招考申请-考核",
+    "全日制非定向，基本修业4年"
+   ],
+   "fields": [
+    "计科软工"
+   ],
+   "field": "计科软工",
+   "hub": "广州实验室",
+   "lastCycle": false,
+   "id": "p243",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "中国科学技术大学",
+   "schoolShort": "中科大",
+   "institute": "苏州国家实验室 × 中国科学技术大学",
+   "title": "苏州实验室-中科大2026联培博士",
+   "degree": "联培",
+   "url": "https://www.szlab.ac.cn/yjs_details/38.html",
+   "publishedAt": "2026-02-13",
+   "deadline": null,
+   "startDate": null,
+   "location": "苏州",
+   "highlights": "苏州国家实验室与中科大2026年联培博士专项，专业含化学、材料加工工程、电子科学与技术、核科学与技术、电子信息、材料与化工、能源动力、智能科学与技术。全日制非定向，课程在中科大、科研与论文阶段主要在苏州实验室，学籍归中科大、科大颁发毕业证和博士学位，实验室提供助研津贴、生活补贴和住宿。三种选拔方式：推免、普通招考、硕博连读，考核由双方联合工作组负责、师生双向选择。",
+   "tags": [
+    "联培",
+    "博士",
+    "推免",
+    "申请-考核"
+   ],
+   "snippet": "按中科大2026年博士网报安排报名，网报\"备用信息\"栏须填写\"苏州实验室\"。",
+   "source": "苏州实验室官网",
+   "dateEstimated": false,
+   "requirements": [
+    "符合中国科学技术大学及报考院系2026年博士报考要求",
+    "推免/普通招考/硕博连读三种方式择优录取",
+    "网报备用信息栏填写\"苏州实验室\""
+   ],
+   "fields": [
+    "化学材料",
+    "数学物理",
+    "电子信息",
+    "计科软工"
+   ],
+   "field": "化学材料",
+   "hub": "苏州实验室",
+   "lastCycle": false,
+   "id": "p244",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "深圳大学",
+   "schoolShort": "深大",
+   "institute": "鹏城国家实验室 × 深圳大学",
+   "title": "鹏城-深大2026联培博士",
+   "degree": "联培",
+   "url": "https://yz.szu.edu.cn/info/1012/14266.htm",
+   "publishedAt": "2026-01-27",
+   "deadline": "2026-03-05",
+   "startDate": null,
+   "location": "深圳",
+   "highlights": "2026年鹏城国家实验室-深大联培博士专项，面向通信、网络和智能信息领域，学术学位专业为信息与通信工程、电子科学与技术、计算机科学与技术、光学工程。全日制非定向，基本学制4年（最长6年），课程在深大、论文结合鹏城实验室国家重大科研任务，深大发毕业证和学位证。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "研招网报名2026-01-30 09:00至03-05 23:59，电子材料同日截止发鹏城实验室邮箱。",
+   "source": "深圳大学研招网",
+   "dateEstimated": false,
+   "requirements": [
+    "符合深圳大学2026年博士招生章程要求",
+    "英语：CET-4/6≥425 或 TOEFL≥75 或 IELTS≥6 等",
+    "应届硕士或已获硕士/博士学位（入学前取得），境外学位须教育部认证",
+    "除世界前200名院校毕业生外，须至少1项学科领域成果（论文需署名前两位等）"
+   ],
+   "fields": [
+    "化学材料",
+    "数学物理",
+    "电子信息",
+    "计科软工"
+   ],
+   "field": "化学材料",
+   "hub": "鹏城实验室",
+   "lastCycle": false,
+   "id": "p248",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "中国科学技术大学",
+   "schoolShort": "中科大",
+   "institute": "宁波东方理工大学（暂名）× 中国科学技术大学",
+   "title": "东方理工-中科大2026联培博士",
+   "degree": "联培",
+   "url": "https://yz.ustc.edu.cn/article/2684/182",
+   "publishedAt": "2025-12-17",
+   "deadline": null,
+   "startDate": null,
+   "location": "宁波",
+   "highlights": "中国科大-东方理工联培博士项目2026年招生简章（2026年计划招收约50人），含学术学位博士与工程博士，基本学习年限4年，全日制非定向。通过普通招考、硕博连读和直接攻博三种方式选拔，网报按中科大2026年博士网报通告（2026-01-24起），符合条件者获中科大毕业证书和学位证书。",
+   "tags": [
+    "联培",
+    "博士",
+    "推免",
+    "申请-考核"
+   ],
+   "snippet": "按中科大2026年博士网报通告报名（各院系截止不晚于2026-05-31）。",
+   "source": "中国科学技术大学研招网",
+   "dateEstimated": false,
+   "requirements": [
+    "普通招考/硕博连读/直接攻博三种方式",
+    "2026年计划招收约50人（以教育部计划为准）",
+    "全日制非定向，基本学习年限4年"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "东方理工",
+   "lastCycle": true,
+   "id": "p251",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "北京大学",
+   "schoolShort": "北大",
+   "institute": "昌平实验室 × 北京大学前沿交叉学科研究院",
+   "title": "昌平-北大2026联培博士",
+   "degree": "联培",
+   "url": "https://www.cpl.ac.cn/join_us/education/4028c1f19b09da40019b0c589fe30003.html",
+   "publishedAt": "2025-12-11",
+   "deadline": "2025-12-19",
+   "startDate": null,
+   "location": "北京",
+   "highlights": "昌平实验室2026年申请-考核制联培博士报考说明所列合作渠道之一：按《北京大学前沿交叉学科研究院2026年申请-考核制博士招生说明》报名，昌平实验室导师含段小洁、陈明辰、高家红、王平、严景华等。北大网报截止2025-12-19 17:00。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "按北大前沿交叉学科研究院2026年申请-考核制说明报名，网报截止2025-12-19 17:00。",
    "source": "昌平实验室官网",
    "dateEstimated": false,
-   "requirements": [],
+   "requirements": [
+    "按北京大学前沿交叉学科研究院2026年申请-考核制博士招生说明执行",
+    "网报截止2025-12-19 17:00",
+    "导师名单见昌平实验室官网"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "昌平实验室",
+   "lastCycle": true,
+   "id": "p253",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "北京协和医学院",
+   "schoolShort": "协和",
+   "institute": "昌平实验室 × 北京协和医学院",
+   "title": "昌平-协和2026联培博士",
+   "degree": "联培",
+   "url": "https://www.cpl.ac.cn/join_us/education/4028c1f19b09da40019b0c589fe30003.html",
+   "publishedAt": "2025-12-11",
+   "deadline": "2025-12-26",
+   "startDate": null,
+   "location": "北京",
+   "highlights": "昌平实验室2026年联培博士报考渠道之一：按《北京协和医学院2026年申请-考核博士研究生招生简章》报名，协和侧导师为陈坚。网报截止2025-12-26 10:00。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "按协和2026年申请-考核博士简章报名，网报截止2025-12-26 10:00。",
+   "source": "昌平实验室官网",
+   "dateEstimated": false,
+   "requirements": [
+    "按北京协和医学院2026年申请-考核博士招生简章执行",
+    "网报截止2025-12-26 10:00"
+   ],
    "fields": [
     "生物医学"
    ],
    "field": "生物医学",
    "hub": "昌平实验室",
    "lastCycle": true,
-   "srcTitle": "昌平实验室2026年“申请-考核制”联合培养博士研究生报考说明",
-   "id": "p244",
-   "firstSeen": "2026-10-20"
+   "id": "p254",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "中国科学院大学",
+   "schoolShort": "国科大",
+   "institute": "昌平实验室 × 中国科学院大学医学院",
+   "title": "昌平-国科大2026联培博士",
+   "degree": "联培",
+   "url": "https://www.cpl.ac.cn/join_us/education/4028c1f19b09da40019b0c589fe30003.html",
+   "publishedAt": "2025-12-11",
+   "deadline": "2026-01-09",
+   "startDate": null,
+   "location": "北京",
+   "highlights": "昌平实验室2026年联培博士报考渠道之一：按国科大2026年秋季入学博士网报公告及医学院材料提交说明报名，昌平实验室导师为严景华。国科大网报截止2026-01-09。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "国科大秋季博士网报截止2026-01-09，材料按国科大医学院说明提交。",
+   "source": "昌平实验室官网",
+   "dateEstimated": false,
+   "requirements": [
+    "按国科大2026年秋季入学博士招生网报公告执行",
+    "网报截止2026-01-09"
+   ],
+   "fields": [
+    "生物医学",
+    "化学材料"
+   ],
+   "field": "生物医学",
+   "hub": "昌平实验室",
+   "lastCycle": true,
+   "id": "p255",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -6895,7 +7287,7 @@
    "field": "生物医学",
    "hub": "深圳理工大学",
    "lastCycle": true,
-   "id": "p245",
+   "id": "p256",
    "firstSeen": "2026-10-21"
   },
   {
@@ -6931,7 +7323,7 @@
    "hub": "CLS/PTN项目",
    "lastCycle": true,
    "srcTitle": "生命科学联合中心（北大方面）与PTN项目（北大方面）2026级博士研究生第二批联合招生简章",
-   "id": "p246",
+   "id": "p257",
    "firstSeen": "2026-10-20"
   },
   {
@@ -6965,7 +7357,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": true,
-   "id": "p249",
+   "id": "p260",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7000,7 +7392,7 @@
    "field": "生物医学",
    "hub": "临港实验室",
    "lastCycle": true,
-   "id": "p250",
+   "id": "p261",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7030,7 +7422,41 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": true,
-   "id": "p251",
+   "id": "p262",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "兰州大学",
+   "schoolShort": "兰大",
+   "institute": "崖州湾国家实验室 × 兰州大学",
+   "title": "崖州湾-兰大2026联培博士",
+   "degree": "联培",
+   "url": "https://yz.lzu.edu.cn/zhaoshengdongtai/2025/1114/321583.html",
+   "publishedAt": "2025-11-14",
+   "deadline": null,
+   "startDate": null,
+   "location": "三亚",
+   "highlights": "崖州湾国家实验室-兰州大学2026年联合培养博士专项计划，报考、报名、考核及录取按兰州大学2026年博士招生章程执行，培养结合崖州湾实验室种业领域科研任务，学籍学位归兰大。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "按兰州大学2026年博士招生章程报名，专项细则见兰大研招网通知。",
+   "source": "兰州大学研招网",
+   "dateEstimated": false,
+   "requirements": [
+    "符合兰州大学2026年博士招生章程报考条件",
+    "按专项计划通知要求报考"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "崖州湾实验室",
+   "lastCycle": true,
+   "id": "p263",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7066,8 +7492,45 @@
    "hub": "钱塘实验室",
    "lastCycle": true,
    "srcTitle": "钱塘实验室-浙大联培博士（2026版）",
-   "id": "p252",
+   "id": "p264",
    "firstSeen": "2026-10-20"
+  },
+  {
+   "category": "program",
+   "school": "上海交通大学",
+   "schoolShort": "上交大",
+   "institute": "宁波东方理工大学（暂名）× 上海交通大学",
+   "title": "东方理工-上交2026联培博士",
+   "degree": "联培",
+   "url": "https://yz.chsi.com.cn/kyzx/yxzc/202511/20251113/2293443647.html",
+   "publishedAt": "2025-11-13",
+   "deadline": "2026-04-20",
+   "startDate": null,
+   "location": "宁波",
+   "highlights": "上交大与宁波东方理工2026年联培博士项目，申请-考核制，招生规模约100人（每位导师1-2个名额），以理学、工学、信息、商科为主，报名时选\"东方理工专项\"。学籍注册在上交大、双导师制，第一年在上交大课程学习，第二年起主要在东方理工科研，学制4年，上交大颁发毕业证和博士学位。两轮报名：2025-11-01至12-15、2026-03-15至04-20，2026年秋季入学。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "上交大研招网报名，第二轮截止2026-04-20。",
+   "source": "中国研究生招生信息网",
+   "dateEstimated": false,
+   "requirements": [
+    "已获硕士学位或应届硕士（入学前取得）",
+    "英语（其一）：六级≥425 / TOEFL iBT≥90 / IELTS≥6.0 / 英语国家全英文项目学位",
+    "须全脱产学习，入学前人事档案转入上交大",
+    "两名副教授以上专家推荐信（含硕士导师）",
+    "报名费250元/人次"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "东方理工",
+   "lastCycle": true,
+   "id": "p265",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -7102,7 +7565,7 @@
    "field": "计科软工",
    "hub": "港理工",
    "lastCycle": true,
-   "id": "p253",
+   "id": "p266",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7138,7 +7601,7 @@
    "field": "其他交叉",
    "hub": "港城大",
    "lastCycle": true,
-   "id": "p254",
+   "id": "p267",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7172,8 +7635,43 @@
    "hub": "南科大",
    "lastCycle": true,
    "srcTitle": "2026年同济大学-南方科技大学联合培养博士研究生招生通知",
-   "id": "p255",
+   "id": "p268",
    "firstSeen": "2026-10-20"
+  },
+  {
+   "category": "program",
+   "school": "中国科学院大学",
+   "schoolShort": "国科大",
+   "institute": "广州国家实验室 × 中科院广州生物医药与健康研究院（广州健康院）",
+   "title": "广州实验室-国科大2026联培博士",
+   "degree": "联培",
+   "url": "https://gibh.cas.cn/yjs/zsxx/lpbszxzs/202511/t20251110_8009381.html",
+   "publishedAt": "2025-11-10",
+   "deadline": "2026-01-09",
+   "startDate": null,
+   "location": "广州",
+   "highlights": "2026年广州健康院与广州国家实验室联合培养博士专项，通过中国科学院大学招生信息网报名，学籍在国科大。2026年招收博士均为全日制非定向，第一阶段课程学习依托国科大体系完成，第二阶段进入广州实验室科研。咨询邮箱 student@gzlab.ac.cn。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "报名2025-12-08至2026-01-09，中国科学院大学招生信息网提交。",
+   "source": "中科院广州健康院官网",
+   "dateEstimated": false,
+   "requirements": [
+    "符合国科大2026年博士报考条件",
+    "在国科大招生信息网报名",
+    "全日制非定向"
+   ],
+   "fields": [
+    "生物医学"
+   ],
+   "field": "生物医学",
+   "hub": "广州实验室",
+   "lastCycle": true,
+   "id": "p269",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -7206,7 +7704,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": true,
-   "id": "p256",
+   "id": "p270",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7243,7 +7741,7 @@
    "field": "其他交叉",
    "hub": "苏州实验室",
    "lastCycle": true,
-   "id": "p257",
+   "id": "p271",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7280,7 +7778,7 @@
    "field": "生物医学",
    "hub": "深圳理工大学",
    "lastCycle": true,
-   "id": "p258",
+   "id": "p272",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7317,7 +7815,7 @@
    "field": "其他交叉",
    "hub": "港理工",
    "lastCycle": true,
-   "id": "p259",
+   "id": "p273",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7353,7 +7851,7 @@
    "field": "生物医学",
    "hub": "深圳理工大学",
    "lastCycle": true,
-   "id": "p260",
+   "id": "p274",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7388,7 +7886,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": true,
-   "id": "p261",
+   "id": "p275",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7423,7 +7921,7 @@
    "field": "其他交叉",
    "hub": "港城大",
    "lastCycle": true,
-   "id": "p262",
+   "id": "p276",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7461,7 +7959,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "港中大（深圳）理工学院2026-27学年研究型硕士-博士项目开放申请",
-   "id": "p263",
+   "id": "p277",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7496,7 +7994,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "中国科学院脑科学与智能技术卓越创新中心2026年博士学位研究生招生章程",
-   "id": "p264",
+   "id": "p278",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7531,7 +8029,7 @@
    "field": "化学材料",
    "hub": "港城大",
    "lastCycle": true,
-   "id": "p265",
+   "id": "p279",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7563,7 +8061,7 @@
    "hub": "清华",
    "lastCycle": true,
    "srcTitle": "清华大学深圳国际研究生院2026年招收内地博士研究生目录（十一月份）",
-   "id": "p266",
+   "id": "p280",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7597,7 +8095,7 @@
    "field": "其他交叉",
    "hub": "广州实验室",
    "lastCycle": true,
-   "id": "p267",
+   "id": "p281",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7633,7 +8131,7 @@
    "field": "其他交叉",
    "hub": "港理工",
    "lastCycle": true,
-   "id": "p268",
+   "id": "p282",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7671,7 +8169,7 @@
    "hub": "鹏城实验室",
    "lastCycle": true,
    "srcTitle": "鹏城实验室-中大联培博士（2026版）",
-   "id": "p269",
+   "id": "p283",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7706,7 +8204,7 @@
    "field": "生物医学",
    "hub": "广州实验室",
    "lastCycle": true,
-   "id": "p270",
+   "id": "p284",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7738,7 +8236,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": true,
-   "id": "p271",
+   "id": "p285",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7768,7 +8266,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": true,
-   "id": "p272",
+   "id": "p286",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7803,7 +8301,42 @@
    "field": "生物医学",
    "hub": "深圳理工大学",
    "lastCycle": true,
-   "id": "p273",
+   "id": "p287",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "北京大学",
+   "schoolShort": "北大",
+   "institute": "鹏城国家实验室 × 北京大学深圳研究生院（信息工程学院）",
+   "title": "鹏城-北大2026联培博士",
+   "degree": "联培",
+   "url": "https://www.ece.pku.edu.cn/info/1025/3047.htm",
+   "publishedAt": "2025-10-17",
+   "deadline": "2025-12-19",
+   "startDate": null,
+   "location": "深圳",
+   "highlights": "北京大学信息工程学院2026年申请-考核制博士招生中含鹏城实验室联培项目，北大深研院网报2025-10-20至12-19。报考鹏城联培项目的考生须在报考登记表首页注明\"鹏城实验室联培项目\"，课程在北大深研院、科研结合鹏城实验室任务，北大颁发学历学位。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "北大深研院网报截止2025-12-19 17:00，登记表首页须注明\"鹏城实验室联培项目\"。",
+   "source": "北京大学信息工程学院",
+   "dateEstimated": false,
+   "requirements": [
+    "符合北京大学2026年博士研究生招生简章报考条件",
+    "申请-考核制",
+    "报考登记表首页注明\"鹏城实验室联培项目\""
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "鹏城实验室",
+   "lastCycle": true,
+   "id": "p288",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7834,7 +8367,7 @@
    "field": "电子信息",
    "hub": null,
    "lastCycle": true,
-   "id": "p274",
+   "id": "p289",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7865,7 +8398,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": true,
-   "id": "p275",
+   "id": "p290",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7898,7 +8431,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": true,
-   "id": "p276",
+   "id": "p291",
    "firstSeen": "2026-10-21"
   },
   {
@@ -7932,7 +8465,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "北京大学集成电路学院2026年\"申请-考核制\"博士研究生招生说明",
-   "id": "p277",
+   "id": "p292",
    "firstSeen": "2026-10-20"
   },
   {
@@ -7963,7 +8496,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": true,
-   "id": "p279",
+   "id": "p294",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8002,7 +8535,40 @@
    "field": "化学材料",
    "hub": "深圳理工大学",
    "lastCycle": true,
-   "id": "p280",
+   "id": "p295",
+   "firstSeen": "2026-10-21"
+  },
+  {
+   "category": "program",
+   "school": "温州医科大学",
+   "schoolShort": "温医大",
+   "institute": "瓯江实验室 × 温州医科大学",
+   "title": "瓯江-温医大2026联培硕士",
+   "degree": "联培",
+   "url": "https://www.ojlab.cn/info/details/14180",
+   "publishedAt": "2025-09-16",
+   "deadline": null,
+   "startDate": null,
+   "location": "温州",
+   "highlights": "瓯江实验室2026年研究生联合招生计划中的硕士项目，与温州医科大学联合招生（此前已完成105名硕士联培招生）。第一学年在温医大修课，第二学年起进入瓯江实验室开展科研与论文，学籍学位归温医大。",
+   "tags": [
+    "联培",
+    "硕士"
+   ],
+   "snippet": "关注温医大研究生院通知公告板块，2026年实际招生计划以温医大官网为准。",
+   "source": "瓯江实验室官网",
+   "dateEstimated": false,
+   "requirements": [
+    "按温州医科大学2026年硕士研究生招生安排执行",
+    "实际计划以高校官网发布为准"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "瓯江实验室",
+   "lastCycle": true,
+   "id": "p296",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8037,7 +8603,7 @@
    "field": "生物医学",
    "hub": "瓯江实验室",
    "lastCycle": true,
-   "id": "p281",
+   "id": "p297",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8072,7 +8638,7 @@
    "hub": "中科大",
    "lastCycle": true,
    "srcTitle": "中国科学技术大学—北京通用人工智能研究院2026年联合培养博士生专项计划（“通计划”）招生简章",
-   "id": "p282",
+   "id": "p298",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8104,7 +8670,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "清华大学深圳国际研究生院2026年接收优秀应届本科毕业生免试攻读研究生报名通知",
-   "id": "p283",
+   "id": "p299",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8134,7 +8700,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": true,
-   "id": "p285",
+   "id": "p301",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8165,7 +8731,7 @@
    "field": "生物医学",
    "hub": "崖州湾实验室",
    "lastCycle": true,
-   "id": "p286",
+   "id": "p302",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8202,7 +8768,7 @@
    "field": "生物医学",
    "hub": "港浸会",
    "lastCycle": false,
-   "id": "p287",
+   "id": "p303",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8238,7 +8804,7 @@
    "field": "计科软工",
    "hub": "IDEA研究院",
    "lastCycle": false,
-   "id": "p288",
+   "id": "p304",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8274,7 +8840,7 @@
    "field": "数学物理",
    "hub": "港中深",
    "lastCycle": false,
-   "id": "p289",
+   "id": "p305",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8305,8 +8871,43 @@
    "field": "其他交叉",
    "hub": "港中文",
    "lastCycle": false,
-   "id": "p290",
+   "id": "p306",
    "firstSeen": "2026-10-20"
+  },
+  {
+   "category": "program",
+   "school": "山东大学",
+   "schoolShort": "山大",
+   "institute": "崂山国家实验室 × 山东大学",
+   "title": "崂山-山大2026联培博士",
+   "degree": "联培",
+   "url": "https://www.huanke.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1983994391&wbfileid=17937157",
+   "publishedAt": null,
+   "deadline": null,
+   "startDate": null,
+   "location": "青岛",
+   "highlights": "崂山国家实验室2026年与山东大学联合培养科研经费博士：培养成本全部由科研经费承担，学习方式全日制、录取类别非定向就业，基本修业年限按山东大学录取要求执行。简章文件（PDF）由山大环境科学与工程学院官网发布，报名纳入山大2026年博士招生（12月/次年4月两轮报名窗口）。",
+   "tags": [
+    "联培",
+    "博士",
+    "申请-考核"
+   ],
+   "snippet": "按山东大学2026年博士招生章程及科研经费博士专项计划报名（报名窗口2025年12月或2026年4月）；链接为简章PDF。",
+   "source": "山东大学环境科学与工程学院",
+   "dateEstimated": false,
+   "requirements": [
+    "科研经费博士：培养成本全部由科研经费承担",
+    "全日制、非定向就业",
+    "符合山东大学2026年博士招生章程要求"
+   ],
+   "fields": [
+    "其他交叉"
+   ],
+   "field": "其他交叉",
+   "hub": "崂山实验室",
+   "lastCycle": false,
+   "id": "p307",
+   "firstSeen": "2026-10-21"
   },
   {
    "category": "program",
@@ -8340,7 +8941,7 @@
    "field": "其他交叉",
    "hub": "张江实验室",
    "lastCycle": false,
-   "id": "p291",
+   "id": "p308",
    "firstSeen": "2026-10-20"
   }
  ],
@@ -8408,7 +9009,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年微分几何暑期学校",
-   "id": "c111",
+   "id": "c112",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8439,7 +9040,7 @@
    "hub": "北大",
    "lastCycle": false,
    "srcTitle": "2026年生命科学学院与前沿交叉学科研究院\"大生命科学交叉\"联合夏令营优秀营员名单",
-   "id": "c129",
+   "id": "c130",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8472,7 +9073,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2027年校园宇宙线观测暑期学校（承办单位已确定）",
-   "id": "c143",
+   "id": "c145",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8504,7 +9105,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "复旦深圳河套学院直博夏令营报名开启",
-   "id": "c160",
+   "id": "c163",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8537,7 +9138,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "上海创芯学院2026年优秀大学生夏令营活动报名通知",
-   "id": "c161",
+   "id": "c164",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8571,7 +9172,7 @@
    "hub": "科学岛",
    "lastCycle": false,
    "srcTitle": "2026年科学岛夏季科研训练营报名通知（第三批）",
-   "id": "c168",
+   "id": "c171",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8605,7 +9206,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "c199",
+   "id": "c202",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8640,7 +9241,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年物理基础学科国际暑期学校",
-   "id": "c200",
+   "id": "c203",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8675,7 +9276,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "上海交通大学海洋学院2027年研究生优才夏令营通知",
-   "id": "c201",
+   "id": "c204",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8709,7 +9310,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "c202",
+   "id": "c205",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8744,7 +9345,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院深圳先进技术研究院2026年优秀大学生夏令营",
-   "id": "c203",
+   "id": "c206",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8782,7 +9383,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年“科技历史与文化”大学生夏令营（第九届）",
-   "id": "c204",
+   "id": "c207",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8814,7 +9415,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学技术大学国家卓越工程师学院（先进技术研究院）2026年创新应用科学营报名公告",
-   "id": "c206",
+   "id": "c209",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8850,7 +9451,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "北京量子信息科学研究院2026年全国优秀大学生夏令营及暑期实践活动",
-   "id": "c207",
+   "id": "c210",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8886,7 +9487,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年北京大学化学学院和深研院化生学院联合举办“全国优秀大学生夏令营”",
-   "id": "c208",
+   "id": "c211",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8918,7 +9519,7 @@
    "field": "其他交叉",
    "hub": null,
    "lastCycle": false,
-   "id": "c209",
+   "id": "c213",
    "firstSeen": "2026-10-21"
   },
   {
@@ -8949,7 +9550,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "北京大学现代农学院2026年全国优秀大学生夏令营活动通知",
-   "id": "c210",
+   "id": "c214",
    "firstSeen": "2026-10-20"
   },
   {
@@ -8985,7 +9586,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院长春光机所2026年\"溯光明理\"夏令营邀请函",
-   "id": "c213",
+   "id": "c217",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9019,7 +9620,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "第八届“计算社会科学方法论”国际暑期学校",
-   "id": "c214",
+   "id": "c218",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9055,7 +9656,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院生物物理研究所2026年生命科学希望之星夏令营报名通知",
-   "id": "c216",
+   "id": "c220",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9090,7 +9691,7 @@
    "hub": "NIBS/北生所",
    "lastCycle": false,
    "srcTitle": "2026年清华大学生物医学交叉研究院（北京生命科学研究所）“暑期科研体验营”",
-   "id": "c217",
+   "id": "c221",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9123,7 +9724,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "大连化物所2026年大学生夏令营第一轮通知",
-   "id": "c218",
+   "id": "c222",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9158,7 +9759,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026清华大学脑与智能实验室音乐脑科学暑期训练营",
-   "id": "c220",
+   "id": "c224",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9191,7 +9792,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年理论物理大学生夏令营",
-   "id": "c222",
+   "id": "c226",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9226,7 +9827,7 @@
    "field": "化学材料",
    "hub": null,
    "lastCycle": false,
-   "id": "c224",
+   "id": "c228",
    "firstSeen": "2026-10-21"
   },
   {
@@ -9265,7 +9866,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "中国科学院高能物理研究所2026年全国大学生夏令营及暑期学校",
-   "id": "c225",
+   "id": "c229",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9301,7 +9902,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年清华大学人工智能学院大学生学术交流日",
-   "id": "c226",
+   "id": "c230",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9336,7 +9937,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年\"探索生命的多样性\"暑期夏令营报名通知",
-   "id": "c230",
+   "id": "c235",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9367,7 +9968,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "ICTP-AP 2026年度\"大学生创新实践训练计划\"项目申请通知",
-   "id": "c231",
+   "id": "c236",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9404,7 +10005,7 @@
    "hub": "深圳医学科学院",
    "lastCycle": false,
    "srcTitle": "深圳医学科学院2026年国际暑期学校",
-   "id": "c233",
+   "id": "c238",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9435,7 +10036,7 @@
    "hub": "NIBS/北生所",
    "lastCycle": false,
    "srcTitle": "2026年NIBS学生暑期训练计划（第二十期）",
-   "id": "c234",
+   "id": "c239",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9470,7 +10071,7 @@
    "field": "生物医学",
    "hub": null,
    "lastCycle": false,
-   "id": "c235",
+   "id": "c240",
    "firstSeen": "2026-10-21"
   },
   {
@@ -9508,7 +10109,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年“代数与数论”暑期学校",
-   "id": "c236",
+   "id": "c241",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9545,7 +10146,7 @@
    "hub": "CLS/PTN项目",
    "lastCycle": false,
    "srcTitle": "生命科学联合中心（北大方面）2026年暑期培训班",
-   "id": "c237",
+   "id": "c242",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9578,7 +10179,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026南京大学智能科学与技术学院具身智能本科生冬令营",
-   "id": "c238",
+   "id": "c245",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9612,7 +10213,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "近代物理所2026年度\"走进国家实验室，感受魅力核科学\"优秀大学生冬令营",
-   "id": "c239",
+   "id": "c246",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9645,7 +10246,7 @@
    "hub": "科学岛",
    "lastCycle": false,
    "srcTitle": "第一届优秀大学生冬季科研训练营",
-   "id": "c240",
+   "id": "c247",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9679,7 +10280,7 @@
    "hub": null,
    "lastCycle": false,
    "srcTitle": "2026年\"资源环境与宜居地球\"大学生冬令营",
-   "id": "c241",
+   "id": "c249",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9715,7 +10316,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "上海应物所2026年\"应用物理\"冬令营招募通知",
-   "id": "c242",
+   "id": "c250",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9754,7 +10355,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "关于举办2026年\"智慧赋能·创领未来\"优秀大学生冬令营通知",
-   "id": "c243",
+   "id": "c252",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9788,7 +10389,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "WINTER@AIR 2026冬令营报名",
-   "id": "c247",
+   "id": "c258",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9826,7 +10427,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "2026年大学生\"菁英\"冬令营报名公告",
-   "id": "c248",
+   "id": "c259",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9860,7 +10461,7 @@
    "hub": null,
    "lastCycle": true,
    "srcTitle": "2025年\"蓝色海洋\"优秀研究生冬令营活动通知",
-   "id": "c278",
+   "id": "c293",
    "firstSeen": "2026-10-20"
   },
   {
@@ -9896,7 +10497,7 @@
    "field": "数学物理",
    "hub": null,
    "lastCycle": true,
-   "id": "c284",
+   "id": "c300",
    "firstSeen": "2026-10-21"
   }
  ]
