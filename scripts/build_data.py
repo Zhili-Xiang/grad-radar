@@ -160,6 +160,7 @@ def clean(x):
         o["schoolShort"] = o["school"][:6]
     o["fields"] = classify_fields(o)
     o["field"] = o["fields"][0]
+    o["hub"] = derive_hub(o)
     pub = o.get("publishedAt") or ""
     o["lastCycle"] = bool(pub and pub < "2026-01-01"
                           and "长期开放" not in o["tags"] and "长期" not in " ".join(o["tags"]))
@@ -209,6 +210,42 @@ def pick_display(cands, src_title):
             return x
     plain = [x for x in cands if not x.get("srcTitle")]
     return (plain or cands)[-1]
+
+
+# 联培枢纽：条目文本命中关键词即归入该枢纽（联培专区按枢纽聚合展示）
+HUB_KEYWORDS = [
+    ("深圳理工大学", ["深圳理工", "深理工", "suat"]),
+    ("深圳医学科学院", ["深圳医科院", "SMART", "深圳湾实验室", "smart.org"]),
+    ("广州实验室", ["广州实验室", "广州国家实验室"]),
+    ("鹏城实验室", ["鹏城"]),
+    ("张江实验室", ["张江实验室"]),
+    ("临港实验室", ["临港实验室"]),
+    ("苏州实验室", ["苏州国家实验室", "苏州实验室"]),
+    ("崂山实验室", ["崂山"]),
+    ("昌平实验室", ["昌平实验室"]),
+    ("乾元实验室", ["乾元"]),
+    ("钱塘实验室", ["钱塘"]),
+    ("瓯江实验室", ["瓯江"]),
+    ("崖州湾实验室", ["崖州湾"]),
+    ("大湾区大学", ["大湾区大学"]),
+    ("上海AI实验室", ["上海人工智能实验室", "shlab"]),
+    ("NIBS/北生所", ["NIBS", "北生所", "北生所", "TIMBR"]),
+    ("CLS/PTN项目", ["CLS", "PTN", "生命科学联合中心"]),
+    ("IDEA研究院", ["IDEA"]),
+    ("东方理工", ["东方理工"]),
+    ("科学岛", ["科学岛", "合肥物质"]),
+]
+
+
+def derive_hub(o):
+    text = " ".join(str(o.get(k) or "") for k in ("title", "institute", "school", "schoolShort", "url"))
+    text += " " + " ".join(t for t in (o.get("tags") or []) if isinstance(t, str))
+    for hub, kws in HUB_KEYWORDS:
+        if any(k.lower() in text.lower() for k in kws):
+            return hub
+    if o.get("degree") == "联培" or "联培" in (o.get("tags") or []):
+        return o.get("schoolShort") or o.get("school") or "其他联培"
+    return None
 
 
 def main():

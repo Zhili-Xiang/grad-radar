@@ -40,6 +40,7 @@ async function boot() {
   buildFilters(all);
   renderPrograms();
   renderCamps();
+  renderJoint();
   renderStats(all);
   renderDigest(all);
   observeReveals();
@@ -183,6 +184,72 @@ function renderCamps() {
   $('#camp-empty').hidden = list.length > 0;
   observeReveals();
 }
+
+/* ---------- 联培专区 ---------- */
+const HUB_TEST = {
+  '深圳理工大学': /深理工|深圳理工/, '深圳医学科学院': /SMART|深圳医科|深圳湾/, '广州实验室': /广州(国家)?实验室/,
+  '鹏城实验室': /鹏城/, '张江实验室': /张江/, '临港实验室': /临港/, '苏州实验室': /苏州(国家)?实验室/,
+  '崂山实验室': /崂山/, '昌平实验室': /昌平/, '乾元实验室': /乾元/, '钱塘实验室': /钱塘/, '瓯江实验室': /瓯江/,
+  '崖州湾实验室': /崖州湾/, '大湾区大学': /大湾区/, '上海AI实验室': /上海人工智能|shlab/, 'NIBS/北生所': /NIBS|北生所|TIMBR/,
+  'CLS/PTN项目': /CLS|PTN|生命科学联合中心/, 'IDEA研究院': /IDEA/, '东方理工': /东方理工/, '科学岛': /科学岛|合肥物质/,
+};
+function hubOf(e) { return e.hub || null; }
+function partnerOf(e, hub) {
+  const re = HUB_TEST[hub];
+  const cands = [e.schoolShort, e.school].filter(Boolean);
+  for (const c of cands) if (!re || !re.test(c)) return c;
+  const m = (e.title || '').split(/[-—－]/).map(s => s.trim()).filter(s => s && (!re || !re.test(s)));
+  return m[0] || '';
+}
+function renderJoint() {
+  if (!DATA) return;
+  const all = [...(DATA.programs || []), ...(DATA.camps || [])].filter(e => e.hub);
+  const groups = new Map();
+  all.forEach(e => {
+    if (!groups.has(e.hub)) groups.set(e.hub, []);
+    groups.get(e.hub).push(e);
+  });
+  const hubs = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
+  $('#joint-grid').innerHTML = hubs.map(([hub, list]) => {
+    const partners = [...new Set(list.map(e => partnerOf(e, hub)).filter(Boolean))];
+    const shown = partners.slice(0, 5);
+    const more = partners.length - shown.length;
+    return `
+<button class="hub-card" data-hub="${esc(hub)}">
+  <div class="hub-top"><span class="hub-name">${esc(hub)}</span><span class="hub-badge">${list.length} 个项目</span></div>
+  <span class="hub-count">合作高校/机构 ${partners.length} 家</span>
+  <div class="hub-partners">${shown.map(p => `<span>${esc(p)}</span>`).join('')}${more > 0 ? `<span class="more">等 ${partners.length} 家</span>` : ''}</div>
+</button>`;
+  }).join('');
+  $('#joint-grid').onclick = e => {
+    const b = e.target.closest('.hub-card');
+    if (!b) return;
+    openHub(b.dataset.hub);
+  };
+}
+function openHub(hub) {
+  const all = [...(DATA.programs || []), ...(DATA.camps || [])].filter(e => e.hub === hub);
+  const partners = [...new Set(all.map(e => partnerOf(e, hub)).filter(Boolean))];
+  $('#joint-grid').hidden = true;
+  const detail = $('#joint-detail');
+  detail.hidden = false;
+  $('#joint-hub-name').textContent = hub;
+  $('#joint-hub-sub').textContent = `与 ${partners.length} 家高校/机构联合培养 · ${all.length} 个项目（含往期参考）`;
+  all.sort((a, b) => {
+    const da = daysUntil(a.deadline), db = daysUntil(b.deadline);
+    const va = da === null ? 1e9 : (da < 0 ? 1e9 + da : da);
+    const vb = db === null ? 1e9 : (db < 0 ? 1e9 + db : db);
+    return va - vb;
+  });
+  $('#joint-cards').innerHTML = all.map((e, i) => cardHTML(e, i)).join('');
+  observeReveals();
+  detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+$('#joint-back').addEventListener('click', () => {
+  $('#joint-detail').hidden = true;
+  $('#joint-grid').hidden = false;
+  $('#joint-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 
 /* ---------- hero 摘要卡 ---------- */
 function renderDigest(all) {

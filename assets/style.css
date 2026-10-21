@@ -285,6 +285,37 @@ img,svg{vertical-align:middle}
 #chat-input:focus{border-color:var(--blue-link)}
 .chat-note{font-size:12px;color:#6e6e73;text-align:center}
 
+/* ---------- 联培专区 ---------- */
+.hub-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:16px;
+}
+.hub-card{
+  background:var(--card);border-radius:var(--radius);padding:24px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04);cursor:pointer;text-align:left;
+  display:flex;flex-direction:column;gap:8px;border:none;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s;
+  font-family:inherit;
+}
+.hub-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.10)}
+.hub-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.hub-name{font-size:19px;font-weight:600;letter-spacing:-.012em}
+.hub-badge{
+  font-size:11px;font-weight:600;color:var(--blue);
+  background:rgba(0,113,227,.08);border-radius:6px;padding:3px 8px;white-space:nowrap;
+}
+.hub-count{font-size:13px;color:var(--ink-3)}
+.hub-partners{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.hub-partners span{
+  font-size:12px;color:var(--ink-2);background:rgba(0,0,0,.045);
+  border-radius:5px;padding:2px 8px;
+}
+.hub-partners .more{color:var(--ink-3)}
+.joint-back{margin-bottom:6px;padding-left:0}
+.joint-hub-head{margin:8px 0 26px}
+.joint-hub-head h3{font-size:clamp(28px,4vw,38px);font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.joint-hub-sub{font-size:15px;color:var(--ink-2)}
+
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:36px}
 .about-card{
