@@ -1,6 +1,6 @@
 {
  "fetchedAt": "2026-10-23",
- "generatedAt": "2026-10-23T16:36:25",
+ "generatedAt": "2026-10-23T16:52:32",
  "counts": {
   "programs": 826,
   "camps": 45,
@@ -1223,6 +1223,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "墨尔本大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p032",
    "firstSeen": "2026-10-23"
@@ -1261,6 +1263,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "莫纳什大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p033",
    "firstSeen": "2026-10-23"
@@ -1299,6 +1303,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "悉尼大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p034",
    "firstSeen": "2026-10-23"
@@ -1337,6 +1343,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "澳大利亚国立大学",
+   "schoolAbbr": "ANU",
    "lastCycle": false,
    "id": "p035",
    "firstSeen": "2026-10-23"
@@ -1377,6 +1385,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "昆士兰大学",
+   "schoolAbbr": "UQ",
    "lastCycle": false,
    "id": "p036",
    "firstSeen": "2026-10-23"
@@ -1415,6 +1425,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "新南威尔士大学",
+   "schoolAbbr": "UNSW",
    "lastCycle": false,
    "id": "p037",
    "firstSeen": "2026-10-23"
@@ -1453,6 +1465,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥塔哥大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p038",
    "firstSeen": "2026-10-23"
@@ -1491,6 +1505,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥克兰大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p039",
    "firstSeen": "2026-10-23"
@@ -1529,6 +1545,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "多伦多大学",
+   "schoolAbbr": "UofT",
    "lastCycle": false,
    "id": "p040",
    "firstSeen": "2026-10-23"
@@ -1567,6 +1585,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "多伦多大学",
+   "schoolAbbr": "UofT",
    "lastCycle": false,
    "id": "p041",
    "firstSeen": "2026-10-23"
@@ -1607,6 +1627,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "麦吉尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p042",
    "firstSeen": "2026-10-23"
@@ -1645,6 +1667,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "英属哥伦比亚大学",
+   "schoolAbbr": "UBC",
    "lastCycle": false,
    "id": "p043",
    "firstSeen": "2026-10-23"
@@ -1683,6 +1707,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "英属哥伦比亚大学",
+   "schoolAbbr": "UBC",
    "lastCycle": false,
    "id": "p044",
    "firstSeen": "2026-10-23"
@@ -1721,6 +1747,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "麦克马斯特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p045",
    "firstSeen": "2026-10-23"
@@ -1759,6 +1787,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "海德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p046",
    "firstSeen": "2026-10-23"
@@ -1797,6 +1827,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "海德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p047",
    "firstSeen": "2026-10-23"
@@ -1835,6 +1867,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "海德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p048",
    "firstSeen": "2026-10-23"
@@ -1873,6 +1907,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "海德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p049",
    "firstSeen": "2026-10-23"
@@ -1911,6 +1947,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p050",
    "firstSeen": "2026-10-23"
@@ -1949,6 +1987,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p051",
    "firstSeen": "2026-10-23"
@@ -1987,6 +2027,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p052",
    "firstSeen": "2026-10-23"
@@ -2025,6 +2067,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p053",
    "firstSeen": "2026-10-23"
@@ -2065,6 +2109,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p054",
    "firstSeen": "2026-10-23"
@@ -2103,6 +2149,8 @@
    ],
    "field": "化学材料",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p055",
    "firstSeen": "2026-10-23"
@@ -2141,6 +2189,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p056",
    "firstSeen": "2026-10-23"
@@ -2179,6 +2229,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p057",
    "firstSeen": "2026-10-23"
@@ -2217,6 +2269,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p058",
    "firstSeen": "2026-10-23"
@@ -2255,6 +2309,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p059",
    "firstSeen": "2026-10-23"
@@ -2293,6 +2349,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p060",
    "firstSeen": "2026-10-23"
@@ -2331,6 +2389,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p061",
    "firstSeen": "2026-10-23"
@@ -2369,6 +2429,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p062",
    "firstSeen": "2026-10-23"
@@ -2407,6 +2469,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p063",
    "firstSeen": "2026-10-23"
@@ -2445,6 +2509,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p064",
    "firstSeen": "2026-10-23"
@@ -2483,6 +2549,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p065",
    "firstSeen": "2026-10-23"
@@ -2521,6 +2589,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑大学",
+   "schoolAbbr": "LMU",
    "lastCycle": false,
    "id": "p066",
    "firstSeen": "2026-10-23"
@@ -2559,6 +2629,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p067",
    "firstSeen": "2026-10-23"
@@ -2597,6 +2669,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p068",
    "firstSeen": "2026-10-23"
@@ -2635,6 +2709,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p069",
    "firstSeen": "2026-10-23"
@@ -2673,6 +2749,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p070",
    "firstSeen": "2026-10-23"
@@ -2711,6 +2789,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p071",
    "firstSeen": "2026-10-23"
@@ -2749,6 +2829,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p072",
    "firstSeen": "2026-10-23"
@@ -2787,6 +2869,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p073",
    "firstSeen": "2026-10-23"
@@ -2825,6 +2909,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p074",
    "firstSeen": "2026-10-23"
@@ -2863,6 +2949,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p075",
    "firstSeen": "2026-10-23"
@@ -2901,6 +2989,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p076",
    "firstSeen": "2026-10-23"
@@ -2939,6 +3029,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p077",
    "firstSeen": "2026-10-23"
@@ -2977,6 +3069,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "慕尼黑工业大学",
+   "schoolAbbr": "TUM",
    "lastCycle": false,
    "id": "p078",
    "firstSeen": "2026-10-23"
@@ -3091,6 +3185,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "比勒费尔德大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p081",
    "firstSeen": "2026-10-23"
@@ -3129,6 +3225,8 @@
    ],
    "field": "数学物理",
    "hub": null,
+   "schoolZh": "比勒费尔德大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p082",
    "firstSeen": "2026-10-23"
@@ -3167,6 +3265,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "比勒费尔德大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p083",
    "firstSeen": "2026-10-23"
@@ -3205,6 +3305,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "比勒费尔德大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p084",
    "firstSeen": "2026-10-23"
@@ -3243,6 +3345,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "勃兰登堡工业大学",
+   "schoolAbbr": "BTU",
    "lastCycle": false,
    "id": "p085",
    "firstSeen": "2026-10-23"
@@ -3281,6 +3385,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "勃兰登堡工业大学",
+   "schoolAbbr": "BTU",
    "lastCycle": false,
    "id": "p086",
    "firstSeen": "2026-10-23"
@@ -3319,6 +3425,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "勃兰登堡工业大学",
+   "schoolAbbr": "BTU",
    "lastCycle": false,
    "id": "p087",
    "firstSeen": "2026-10-23"
@@ -3357,6 +3465,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "勃兰登堡工业大学",
+   "schoolAbbr": "BTU",
    "lastCycle": false,
    "id": "p088",
    "firstSeen": "2026-10-23"
@@ -3395,6 +3505,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林夏里特医学院",
+   "schoolAbbr": "Charité",
    "lastCycle": false,
    "id": "p089",
    "firstSeen": "2026-10-23"
@@ -3433,6 +3545,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "开姆尼茨工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p090",
    "firstSeen": "2026-10-23"
@@ -3471,6 +3585,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "开姆尼茨工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p091",
    "firstSeen": "2026-10-23"
@@ -3585,6 +3701,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "德累斯顿工业大学",
+   "schoolAbbr": "TUD",
    "lastCycle": false,
    "id": "p094",
    "firstSeen": "2026-10-23"
@@ -3623,6 +3741,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "德累斯顿工业大学",
+   "schoolAbbr": "TUD",
    "lastCycle": false,
    "id": "p095",
    "firstSeen": "2026-10-23"
@@ -3661,6 +3781,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "德累斯顿工业大学",
+   "schoolAbbr": "TUD",
    "lastCycle": false,
    "id": "p096",
    "firstSeen": "2026-10-23"
@@ -3699,6 +3821,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "德累斯顿工业大学",
+   "schoolAbbr": "TUD",
    "lastCycle": false,
    "id": "p097",
    "firstSeen": "2026-10-23"
@@ -3737,6 +3861,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "德累斯顿工业大学",
+   "schoolAbbr": "TUD",
    "lastCycle": false,
    "id": "p098",
    "firstSeen": "2026-10-23"
@@ -3813,6 +3939,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p100",
    "firstSeen": "2026-10-23"
@@ -3851,6 +3979,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p101",
    "firstSeen": "2026-10-23"
@@ -3889,6 +4019,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p102",
    "firstSeen": "2026-10-23"
@@ -3927,6 +4059,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p103",
    "firstSeen": "2026-10-23"
@@ -3965,6 +4099,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p104",
    "firstSeen": "2026-10-23"
@@ -4003,6 +4139,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p105",
    "firstSeen": "2026-10-23"
@@ -4041,6 +4179,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p106",
    "firstSeen": "2026-10-23"
@@ -4081,6 +4221,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "埃尔朗根-纽伦堡大学",
+   "schoolAbbr": "FAU",
    "lastCycle": false,
    "id": "p107",
    "firstSeen": "2026-10-23"
@@ -4119,6 +4261,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p108",
    "firstSeen": "2026-10-23"
@@ -4157,6 +4301,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p109",
    "firstSeen": "2026-10-23"
@@ -4195,6 +4341,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p110",
    "firstSeen": "2026-10-23"
@@ -4233,6 +4381,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p111",
    "firstSeen": "2026-10-23"
@@ -4271,6 +4421,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p112",
    "firstSeen": "2026-10-23"
@@ -4309,6 +4461,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p113",
    "firstSeen": "2026-10-23"
@@ -4347,6 +4501,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林自由大学",
+   "schoolAbbr": "FU Berlin",
    "lastCycle": false,
    "id": "p114",
    "firstSeen": "2026-10-23"
@@ -4385,6 +4541,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p115",
    "firstSeen": "2026-10-23"
@@ -4423,6 +4581,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p116",
    "firstSeen": "2026-10-23"
@@ -4461,6 +4621,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p117",
    "firstSeen": "2026-10-23"
@@ -4499,6 +4661,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p118",
    "firstSeen": "2026-10-23"
@@ -4537,6 +4701,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p119",
    "firstSeen": "2026-10-23"
@@ -4575,6 +4741,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p120",
    "firstSeen": "2026-10-23"
@@ -4613,6 +4781,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p121",
    "firstSeen": "2026-10-23"
@@ -4651,6 +4821,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p122",
    "firstSeen": "2026-10-23"
@@ -4689,6 +4861,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶拿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p123",
    "firstSeen": "2026-10-23"
@@ -4919,6 +5093,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "法兰克福大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p129",
    "firstSeen": "2026-10-23"
@@ -4957,6 +5133,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "法兰克福大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p130",
    "firstSeen": "2026-10-23"
@@ -4995,6 +5173,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "法兰克福大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p131",
    "firstSeen": "2026-10-23"
@@ -5033,6 +5213,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡工业大学",
+   "schoolAbbr": "TUHH",
    "lastCycle": false,
    "id": "p132",
    "firstSeen": "2026-10-23"
@@ -5071,6 +5253,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡工业大学",
+   "schoolAbbr": "TUHH",
    "lastCycle": false,
    "id": "p133",
    "firstSeen": "2026-10-23"
@@ -5109,6 +5293,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡工业大学",
+   "schoolAbbr": "TUHH",
    "lastCycle": false,
    "id": "p134",
    "firstSeen": "2026-10-23"
@@ -5147,6 +5333,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p135",
    "firstSeen": "2026-10-23"
@@ -5185,6 +5373,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p136",
    "firstSeen": "2026-10-23"
@@ -5223,6 +5413,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p137",
    "firstSeen": "2026-10-23"
@@ -5261,6 +5453,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p138",
    "firstSeen": "2026-10-23"
@@ -5299,6 +5493,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p139",
    "firstSeen": "2026-10-23"
@@ -5337,6 +5533,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p140",
    "firstSeen": "2026-10-23"
@@ -5375,6 +5573,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p141",
    "firstSeen": "2026-10-23"
@@ -5413,6 +5613,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉诺威医学院",
+   "schoolAbbr": "MHH",
    "lastCycle": false,
    "id": "p142",
    "firstSeen": "2026-10-23"
@@ -5451,6 +5653,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "杜塞尔多夫大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p143",
    "firstSeen": "2026-10-23"
@@ -5489,6 +5693,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "杜塞尔多夫大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p144",
    "firstSeen": "2026-10-23"
@@ -5641,6 +5847,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林洪堡大学",
+   "schoolAbbr": "HU Berlin",
    "lastCycle": false,
    "id": "p148",
    "firstSeen": "2026-10-23"
@@ -5679,6 +5887,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林洪堡大学",
+   "schoolAbbr": "HU Berlin",
    "lastCycle": false,
    "id": "p149",
    "firstSeen": "2026-10-23"
@@ -5755,6 +5965,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "美因茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p151",
    "firstSeen": "2026-10-23"
@@ -5793,6 +6005,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "美因茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p152",
    "firstSeen": "2026-10-23"
@@ -5831,6 +6045,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p153",
    "firstSeen": "2026-10-23"
@@ -5869,6 +6085,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p154",
    "firstSeen": "2026-10-23"
@@ -5907,6 +6125,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p155",
    "firstSeen": "2026-10-23"
@@ -5945,6 +6165,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p156",
    "firstSeen": "2026-10-23"
@@ -5983,6 +6205,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p157",
    "firstSeen": "2026-10-23"
@@ -6021,6 +6245,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p158",
    "firstSeen": "2026-10-23"
@@ -6059,6 +6285,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p159",
    "firstSeen": "2026-10-23"
@@ -6097,6 +6325,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p160",
    "firstSeen": "2026-10-23"
@@ -6135,6 +6365,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p161",
    "firstSeen": "2026-10-23"
@@ -6173,6 +6405,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p162",
    "firstSeen": "2026-10-23"
@@ -6211,6 +6445,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p163",
    "firstSeen": "2026-10-23"
@@ -6249,6 +6485,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p164",
    "firstSeen": "2026-10-23"
@@ -6287,6 +6525,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维尔茨堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p165",
    "firstSeen": "2026-10-23"
@@ -6325,6 +6565,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p166",
    "firstSeen": "2026-10-23"
@@ -6363,6 +6605,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p167",
    "firstSeen": "2026-10-23"
@@ -6401,6 +6645,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p168",
    "firstSeen": "2026-10-23"
@@ -6439,6 +6685,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p169",
    "firstSeen": "2026-10-23"
@@ -6477,6 +6725,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p170",
    "firstSeen": "2026-10-23"
@@ -6515,6 +6765,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p171",
    "firstSeen": "2026-10-23"
@@ -6553,6 +6805,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p172",
    "firstSeen": "2026-10-23"
@@ -6591,6 +6845,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p173",
    "firstSeen": "2026-10-23"
@@ -6629,6 +6885,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p174",
    "firstSeen": "2026-10-23"
@@ -6667,6 +6925,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "吉森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p175",
    "firstSeen": "2026-10-23"
@@ -6705,6 +6965,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "基尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p176",
    "firstSeen": "2026-10-23"
@@ -6743,6 +7005,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "基尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p177",
    "firstSeen": "2026-10-23"
@@ -6781,6 +7045,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "基尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p178",
    "firstSeen": "2026-10-23"
@@ -6819,6 +7085,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "基尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p179",
    "firstSeen": "2026-10-23"
@@ -6935,6 +7203,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "莱比锡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p182",
    "firstSeen": "2026-10-23"
@@ -6973,6 +7243,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "莱比锡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p183",
    "firstSeen": "2026-10-23"
@@ -7011,6 +7283,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "莱比锡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p184",
    "firstSeen": "2026-10-23"
@@ -7049,6 +7323,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马尔堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p185",
    "firstSeen": "2026-10-23"
@@ -7089,6 +7365,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马尔堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p186",
    "firstSeen": "2026-10-23"
@@ -7127,6 +7405,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "马尔堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p187",
    "firstSeen": "2026-10-23"
@@ -7699,6 +7979,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马普物理与医学中心",
+   "schoolAbbr": "MPZ.PM",
    "lastCycle": false,
    "id": "p202",
    "firstSeen": "2026-10-23"
@@ -7737,6 +8019,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马普物理与医学中心",
+   "schoolAbbr": "MPZ.PM",
    "lastCycle": false,
    "id": "p203",
    "firstSeen": "2026-10-23"
@@ -7775,6 +8059,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥斯纳布吕克大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p204",
    "firstSeen": "2026-10-23"
@@ -7813,6 +8099,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥斯纳布吕克大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p205",
    "firstSeen": "2026-10-23"
@@ -7851,6 +8139,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥斯纳布吕克大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p206",
    "firstSeen": "2026-10-23"
@@ -7889,6 +8179,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马格德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p207",
    "firstSeen": "2026-10-23"
@@ -7927,6 +8219,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马格德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p208",
    "firstSeen": "2026-10-23"
@@ -7965,6 +8259,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "马格德堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p209",
    "firstSeen": "2026-10-23"
@@ -8003,6 +8299,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "帕德博恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p210",
    "firstSeen": "2026-10-23"
@@ -8041,6 +8339,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "帕德博恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p211",
    "firstSeen": "2026-10-23"
@@ -8079,6 +8379,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "帕德博恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p212",
    "firstSeen": "2026-10-23"
@@ -8117,6 +8419,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p213",
    "firstSeen": "2026-10-23"
@@ -8155,6 +8459,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p214",
    "firstSeen": "2026-10-23"
@@ -8193,6 +8499,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p215",
    "firstSeen": "2026-10-23"
@@ -8231,6 +8539,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p216",
    "firstSeen": "2026-10-23"
@@ -8269,6 +8579,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p217",
    "firstSeen": "2026-10-23"
@@ -8307,6 +8619,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p218",
    "firstSeen": "2026-10-23"
@@ -8345,6 +8659,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "凯泽斯劳滕-兰道大学",
+   "schoolAbbr": "RPTU",
    "lastCycle": false,
    "id": "p219",
    "firstSeen": "2026-10-23"
@@ -8383,6 +8699,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p220",
    "firstSeen": "2026-10-23"
@@ -8421,6 +8739,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p221",
    "firstSeen": "2026-10-23"
@@ -8461,6 +8781,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p222",
    "firstSeen": "2026-10-23"
@@ -8499,6 +8821,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p223",
    "firstSeen": "2026-10-23"
@@ -8537,6 +8861,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p224",
    "firstSeen": "2026-10-23"
@@ -8575,6 +8901,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p225",
    "firstSeen": "2026-10-23"
@@ -8613,6 +8941,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "亚琛工业大学",
+   "schoolAbbr": "RWTH",
    "lastCycle": false,
    "id": "p226",
    "firstSeen": "2026-10-23"
@@ -8651,6 +8981,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波鸿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p227",
    "firstSeen": "2026-10-23"
@@ -8689,6 +9021,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波鸿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p228",
    "firstSeen": "2026-10-23"
@@ -8729,6 +9063,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波鸿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p229",
    "firstSeen": "2026-10-23"
@@ -8767,6 +9103,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波鸿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p230",
    "firstSeen": "2026-10-23"
@@ -8919,6 +9257,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "萨尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p234",
    "firstSeen": "2026-10-23"
@@ -8957,6 +9297,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "萨尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p235",
    "firstSeen": "2026-10-23"
@@ -8995,6 +9337,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "萨尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p236",
    "firstSeen": "2026-10-23"
@@ -9033,6 +9377,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "萨尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p237",
    "firstSeen": "2026-10-23"
@@ -9071,6 +9417,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "萨尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p238",
    "firstSeen": "2026-10-23"
@@ -9109,6 +9457,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱贝格矿业工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p239",
    "firstSeen": "2026-10-23"
@@ -9147,6 +9497,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱贝格矿业工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p240",
    "firstSeen": "2026-10-23"
@@ -9185,6 +9537,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱贝格矿业工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p241",
    "firstSeen": "2026-10-23"
@@ -9223,6 +9577,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "多特蒙德工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p242",
    "firstSeen": "2026-10-23"
@@ -9261,6 +9617,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "多特蒙德工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p243",
    "firstSeen": "2026-10-23"
@@ -9299,6 +9657,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "达姆施塔特工业大学",
+   "schoolAbbr": "TUDa",
    "lastCycle": false,
    "id": "p244",
    "firstSeen": "2026-10-23"
@@ -9337,6 +9697,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "达姆施塔特工业大学",
+   "schoolAbbr": "TUDa",
    "lastCycle": false,
    "id": "p245",
    "firstSeen": "2026-10-23"
@@ -9375,6 +9737,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林工业大学",
+   "schoolAbbr": "TU Berlin",
    "lastCycle": false,
    "id": "p246",
    "firstSeen": "2026-10-23"
@@ -9413,6 +9777,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林工业大学",
+   "schoolAbbr": "TU Berlin",
    "lastCycle": false,
    "id": "p247",
    "firstSeen": "2026-10-23"
@@ -9451,6 +9817,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "柏林工业大学",
+   "schoolAbbr": "TU Berlin",
    "lastCycle": false,
    "id": "p248",
    "firstSeen": "2026-10-23"
@@ -9527,6 +9895,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "伊尔梅瑙工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p250",
    "firstSeen": "2026-10-23"
@@ -9565,6 +9935,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "伊尔梅瑙工业大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p251",
    "firstSeen": "2026-10-23"
@@ -9641,6 +10013,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "乌尔姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p253",
    "firstSeen": "2026-10-23"
@@ -9679,6 +10053,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "乌尔姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p254",
    "firstSeen": "2026-10-23"
@@ -9717,6 +10093,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "乌尔姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p255",
    "firstSeen": "2026-10-23"
@@ -9755,6 +10133,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "乌尔姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p256",
    "firstSeen": "2026-10-23"
@@ -9795,6 +10175,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "乌尔姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p257",
    "firstSeen": "2026-10-23"
@@ -9909,6 +10291,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "拜罗伊特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p260",
    "firstSeen": "2026-10-23"
@@ -9947,6 +10331,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "拜罗伊特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p261",
    "firstSeen": "2026-10-23"
@@ -9985,6 +10371,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p262",
    "firstSeen": "2026-10-23"
@@ -10023,6 +10411,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p263",
    "firstSeen": "2026-10-23"
@@ -10061,6 +10451,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p264",
    "firstSeen": "2026-10-23"
@@ -10101,6 +10493,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p265",
    "firstSeen": "2026-10-23"
@@ -10139,6 +10533,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p266",
    "firstSeen": "2026-10-23"
@@ -10177,6 +10573,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p267",
    "firstSeen": "2026-10-23"
@@ -10215,6 +10613,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p268",
    "firstSeen": "2026-10-23"
@@ -10253,6 +10653,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p269",
    "firstSeen": "2026-10-23"
@@ -10291,6 +10693,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p270",
    "firstSeen": "2026-10-23"
@@ -10329,6 +10733,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p271",
    "firstSeen": "2026-10-23"
@@ -10367,6 +10773,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p272",
    "firstSeen": "2026-10-23"
@@ -10405,6 +10813,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p273",
    "firstSeen": "2026-10-23"
@@ -10443,6 +10853,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p274",
    "firstSeen": "2026-10-23"
@@ -10481,6 +10893,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "波恩大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p275",
    "firstSeen": "2026-10-23"
@@ -10519,6 +10933,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "不来梅大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p276",
    "firstSeen": "2026-10-23"
@@ -10557,6 +10973,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "不来梅大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p277",
    "firstSeen": "2026-10-23"
@@ -10595,6 +11013,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "不来梅大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p278",
    "firstSeen": "2026-10-23"
@@ -10633,6 +11053,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "科隆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p279",
    "firstSeen": "2026-10-23"
@@ -10671,6 +11093,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "科隆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p280",
    "firstSeen": "2026-10-23"
@@ -10709,6 +11133,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "科隆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p281",
    "firstSeen": "2026-10-23"
@@ -10747,6 +11173,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "科隆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p282",
    "firstSeen": "2026-10-23"
@@ -10785,6 +11213,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "科隆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p283",
    "firstSeen": "2026-10-23"
@@ -10823,6 +11253,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "杜伊斯堡-埃森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p284",
    "firstSeen": "2026-10-23"
@@ -10863,6 +11295,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "杜伊斯堡-埃森大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p285",
    "firstSeen": "2026-10-23"
@@ -10901,6 +11335,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p286",
    "firstSeen": "2026-10-23"
@@ -10941,6 +11377,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p287",
    "firstSeen": "2026-10-23"
@@ -10979,6 +11417,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p288",
    "firstSeen": "2026-10-23"
@@ -11017,6 +11457,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p289",
    "firstSeen": "2026-10-23"
@@ -11055,6 +11497,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p290",
    "firstSeen": "2026-10-23"
@@ -11093,6 +11537,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗莱堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p291",
    "firstSeen": "2026-10-23"
@@ -11169,6 +11615,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p293",
    "firstSeen": "2026-10-23"
@@ -11207,6 +11655,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p294",
    "firstSeen": "2026-10-23"
@@ -11245,6 +11695,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p295",
    "firstSeen": "2026-10-23"
@@ -11283,6 +11735,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p296",
    "firstSeen": "2026-10-23"
@@ -11321,6 +11775,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p297",
    "firstSeen": "2026-10-23"
@@ -11359,6 +11815,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p298",
    "firstSeen": "2026-10-23"
@@ -11397,6 +11855,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p299",
    "firstSeen": "2026-10-23"
@@ -11435,6 +11895,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p300",
    "firstSeen": "2026-10-23"
@@ -11473,6 +11935,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p301",
    "firstSeen": "2026-10-23"
@@ -11511,6 +11975,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p302",
    "firstSeen": "2026-10-23"
@@ -11549,6 +12015,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p303",
    "firstSeen": "2026-10-23"
@@ -11587,6 +12055,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p304",
    "firstSeen": "2026-10-23"
@@ -11625,6 +12095,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p305",
    "firstSeen": "2026-10-23"
@@ -11665,6 +12137,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p306",
    "firstSeen": "2026-10-23"
@@ -11703,6 +12177,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "哥廷根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p307",
    "firstSeen": "2026-10-23"
@@ -11741,6 +12217,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p308",
    "firstSeen": "2026-10-23"
@@ -11779,6 +12257,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p309",
    "firstSeen": "2026-10-23"
@@ -11817,6 +12297,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "汉堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p310",
    "firstSeen": "2026-10-23"
@@ -11855,6 +12337,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p311",
    "firstSeen": "2026-10-23"
@@ -11893,6 +12377,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p312",
    "firstSeen": "2026-10-23"
@@ -11931,6 +12417,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "汉堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p313",
    "firstSeen": "2026-10-23"
@@ -11969,6 +12457,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p314",
    "firstSeen": "2026-10-23"
@@ -12007,6 +12497,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p315",
    "firstSeen": "2026-10-23"
@@ -12045,6 +12537,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p316",
    "firstSeen": "2026-10-23"
@@ -12083,6 +12577,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p317",
    "firstSeen": "2026-10-23"
@@ -12121,6 +12617,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p318",
    "firstSeen": "2026-10-23"
@@ -12159,6 +12657,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p319",
    "firstSeen": "2026-10-23"
@@ -12197,6 +12697,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "霍恩海姆大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p320",
    "firstSeen": "2026-10-23"
@@ -12235,6 +12737,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "卡塞尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p321",
    "firstSeen": "2026-10-23"
@@ -12273,6 +12777,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "卡塞尔大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p322",
    "firstSeen": "2026-10-23"
@@ -12387,6 +12893,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "康斯坦茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p325",
    "firstSeen": "2026-10-23"
@@ -12425,6 +12933,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "康斯坦茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p326",
    "firstSeen": "2026-10-23"
@@ -12463,6 +12973,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "康斯坦茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p327",
    "firstSeen": "2026-10-23"
@@ -12501,6 +13013,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "康斯坦茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p328",
    "firstSeen": "2026-10-23"
@@ -12539,6 +13053,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "康斯坦茨大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p329",
    "firstSeen": "2026-10-23"
@@ -12615,6 +13131,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "明斯特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p331",
    "firstSeen": "2026-10-23"
@@ -12653,6 +13171,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "明斯特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p332",
    "firstSeen": "2026-10-23"
@@ -12691,6 +13211,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥尔登堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p333",
    "firstSeen": "2026-10-23"
@@ -12729,6 +13251,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥尔登堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p334",
    "firstSeen": "2026-10-23"
@@ -12767,6 +13291,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥尔登堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p335",
    "firstSeen": "2026-10-23"
@@ -12805,6 +13331,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥尔登堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p336",
    "firstSeen": "2026-10-23"
@@ -12843,6 +13371,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥尔登堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p337",
    "firstSeen": "2026-10-23"
@@ -12881,6 +13411,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥尔登堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p338",
    "firstSeen": "2026-10-23"
@@ -12957,6 +13489,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p340",
    "firstSeen": "2026-10-23"
@@ -12995,6 +13529,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p341",
    "firstSeen": "2026-10-23"
@@ -13033,6 +13569,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p342",
    "firstSeen": "2026-10-23"
@@ -13071,6 +13609,8 @@
    ],
    "field": "计科软工",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p343",
    "firstSeen": "2026-10-23"
@@ -13111,6 +13651,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p344",
    "firstSeen": "2026-10-23"
@@ -13149,6 +13691,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p345",
    "firstSeen": "2026-10-23"
@@ -13187,6 +13731,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p346",
    "firstSeen": "2026-10-23"
@@ -13225,6 +13771,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p347",
    "firstSeen": "2026-10-23"
@@ -13265,6 +13813,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "波茨坦大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p348",
    "firstSeen": "2026-10-23"
@@ -13303,6 +13853,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "雷根斯堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p349",
    "firstSeen": "2026-10-23"
@@ -13341,6 +13893,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "雷根斯堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p350",
    "firstSeen": "2026-10-23"
@@ -13379,6 +13933,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "雷根斯堡大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p351",
    "firstSeen": "2026-10-23"
@@ -13417,6 +13973,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "斯图加特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p352",
    "firstSeen": "2026-10-23"
@@ -13455,6 +14013,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "斯图加特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p353",
    "firstSeen": "2026-10-23"
@@ -13493,6 +14053,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "斯图加特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p354",
    "firstSeen": "2026-10-23"
@@ -13569,6 +14131,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p356",
    "firstSeen": "2026-10-23"
@@ -13607,6 +14171,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p357",
    "firstSeen": "2026-10-23"
@@ -13645,6 +14211,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p358",
    "firstSeen": "2026-10-23"
@@ -13683,6 +14251,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p359",
    "firstSeen": "2026-10-23"
@@ -13721,6 +14291,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p360",
    "firstSeen": "2026-10-23"
@@ -13759,6 +14331,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p361",
    "firstSeen": "2026-10-23"
@@ -13797,6 +14371,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p362",
    "firstSeen": "2026-10-23"
@@ -13837,6 +14413,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p363",
    "firstSeen": "2026-10-23"
@@ -13875,6 +14453,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p364",
    "firstSeen": "2026-10-23"
@@ -13915,6 +14495,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p365",
    "firstSeen": "2026-10-23"
@@ -13953,6 +14535,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p366",
    "firstSeen": "2026-10-23"
@@ -13991,6 +14575,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p367",
    "firstSeen": "2026-10-23"
@@ -14029,6 +14615,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p368",
    "firstSeen": "2026-10-23"
@@ -14067,6 +14655,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p369",
    "firstSeen": "2026-10-23"
@@ -14105,6 +14695,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p370",
    "firstSeen": "2026-10-23"
@@ -14143,6 +14735,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p371",
    "firstSeen": "2026-10-23"
@@ -14181,6 +14775,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "图宾根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p372",
    "firstSeen": "2026-10-23"
@@ -16357,6 +16953,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "苏黎世联邦理工学院·生命科学研究生院",
+   "schoolAbbr": "ETH",
    "lastCycle": false,
    "id": "p429",
    "firstSeen": "2026-10-23"
@@ -16395,6 +16993,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "洛桑联邦理工学院",
+   "schoolAbbr": "EPFL",
    "lastCycle": false,
    "id": "p430",
    "firstSeen": "2026-10-23"
@@ -16433,6 +17033,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗里德里希·米歇尔研究所",
+   "schoolAbbr": "FMI",
    "lastCycle": false,
    "id": "p431",
    "firstSeen": "2026-10-23"
@@ -16473,6 +17075,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "巴塞尔大学·Biozentrum",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p432",
    "firstSeen": "2026-10-23"
@@ -16511,6 +17115,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "巴斯德研究所",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p433",
    "firstSeen": "2026-10-23"
@@ -16549,6 +17155,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "居里研究所",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p434",
    "firstSeen": "2026-10-23"
@@ -16587,6 +17195,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "维也纳生物中心",
+   "schoolAbbr": "VBC",
    "lastCycle": false,
    "id": "p435",
    "firstSeen": "2026-10-23"
@@ -16625,6 +17235,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥地利科学技术研究所",
+   "schoolAbbr": "ISTA",
    "lastCycle": false,
    "id": "p436",
    "firstSeen": "2026-10-23"
@@ -16665,6 +17277,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "胡布雷希特研究所",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p437",
    "firstSeen": "2026-10-23"
@@ -16703,6 +17317,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "荷兰癌症研究所",
+   "schoolAbbr": "NKI",
    "lastCycle": false,
    "id": "p438",
    "firstSeen": "2026-10-23"
@@ -16741,6 +17357,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "VIB-鲁汶大学神经科学中心",
+   "schoolAbbr": "VIB",
    "lastCycle": false,
    "id": "p439",
    "firstSeen": "2026-10-23"
@@ -16779,6 +17397,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "卡罗林斯卡医学院",
+   "schoolAbbr": "KI",
    "lastCycle": false,
    "id": "p440",
    "firstSeen": "2026-10-23"
@@ -16817,6 +17437,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "瑞典生命科学实验室",
+   "schoolAbbr": "SciLifeLab",
    "lastCycle": false,
    "id": "p441",
    "firstSeen": "2026-10-23"
@@ -16857,6 +17479,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "诺和诺德基金会研究中心",
+   "schoolAbbr": "NNF",
    "lastCycle": false,
    "id": "p442",
    "firstSeen": "2026-10-23"
@@ -16895,6 +17519,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "挪威科技大学",
+   "schoolAbbr": "NTNU",
    "lastCycle": false,
    "id": "p443",
    "firstSeen": "2026-10-23"
@@ -16933,6 +17559,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "奥斯陆大学·分子生物科学中心",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p444",
    "firstSeen": "2026-10-23"
@@ -16971,6 +17599,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "人类技术园",
+   "schoolAbbr": "Human Technopole",
    "lastCycle": false,
    "id": "p445",
    "firstSeen": "2026-10-23"
@@ -17011,6 +17641,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "TIGEM 遗传学与医学研究所",
+   "schoolAbbr": "TIGEM",
    "lastCycle": false,
    "id": "p446",
    "firstSeen": "2026-10-23"
@@ -17089,6 +17721,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "尚帕利莫基金会",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p448",
    "firstSeen": "2026-10-23"
@@ -17627,6 +18261,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "韩国科学技术院",
+   "schoolAbbr": "KAIST",
    "lastCycle": false,
    "id": "p462",
    "firstSeen": "2026-10-23"
@@ -17667,6 +18303,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "浦项科技大学",
+   "schoolAbbr": "POSTECH",
    "lastCycle": false,
    "id": "p463",
    "firstSeen": "2026-10-23"
@@ -17707,6 +18345,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "光州科学技术院",
+   "schoolAbbr": "GIST",
    "lastCycle": false,
    "id": "p464",
    "firstSeen": "2026-10-23"
@@ -17747,6 +18387,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "蔚山科学技术院",
+   "schoolAbbr": "UNIST",
    "lastCycle": false,
    "id": "p465",
    "firstSeen": "2026-10-23"
@@ -18091,6 +18733,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "牛津大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p474",
    "firstSeen": "2026-10-23"
@@ -18129,6 +18773,8 @@
    ],
    "field": "其他交叉",
    "hub": null,
+   "schoolZh": "剑桥大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p475",
    "firstSeen": "2026-10-23"
@@ -18167,6 +18813,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "剑桥大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p476",
    "firstSeen": "2026-10-23"
@@ -18205,6 +18853,8 @@
    ],
    "field": "其他交叉",
    "hub": null,
+   "schoolZh": "帝国理工学院",
+   "schoolAbbr": "Imperial",
    "lastCycle": false,
    "id": "p477",
    "firstSeen": "2026-10-23"
@@ -18243,6 +18893,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "伦敦大学学院·SWC 神经中心",
+   "schoolAbbr": "UCL",
    "lastCycle": false,
    "id": "p478",
    "firstSeen": "2026-10-23"
@@ -18281,6 +18933,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "爱丁堡大学（EASTBIO）",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p479",
    "firstSeen": "2026-10-23"
@@ -18319,6 +18973,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "伦敦国王学院",
+   "schoolAbbr": "KCL",
    "lastCycle": false,
    "id": "p480",
    "firstSeen": "2026-10-23"
@@ -18357,6 +19013,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "弗朗西斯·克里克研究所",
+   "schoolAbbr": "Crick",
    "lastCycle": false,
    "id": "p481",
    "firstSeen": "2026-10-23"
@@ -18395,6 +19053,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "威康桑格研究所",
+   "schoolAbbr": "Sanger",
    "lastCycle": false,
    "id": "p482",
    "firstSeen": "2026-10-23"
@@ -18433,6 +19093,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "曼彻斯特大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p483",
    "firstSeen": "2026-10-23"
@@ -18471,6 +19133,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "谢菲尔德大学（约克郡 DTP）",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p484",
    "firstSeen": "2026-10-23"
@@ -18509,6 +19173,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "冷泉港实验室",
+   "schoolAbbr": "CSHL",
    "lastCycle": false,
    "id": "p485",
    "firstSeen": "2026-10-23"
@@ -18547,6 +19213,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "洛克菲勒大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p486",
    "firstSeen": "2026-10-23"
@@ -18585,6 +19253,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "麻省理工学院",
+   "schoolAbbr": "MIT",
    "lastCycle": false,
    "id": "p487",
    "firstSeen": "2026-10-23"
@@ -18623,6 +19293,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "哈佛大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p488",
    "firstSeen": "2026-10-23"
@@ -18661,6 +19333,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "斯坦福大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p489",
    "firstSeen": "2026-10-23"
@@ -18699,6 +19373,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "斯坦福大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p490",
    "firstSeen": "2026-10-23"
@@ -18737,6 +19413,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "加州大学旧金山分校",
+   "schoolAbbr": "UCSF",
    "lastCycle": false,
    "id": "p491",
    "firstSeen": "2026-10-23"
@@ -18775,6 +19453,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "加州大学伯克利分校",
+   "schoolAbbr": "Berkeley",
    "lastCycle": false,
    "id": "p492",
    "firstSeen": "2026-10-23"
@@ -18813,6 +19493,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "加州理工学院",
+   "schoolAbbr": "Caltech",
    "lastCycle": false,
    "id": "p493",
    "firstSeen": "2026-10-23"
@@ -18851,6 +19533,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "约翰斯·霍普金斯大学",
+   "schoolAbbr": "JHU",
    "lastCycle": false,
    "id": "p494",
    "firstSeen": "2026-10-23"
@@ -18889,6 +19573,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "耶鲁大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p495",
    "firstSeen": "2026-10-23"
@@ -18927,6 +19613,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "普林斯顿大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p496",
    "firstSeen": "2026-10-23"
@@ -18965,6 +19653,8 @@
    ],
    "field": "化学材料",
    "hub": null,
+   "schoolZh": "斯克里普斯研究所",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p497",
    "firstSeen": "2026-10-23"
@@ -19003,6 +19693,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "圣路易斯华盛顿大学",
+   "schoolAbbr": "WashU",
    "lastCycle": false,
    "id": "p498",
    "firstSeen": "2026-10-23"
@@ -19041,6 +19733,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "密歇根大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p499",
    "firstSeen": "2026-10-23"
@@ -19079,6 +19773,8 @@
    ],
    "field": "生物医学",
    "hub": null,
+   "schoolZh": "杜克大学",
+   "schoolAbbr": "",
    "lastCycle": false,
    "id": "p500",
    "firstSeen": "2026-10-23"
