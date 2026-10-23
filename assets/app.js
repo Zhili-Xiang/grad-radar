@@ -459,7 +459,9 @@ function renderBoard(board) {
     groups = REGION_ORDER.filter(r => list.some(e => e.region === r))
       .map(r => [r, list.filter(e => e.region === r)]);
   } else {
-    const countries = [...new Set(list.map(e => e.country).filter(Boolean))];
+    const byCountry = new Map();
+    list.forEach(e => { if (e.country) byCountry.set(e.country, (byCountry.get(e.country) || 0) + 1); });
+    const countries = [...byCountry.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
     groups = countries.length > 1
       ? countries.map(c => [`${st.region} · ${c}`, list.filter(e => e.country === c)])
       : [[st.region, list]];
@@ -581,8 +583,13 @@ function wireBoard(board) {
   const st = boardState[board];
   const pool = boardPrograms(board);
   const regions = REGION_ORDER.filter(r => pool.some(e => e.region === r));
+  const syncViewChips = () => {
+    [...document.querySelectorAll(`#${board}-view .chip`)]
+      .forEach(c => c.classList.toggle('on', c.dataset.v === st.view));
+  };
   chipRow($(`#${board}-chips`), ['全部', ...regions], st.region, v => {
     st.region = v; st.country = '全部';
+    if (st.view !== 'region') { st.view = 'region'; curSchool[board] = null; syncViewChips(); }
     updateCountryChips(board);
     renderBoard(board);
   });
