@@ -49,8 +49,8 @@ const state = {
   camp: '全部', campField: '全部', campSub: '全部',
 };
 const boardState = {
-  intl: { region: '全部', country: '全部', subfield: '全部', degree: '全部', q: '', sort: 'tier', hideExpired: true, view: 'region' },
-  overseas: { region: '全部', country: '全部', subfield: '全部', degree: '全部', q: '', sort: 'tier', hideExpired: true, view: 'region' },
+  intl: { region: '全部', country: '全部', subfield: '全部', degree: '全部', q: '', sort: 'tier', hideExpired: true, view: 'school' },
+  overseas: { region: '全部', country: '全部', subfield: '全部', degree: '全部', q: '', sort: 'tier', hideExpired: true, view: 'school' },
 };
 const curSchool = { intl: null, overseas: null };
 
@@ -141,7 +141,7 @@ function fillSubfieldSelect(sel, pool) {
   pool.forEach(e => {
     if (e.subfield && present.has(e.field)) present.get(e.field).add(e.subfield);
   });
-  sel.innerHTML = `<option value="全部">全部方向</option>` + FIELDS_ALL.map(f => {
+  sel.innerHTML = `<option value="全部">研究方向</option>` + FIELDS_ALL.map(f => {
     const subs = SUBFIELDS[f].length ? SUBFIELDS[f].filter(s => present.get(f).has(s)) : [];
     if (!subs.length) return '';
     return `<optgroup label="${esc(f)}">` +
@@ -476,12 +476,14 @@ function renderBoard(board) {
 }
 
 function degCountText(items) {
-  const n = items.filter(e => /博士|硕博/.test(e.degree || '')).length;
+  const n = items.filter(e => e.degree === '博士').length;
   const m = items.filter(e => e.degree === '硕士').length;
-  const r = items.length - n - m;
+  const both = items.filter(e => e.degree !== '博士' && e.degree !== '硕士' && /博士|硕博/.test(e.degree || '')).length;
+  const r = items.length - n - m - both;
   const parts = [`共 ${items.length} 条`];
   if (n) parts.push(`博 ${n}`);
   if (m) parts.push(`硕 ${m}`);
+  if (both) parts.push(`硕博 ${both}`);
   if (r) parts.push(`其他 ${r}`);
   return parts.join(' · ');
 }
@@ -564,7 +566,10 @@ function openSchool(board, school) {
   const parts = [];
   if (phd.length) parts.push(moduleHTML(`sd-${board}-博士`, '博士', phd.sort(tierCmp), true, '', degCountText(phd)));
   if (msc.length) parts.push(moduleHTML(`sd-${board}-硕士`, '硕士', msc.sort(tierCmp), true, '', degCountText(msc)));
-  if (rest.length) parts.push(moduleHTML(`sd-${board}-其他`, '其他', rest.sort(tierCmp), true, '', degCountText(rest)));
+  if (rest.length) {
+    const degName = rest[0].degree || '其他';
+    parts.push(moduleHTML(`sd-${board}-${degName}`, degName, rest.sort(tierCmp), true, '', degCountText(rest)));
+  }
   modsEl.innerHTML = parts.join('');
   registerGrids(modsEl);
   observeReveals();

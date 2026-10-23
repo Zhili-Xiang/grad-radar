@@ -151,12 +151,12 @@ img,svg{vertical-align:middle}
 .chip:hover{border-color:var(--ink-3);color:var(--ink)}
 .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-#search{
+#search,#intl-search,#overseas-search{
   flex:1;min-width:200px;border:1px solid var(--line);border-radius:12px;
   background:var(--card);padding:10px 15px;font-size:14px;color:var(--ink);outline:none;
   transition:border-color .2s,box-shadow .2s;
 }
-#search:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,113,227,.15)}
+#search:focus,#intl-search:focus,#overseas-search:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,113,227,.15)}
 .toolbar select{
   border:1px solid var(--line);border-radius:12px;background:var(--card);
   padding:10px 12px;font-size:14px;color:var(--ink);outline:none;cursor:pointer;
