@@ -459,14 +459,23 @@ function wireBoard(board) {
   $(`#${board}-search`).addEventListener('input', e => { st.q = e.target.value.trim(); renderBoard(board); });
   $(`#${board}-degree`).onchange = e => { st.degree = e.target.value; renderBoard(board); };
   $(`#${board}-sort`).onchange = e => { st.sort = e.target.value; renderBoard(board); };
-  $(`#${board}-hide-expired`).addEventListener('change', e => { st.hideExpired = e.target.checked; renderBoard(board); });
+  $(`#${board}-hide-expired`).addEventListener('change', e => {
+    st.hideExpired = e.target.checked;
+    updateCountryChips(board);
+    renderBoard(board);
+  });
 }
 
 function updateCountryChips(board) {
   const st = boardState[board];
   const row = $(`#${board}-country-chips`);
   if (st.region === '全部') { row.hidden = true; return; }
-  const pool = boardPrograms(board).filter(e => e.region === st.region);
+  const pool = boardPrograms(board).filter(e => {
+    if (e.region !== st.region) return false;
+    if (!st.hideExpired) return true;
+    const d = daysUntil(e.deadline);
+    return d === null || d >= 0;
+  });
   const counts = new Map();
   pool.forEach(e => { if (e.country) counts.set(e.country, (counts.get(e.country) || 0) + 1); });
   const countries = [...counts.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
@@ -525,16 +534,21 @@ function runMatch() {
     if (Number.isFinite(ielts) && e.ielts && e.ielts > ielts + 1e-9) { failedLang++; return; }
     if (Number.isFinite(gpa) && e.gpa && e.gpa > gpa + 1e-9) { failedLang++; return; }
     if (fund === '仅全奖' && e.funding !== '全奖') { failedFund++; return; }
-    if (fund === 'CSC可申请' && !(e.funding || '').includes('CSC')) { failedFund++; return; }
     if (!e.ielts && !e.gpa) unknown++;
     if (bg === '双非' && e.tier === 0) e._reach = true; else e._reach = false;
     ok.push(e);
   });
+  // CSC 是学生自申通道，海外博士几乎都可行：不做硬过滤，仅把更适合自带资助的排前
+  const fundRank = e => fund === 'CSC可申请'
+    ? ({ '学费减免': 0, '未知': 1, '全奖': 2 }[e.funding] ?? 3)
+    : 0;
   ok.sort((a, b) => {
     if (fund === '全奖优先') {
       const fa = (a.funding === '全奖') ? 0 : 1, fb = (b.funding === '全奖') ? 0 : 1;
       if (fa !== fb) return fa - fb;
     }
+    const ra = fundRank(a), rb = fundRank(b);
+    if (ra !== rb) return ra - rb;
     return tierCmp(a, b);
   });
 
@@ -545,6 +559,7 @@ function runMatch() {
   if (unknown) bits.push(`${unknown} 条要求未标注（保留展示）`);
   if (failedLang) bits.push(`${failedLang} 条因语言/均分不够被筛掉`);
   if (failedFund) bits.push(`${failedFund} 条不满足资助条件`);
+  if (fund === 'CSC可申请') bits.push('海外博士大多可自申 CSC，已按适合自带资助优先排序');
   if (bg === '双非') bits.push('顶尖档已标「冲刺位」');
   sum.textContent = bits.join(' · ');
   out.scrollIntoView({ behavior: 'smooth', block: 'start' });

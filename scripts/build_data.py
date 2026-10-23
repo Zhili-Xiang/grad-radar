@@ -32,6 +32,8 @@ BOARD_FILES_OVERSEAS = {
     "overseas-aunz.json", "overseas-jpkr.json", "overseas-sea.json",
 }
 SPECIAL_DEADLINES = {"滚动": "滚动", "长期": "长期", "长期开放": "长期", "长期有效": "长期", "全年": "滚动"}
+# 资助口径归一化（机制细节保留在各条 note 里）
+FUNDING_NORM = {"竞争制全奖": "全奖", "学费全免": "学费减免", "导师资助": "全奖", "全额资助": "全奖"}
 
 # 大类分类：1) 精确覆盖表（多领域专项、机构定向）2) 标题+学院关键词（强信号）
 # 3) 兜底：整校章程/简章归其他交叉 4) 正文关键词（弱信号）
@@ -308,6 +310,8 @@ def clean(x):
     o["subfield"] = classify_subfield(o)
     o["hub"] = derive_hub(o) if board == "domestic" else None
     o["tier"] = x.get("tier") if x.get("tier") in (0, 1, 2) else None
+    if o.get("funding") in FUNDING_NORM:
+        o["funding"] = FUNDING_NORM[o["funding"]]
     o["ielts"] = norm_num(x.get("ielts"))
     o["gpa"] = norm_num(x.get("gpa"))
     # 海外/国际：明确日期且已过 → 往期参考（滚动/长期不算）
