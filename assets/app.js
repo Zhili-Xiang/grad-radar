@@ -421,7 +421,9 @@ function renderBoard(board) {
   const st = boardState[board];
   const pre = board === 'intl' ? 'if-' : 'of-';
   const sp = board === 'intl' ? 'is-' : 'os-';
-  [...pgPages.keys()].filter(k => k.startsWith(pre) || k.startsWith(sp) || k.startsWith('sd-' + board))
+  const wallKey = board === 'intl' ? 'is-wall' : 'os-wall';
+  [...pgPages.keys()]
+    .filter(k => k !== wallKey && (k.startsWith(pre) || k.startsWith(sp) || k.startsWith('sd-' + board)))
     .forEach(k => pgPages.delete(k));
   let list = boardPrograms(board);
   if (st.region !== '全部') list = list.filter(e => (e.region || '') === st.region);
@@ -785,7 +787,7 @@ function renderPaged(key, gridEl, html, pp) {
   // 字符串分页：切片渲染 + 更新同容器内的翻页控件
   if (!pgPages.has(key)) pgPages.set(key, 0);
   const pages = Math.ceil(html.length / pp) || 1;
-  const page = Math.min(pgPages.get(key), pages - 1);
+  const page = Math.max(0, Math.min(pgPages.get(key), pages - 1));
   pgPages.set(key, page);
   gridEl.innerHTML = html.slice(page * pp, page * pp + pp).join('');
   const ctl = gridEl.parentElement.querySelector('.pg-ctl[data-mod="' + key + '"]');
