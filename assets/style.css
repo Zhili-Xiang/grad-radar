@@ -66,34 +66,6 @@ img,svg{vertical-align:middle}
   text-wrap:balance;
 }
 .hero-cta{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
-.hero-digest{
-  max-width:720px;margin:64px auto 0;text-align:left;
-  background:#0d0d0f;border-radius:var(--radius);padding:26px 30px;
-  box-shadow:0 24px 60px rgba(0,0,0,.16);
-}
-.hd-title{
-  font-size:12px;font-weight:600;letter-spacing:.08em;color:#a1a1a6;
-  margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline;
-}
-.hd-title a{font-weight:400;letter-spacing:0;color:var(--blue-link)}
-.hd-row{
-  display:flex;align-items:center;gap:14px;padding:13px 2px;
-  border-top:1px solid #2e2e31;transition:background .2s;border-radius:8px;
-}
-.hd-row:hover{background:rgba(255,255,255,.04)}
-.hd-days{
-  flex:0 0 auto;font-size:12px;font-weight:700;border-radius:980px;padding:4px 10px;
-  font-variant-numeric:tabular-nums;
-}
-.hd-days.urgent{background:rgba(255,69,58,.16);color:#ff6961}
-.hd-days.soon{background:rgba(255,255,255,.08);color:#a1a1a6}
-.hd-name{
-  color:#f5f5f7;font-size:15px;line-height:1.4;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.hd-name .hd-school{color:#a1a1a6;margin-right:8px}
-.hd-date{margin-left:auto;flex:0 0 auto;font-size:12px;color:#6e6e73;white-space:nowrap}
-
 /* ---------- buttons ---------- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
@@ -376,7 +348,6 @@ footer{
 @media (max-width:760px){
   .nav-links{display:none}
   .hero{padding-top:calc(var(--nav-h) + 72px)}
-  .hero-digest{margin-top:40px;padding:20px}
   .stats{gap:24px 0;padding-bottom:72px}
   .stat{min-width:40%;padding:0 12px;margin-bottom:20px}
   .stat + .stat{border-left:none}
@@ -395,7 +366,6 @@ footer{
 }
 
 /* ---------- 国际联培 / 海外专区 ---------- */
-#intl{background:linear-gradient(180deg,rgba(0,113,227,.045),rgba(0,113,227,0) 360px)}
 #overseas{background:linear-gradient(180deg,rgba(52,199,89,.05),rgba(52,199,89,0) 380px)}
 .chip-row-sub{margin-top:-2px}
 .chip-row-sub .chip{padding:5px 12px;font-size:12px}
@@ -507,4 +477,34 @@ footer{
   .view-row{gap:10px}
   .sch-grid{grid-template-columns:1fr}
   .sch-card{padding:18px}
+}
+
+/* ---------- hero 四入口 ---------- */
+.hero-entries{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  max-width:940px;margin:64px auto 0;text-align:left;
+}
+.he-card{
+  background:var(--card);border:1px solid rgba(0,0,0,.07);border-radius:22px;
+  padding:22px 22px 18px;display:flex;flex-direction:column;gap:5px;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s,border-color .3s;
+}
+.he-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.10);border-color:rgba(0,113,227,.35)}
+.he-icon{
+  width:38px;height:38px;border-radius:12px;background:rgba(0,113,227,.09);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:8px;
+}
+.he-name{font-size:17px;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.he-sub{font-size:13px;color:var(--ink-3);line-height:1.45}
+.he-num{font-size:12.5px;font-weight:600;color:var(--blue);margin-top:6px;font-variant-numeric:tabular-nums}
+
+/* ---------- 联培子标签 ---------- */
+.joint-tabrow{margin-bottom:24px}
+#intl{padding-top:6px}
+@media (max-width:760px){
+  .hero-entries{grid-template-columns:1fr 1fr;gap:10px;margin-top:44px}
+  .he-card{padding:16px 14px 14px;border-radius:18px}
+  .he-icon{width:32px;height:32px;margin-bottom:6px}
+  .he-name{font-size:15px}
+  .he-sub{font-size:12px}
 }

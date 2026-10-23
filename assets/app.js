@@ -79,7 +79,9 @@ async function boot() {
   renderBoard('intl');
   renderBoard('overseas');
   renderStats(all);
-  renderDigest(all);
+  renderHeroEntries(all);
+  wireJointTabs();
+  if (location.hash === '#intl') setJointTab('intl');
   observeReveals();
 }
 
@@ -850,32 +852,57 @@ $('#joint-grid-pager').addEventListener('click', e => {
   $('#joint-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-/* ---------- hero 摘要卡 ---------- */
-function renderDigest(all) {
-  const box = $('#hero-digest');
+/* ---------- hero 四入口 + 联培子标签 ---------- */
+const HE_ICONS = {
+  cap: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.5 12 5l9.5 4.5L12 14 2.5 9.5Z"/><path d="M6.5 11.5V16c0 1.2 2.5 2.5 5.5 2.5s5.5-1.3 5.5-2.5v-4.5"/><path d="M21.5 9.5V15"/></svg>',
+  rings: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg>',
+  globe: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.3 3.9 5.2 3.9 8.5s-1.3 6.2-3.9 8.5c-2.6-2.3-3.9-5.2-3.9-8.5s1.3-6.2 3.9-8.5Z"/></svg>',
+  flag: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 21V4.5"/><path d="M5.5 5c3.5-2 6.5 2 10 0v8c-3.5 2-6.5-2-10 0"/></svg>',
+};
+
+function renderHeroEntries() {
+  const box = $('#hero-entries');
   if (!box) return;
-  const soon = all
-    .filter(e => boardOf(e) === 'domestic')
-    .filter(e => { const d = daysUntil(e.deadline); return d !== null && d >= 0 && d <= 30; })
-    .sort((a, b) => daysUntil(a.deadline) - daysUntil(b.deadline))
-    .slice(0, 3);
-  const row = e => {
-    const d = daysUntil(e.deadline);
-    const cls = d <= 7 ? 'urgent' : 'soon';
-    const label = d === 0 ? '今天' : `剩 ${d} 天`;
-    const school = e.schoolShort || e.school || '';
-    const name = e.title.includes(school) ? e.title : school + e.title;
-    return `
-<a class="hd-row" href="#programs">
-  <span class="hd-days ${cls}">${label}</span>
-  <span class="hd-name">${esc(name)}</span>
-  <span class="hd-date">${fmtMD(e.deadline)} 截止</span>
-</a>`;
-  };
-  box.innerHTML = soon.length
-    ? `<div class="hd-title"><span>30 天内截止</span><a href="#programs">查看全部 →</a></div>${soon.map(row).join('')}`
-    : `<div class="hd-title"><span>30 天内暂无截止条目</span></div>`;
+  const dom = boardPrograms('domestic').length;
+  const hubs = new Set(boardPrograms('domestic').filter(e => e.hub).map(e => e.hub)).size;
+  const intlN = boardPrograms('intl').length;
+  const ov = boardPrograms('overseas').length;
+  const camps = (DATA.camps || []).length;
+  const entries = [
+    ['国内硕博', '招生简章 · 直博专项', dom + ' 条在招', '#programs', 'cap'],
+    ['联培专区', '国家实验室 · 新势力 · 国际联培', hubs + ' 家机构 · ' + intlN + ' 条国际', '#joint', 'rings'],
+    ['海外名校', '生物医药与交叉方向', ov + ' 条 · 22 国', '#overseas', 'globe'],
+    ['冬夏令营', '报名与开营日程', camps + ' 场', '#camps', 'flag'],
+  ];
+  box.innerHTML = entries.map(([name, sub, num, href, icon]) => `
+<a class="he-card" href="${href}">
+  <span class="he-icon">${HE_ICONS[icon]}</span>
+  <span class="he-name">${name}</span>
+  <span class="he-sub">${esc(sub)}</span>
+  <span class="he-num">${esc(num)}</span>
+</a>`).join('');
 }
+
+let curJointTab = 'domestic';
+function setJointTab(v) {
+  curJointTab = v;
+  const dom = $('#joint-domestic'), intl = $('#intl');
+  if (!dom || !intl) return;
+  dom.hidden = v !== 'domestic';
+  intl.hidden = v !== 'intl';
+  $$('#joint-tabs .chip').forEach(c => c.classList.toggle('on', c.dataset.v === v));
+}
+function wireJointTabs() {
+  const row = $('#joint-tabs');
+  if (!row) return;
+  row.addEventListener('click', e => {
+    const b = e.target.closest('.chip');
+    if (b && b.dataset.v !== curJointTab) setJointTab(b.dataset.v);
+  });
+}
+window.addEventListener('hashchange', () => {
+  if (location.hash === '#intl') setJointTab('intl');
+});
 
 /* ---------- 统计 ---------- */
 function countUp(el, n) {
