@@ -17,8 +17,21 @@ TODAY = datetime.date.today().isoformat()
 
 KEEP = ["category", "school", "schoolShort", "institute", "title", "degree", "url",
         "publishedAt", "deadline", "startDate", "location", "highlights", "tags",
-        "snippet", "source", "dateEstimated", "requirements"]
+        "snippet", "source", "dateEstimated", "requirements",
+        "region", "country", "subfield", "funding", "partner", "desc",
+        "schoolDesc", "tier", "ielts", "gpa"]
 CAMP_DEGREES = {"夏令营", "冬令营", "暑校", "学习班"}
+
+# 板块路由：显式映射 > 内容推断（有 partner 视为国际联培；仅 region 视为海外项目）
+FILE_BOARD = {
+    "intl-world.json": "intl",
+    "intl-hk2.json": "intl",
+}
+BOARD_FILES_OVERSEAS = {
+    "overseas-eu.json", "overseas-uk.json", "overseas-us.json", "overseas-ca.json",
+    "overseas-aunz.json", "overseas-jpkr.json", "overseas-sea.json",
+}
+SPECIAL_DEADLINES = {"滚动": "滚动", "长期": "长期", "长期开放": "长期", "长期有效": "长期", "全年": "滚动"}
 
 # 大类分类：1) 精确覆盖表（多领域专项、机构定向）2) 标题+学院关键词（强信号）
 # 3) 兜底：整校章程/简章归其他交叉 4) 正文关键词（弱信号）
@@ -61,6 +74,77 @@ FIELD_RULES = [
     ("计科软工", ["计算机", "软件", "人工智能", "智能", "机器学习", "大数据", "数据科学",
                  "密码", "网络", "算法", "计算"]),
 ]
+# 英文标题兜底层（海外条目）：命中即归该大类
+FIELD_RULES_EN = [
+    ("生物医学", ["biology", "biomedical", "medicine", "medical", "neuro", "genom", "immun",
+                 "molecular", "cell", "brain", "life science", "pharma", "bioscience", "health"]),
+    ("化学材料", ["chemistry", "chemical", "material", "polymer", "catalysis"]),
+    ("数学物理", ["physics", "mathematic", "astronomy", "quantum", "photonics", "optic"]),
+    ("电子信息", ["electronic", "electrical", "integrated circuit", "semiconductor",
+                 "communication", "robotic", "automation", "photon"]),
+    ("计科软工", ["computer", "computing", "software", "artificial intelligence",
+                 "machine learning", "data science", "informatics", "computational"]),
+]
+
+# 二级学科：subfield → 大类（海外条目由采集时的 subfield 反推 field）
+SUBFIELD_FIELD = {
+    "分子生物学": "生物医学", "细胞生物学": "生物医学", "神经科学": "生物医学",
+    "计算生物学": "生物医学", "免疫学": "生物医学", "遗传与基因组学": "生物医学",
+    "微生物与病原": "生物医学", "药学与转化医学": "生物医学", "生物医学工程": "生物医学",
+    "生态与演化": "生物医学", "生物综合": "生物医学",
+    "化学": "化学材料", "材料科学": "化学材料", "化学工程": "化学材料",
+    "数学": "数学物理", "物理学": "数学物理", "天文学": "数学物理",
+    "核科学与技术": "数学物理", "量子科技": "数学物理", "力学与精密测量": "数学物理",
+    "人工智能": "计科软工", "计算机系统": "计科软工", "软件工程": "计科软工",
+    "数据科学": "计科软工", "网络安全": "计科软工",
+    "微电子与集成电路": "电子信息", "通信": "电子信息", "光电": "电子信息",
+    "自动化与机器人": "电子信息", "仪器": "电子信息", "电气": "电子信息",
+    "其他": "其他交叉",
+}
+
+# 二级学科关键词（国内条目自动细分；采集时已给 subfield 的直接用）
+SUBFIELD_RULES = {
+    "生物医学": [
+        ("神经科学", ["神经", "脑", "类脑", "认知"]),
+        ("免疫学", ["免疫"]),
+        ("计算生物学", ["生物信息", "计算生物", "系统生物", "结构生物"]),
+        ("遗传与基因组学", ["遗传", "基因组", "基因编辑"]),
+        ("微生物与病原", ["微生物", "病毒", "病原", "感染", "寄生"]),
+        ("分子生物学", ["分子", "生化", "蛋白"]),
+        ("细胞生物学", ["细胞", "干细胞", "发育"]),
+        ("药学与转化医学", ["药", "制药", "转化"]),
+        ("生物医学工程", ["医工", "医学工程", "生物医学工程", "医疗器械", "影像", "智能医学", "脑机"]),
+        ("生态与演化", ["生态", "演化", "进化", "植物", "农", "园艺", "作物"]),
+    ],
+    "化学材料": [
+        ("化学工程", ["化工", "过程工程", "化学工程"]),
+        ("材料科学", ["材料", "纳米"]),
+        ("化学", ["化学", "催化", "有机", "无机", "高分子", "应化", "化物", "分析"]),
+    ],
+    "数学物理": [
+        ("天文学", ["天文", "天体"]),
+        ("核科学与技术", ["核科学", "核工程", "核技术", "核动力", "核能"]),
+        ("量子科技", ["量子"]),
+        ("数学", ["数学", "概率", "统计", "运筹"]),
+        ("力学与精密测量", ["力学", "精密测量"]),
+        ("物理学", ["物理", "光学", "声学"]),
+    ],
+    "计科软工": [
+        ("人工智能", ["人工智能", "智能", "机器学习", "大模型", "AIGC"]),
+        ("网络安全", ["安全", "密码", "网络空间"]),
+        ("数据科学", ["数据科学", "大数据"]),
+        ("软件工程", ["软件"]),
+        ("计算机系统", ["计算机", "计算", "系统结构"]),
+    ],
+    "电子信息": [
+        ("微电子与集成电路", ["微电子", "集成电路", "半导体", "芯片"]),
+        ("光电", ["光电", "光子", "激光"]),
+        ("通信", ["通信", "信通", "6G", "5G", "电磁", "微波", "天线"]),
+        ("自动化与机器人", ["自动化", "机器人", "控制", "具身"]),
+        ("仪器", ["仪器", "传感"]),
+        ("电气", ["电气", "电力", "电网"]),
+    ],
+}
 
 
 def classify_fields(e):
@@ -85,6 +169,11 @@ def classify_fields(e):
     ti_c, weak_c = deambig(ti), deambig(weak)
     fields = [field for field, kws in FIELD_RULES if any(k in ti_c for k in kws)]
     if not fields:
+        ti_en = (ti + " " + weak).lower()
+        for field, kws in FIELD_RULES_EN:
+            if any(k in ti_en for k in kws):
+                fields.append(field)
+    if not fields:
         for pat, field in TI_GENERIC:
             if pat in ti:
                 return [field]
@@ -108,6 +197,32 @@ def norm_date(v):
             if 1900 < y < 2100 and 1 <= mo <= 12 and 1 <= d <= 31:
                 return f"{y:04d}-{mo:02d}-{d:02d}"
     return None
+
+
+def classify_subfield(o):
+    """二级学科：采集时给定的 subfield 优先；否则按标题/学院关键词细分，兜底"综合"。"""
+    if o.get("subfield"):
+        return o["subfield"]
+    text = (o.get("title") or "") + (o.get("institute") or "") + (o.get("desc") or "")
+    for sub, kws in SUBFIELD_RULES.get(o.get("field")) or []:
+        if any(k in text for k in kws):
+            return sub
+    return "生物综合" if o.get("field") == "生物医学" else "综合"
+
+
+def norm_deadline(v):
+    s = str(v or "").strip()
+    if s in SPECIAL_DEADLINES:
+        return SPECIAL_DEADLINES[s]
+    return norm_date(s)
+
+
+def norm_num(v):
+    try:
+        f = float(v)
+        return f if 0 < f <= 110 else None
+    except (TypeError, ValueError):
+        return None
 
 
 def norm_url(u):
@@ -141,11 +256,28 @@ def load_raw():
         if not isinstance(data, list):
             print(f"not a list: {f.name}")
             continue
-        items += [x for x in data if isinstance(x, dict)]
+        items += [dict(x, _src=f.name) for x in data if isinstance(x, dict)]
     return items
 
 
+def board_of(x):
+    b = x.get("board")
+    if b in ("domestic", "intl", "overseas"):
+        return b
+    src = x.get("_src") or ""
+    if src in FILE_BOARD:
+        return FILE_BOARD[src]
+    if src in BOARD_FILES_OVERSEAS:
+        return "overseas"
+    if x.get("partner"):
+        return "intl"
+    if x.get("region") and x["region"] != "港澳":
+        return "overseas"
+    return "domestic"
+
+
 def clean(x):
+    board = board_of(x)
     o = {k: x.get(k) for k in KEEP}
     deg = o.get("degree") or ""
     is_camp = o.get("category") == "camp" or deg in CAMP_DEGREES
@@ -158,17 +290,33 @@ def clean(x):
     o["requirements"] = [r for r in (reqs if isinstance(reqs, list) else []) if isinstance(r, str)]
     if not o.get("url"):
         return None
-    for k in ("publishedAt", "deadline", "startDate"):
-        o[k] = norm_date(o.get(k))
+    o["publishedAt"] = norm_date(o.get("publishedAt"))
+    o["deadline"] = norm_deadline(o.get("deadline"))
+    o["startDate"] = norm_date(o.get("startDate"))
     if not o.get("school"):
         o["school"] = o.get("schoolShort") or "未知单位"
     if not o.get("schoolShort"):
         o["schoolShort"] = o["school"][:6]
-    o["fields"] = classify_fields(o)
+    o["board"] = board
+    # 海外/国际条目：subfield 由采集给定，field 反推；国内条目走中文分类器
+    sub = x.get("subfield")
+    if board != "domestic" and sub in SUBFIELD_FIELD:
+        o["fields"] = [SUBFIELD_FIELD[sub]]
+    else:
+        o["fields"] = classify_fields(o)
     o["field"] = o["fields"][0]
-    o["hub"] = derive_hub(o)
+    o["subfield"] = classify_subfield(o)
+    o["hub"] = derive_hub(o) if board == "domestic" else None
+    o["tier"] = x.get("tier") if x.get("tier") in (0, 1, 2) else None
+    o["ielts"] = norm_num(x.get("ielts"))
+    o["gpa"] = norm_num(x.get("gpa"))
+    # 海外/国际：明确日期且已过 → 往期参考（滚动/长期不算）
+    dl = o["deadline"]
+    if board != "domestic" and isinstance(dl, str) and dl < TODAY:
+        if "往期参考" not in o["tags"]:
+            o["tags"].append("往期参考")
     pub = o.get("publishedAt") or ""
-    o["lastCycle"] = bool(pub and pub < "2026-01-01"
+    o["lastCycle"] = bool(board == "domestic" and pub and pub < "2026-01-01"
                           and "长期开放" not in o["tags"] and "长期" not in " ".join(o["tags"]))
     return o
 
@@ -318,12 +466,15 @@ def main():
             "programs": len(programs),
             "camps": len(camps),
             "schools": len({it.get("school") for it in programs + camps if it.get("school")}),
+            "intl": sum(1 for it in programs if it.get("board") == "intl"),
+            "overseas": sum(1 for it in programs if it.get("board") == "overseas"),
         },
         "programs": programs,
         "camps": camps,
     }
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"programs={len(programs)} camps={len(camps)} schools={out['counts']['schools']} -> {OUT}")
+    print(f"programs={len(programs)} camps={len(camps)} schools={out['counts']['schools']} "
+          f"intl={out['counts']['intl']} overseas={out['counts']['overseas']} -> {OUT}")
 
 
 if __name__ == "__main__":

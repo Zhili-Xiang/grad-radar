@@ -393,3 +393,81 @@ footer{
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+
+/* ---------- 国际联培 / 海外专区 ---------- */
+#intl{background:linear-gradient(180deg,rgba(0,113,227,.045),rgba(0,113,227,0) 360px)}
+#overseas{background:linear-gradient(180deg,rgba(52,199,89,.05),rgba(52,199,89,0) 380px)}
+.chip-row-sub{margin-top:-2px}
+.chip-row-sub .chip{padding:5px 12px;font-size:12px}
+.sch-logo{
+  width:22px;height:22px;border-radius:6px;object-fit:cover;flex:0 0 auto;
+  background:var(--card);box-shadow:0 0 0 1px rgba(0,0,0,.06);
+}
+.chip-partner{
+  font-size:12px;font-weight:600;color:var(--purple);
+  background:rgba(94,92,230,.1);border-radius:6px;padding:3px 8px;
+}
+.chip-place{
+  font-size:12px;font-weight:500;color:var(--ink-2);
+  background:rgba(0,0,0,.045);border-radius:6px;padding:3px 8px;white-space:nowrap;
+}
+.chip-tier{font-size:11px;font-weight:700;border-radius:6px;padding:3px 7px;white-space:nowrap}
+.chip-tier.t0{background:rgba(191,148,0,.14);color:#8a6400}
+.chip-tier.t1{background:rgba(0,113,227,.09);color:var(--blue)}
+.chip-fund{font-size:11px;font-weight:600;border-radius:6px;padding:3px 7px}
+.fu-全奖{background:rgba(52,199,89,.15);color:#1d7a34}
+.fu-部分奖{background:rgba(191,87,0,.12);color:var(--orange)}
+.fu-学费减免{background:rgba(191,87,0,.12);color:var(--orange)}
+.fu-CSC可申请{background:rgba(94,92,230,.12);color:var(--purple)}
+.fu-自费{background:rgba(0,0,0,.05);color:var(--ink-3)}
+.chip-ielts{font-size:11px;font-weight:600;color:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-variant-numeric:tabular-nums}
+.chip-sub{font-size:11px;font-weight:600;border-radius:6px;padding:3px 7px}
+.card-schdesc{
+  font-size:13px;color:var(--ink-3);line-height:1.55;
+  border-left:2px solid var(--line);padding-left:10px;
+}
+.card-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dl-open{background:rgba(52,199,89,.12);color:#1d7a34}
+.d-双学位{background:rgba(94,92,230,.12);color:var(--purple)}
+
+/* 学科水印（模块头部装饰） */
+.mod-head{position:relative}
+.mod-head::after{
+  content:'';position:absolute;right:52px;top:50%;
+  width:104px;height:104px;transform:translateY(-50%);
+  opacity:.055;background:center/contain no-repeat;pointer-events:none;
+}
+.wm-生物医学 .mod-head::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M32 6 C10 30 54 44 68 50 C82 56 90 70 68 94'/%3E%3Cpath d='M68 6 C90 30 46 44 32 50 C18 56 10 70 32 94'/%3E%3C/g%3E%3Cg stroke='%23000' stroke-width='3' stroke-linecap='round' opacity='.85'%3E%3Cpath d='M36 18 H64'/%3E%3Cpath d='M33 32 H67'/%3E%3Cpath d='M33 68 H67'/%3E%3Cpath d='M36 82 H64'/%3E%3C/g%3E%3C/svg%3E")}
+.wm-化学材料 .mod-head::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M40 12 H60 M46 12 V38 L24 76 A12 12 0 0 0 35 92 H65 A12 12 0 0 0 76 76 L54 38 V12'/%3E%3Cpath d='M33 66 H67'/%3E%3C/g%3E%3Ccircle cx='44' cy='78' r='4' fill='%23000'/%3E%3Ccircle cx='58' cy='82' r='3' fill='%23000'/%3E%3C/svg%3E")}
+.wm-数学物理 .mod-head::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000' stroke-width='3'%3E%3Cellipse cx='50' cy='50' rx='44' ry='17'/%3E%3Cellipse cx='50' cy='50' rx='44' ry='17' transform='rotate(60 50 50)'/%3E%3Cellipse cx='50' cy='50' rx='44' ry='17' transform='rotate(120 50 50)'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='6' fill='%23000'/%3E%3C/svg%3E")}
+.wm-计科软工 .mod-head::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 30 L12 50 L32 70'/%3E%3Cpath d='M68 30 L88 50 L68 70'/%3E%3Cpath d='M56 22 L44 78'/%3E%3C/g%3E%3C/svg%3E")}
+.wm-电子信息 .mod-head::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round'%3E%3Crect x='28' y='28' width='44' height='44' rx='7'/%3E%3Cpath d='M40 28 V14 M50 28 V14 M60 28 V14 M40 86 V72 M50 86 V72 M60 86 V72 M28 40 H14 M28 50 H14 M28 60 H14 M86 40 H72 M86 50 H72 M86 60 H72'/%3E%3C/g%3E%3Crect x='42' y='42' width='16' height='16' rx='3' fill='%23000'/%3E%3C/svg%3E")}
+.wm-其他交叉 .mod-head::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000' stroke-width='2.5'%3E%3Cpath d='M20 24 L50 50 L80 26 M20 76 L50 50 L80 74 M20 24 L20 76 M80 26 L80 74 M20 24 L80 74'/%3E%3C/g%3E%3Cg fill='%23000'%3E%3Ccircle cx='20' cy='24' r='6'/%3E%3Ccircle cx='80' cy='26' r='6'/%3E%3Ccircle cx='20' cy='76' r='6'/%3E%3Ccircle cx='80' cy='74' r='6'/%3E%3Ccircle cx='50' cy='50' r='7'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ---------- 背景匹配器 ---------- */
+.match-panel{
+  background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);
+  padding:26px 28px;margin-bottom:38px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04);
+}
+.match-head{margin-bottom:18px}
+.match-head h3{font-size:22px;font-weight:600;letter-spacing:-.012em;margin-bottom:6px}
+.match-head p{font-size:14px;color:var(--ink-2)}
+.match-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+}
+.match-grid select{
+  border:1px solid var(--line);border-radius:12px;background:var(--card);
+  padding:10px 12px;font-size:14px;color:var(--ink);outline:none;cursor:pointer;width:100%;
+}
+.match-grid select:focus{border-color:var(--blue)}
+.match-grid select:disabled{color:var(--ink-3);background:rgba(0,0,0,.02)}
+.match-foot{display:flex;align-items:center;gap:16px;margin-top:16px;flex-wrap:wrap}
+.match-sum{font-size:13px;color:var(--ink-2);line-height:1.5}
+.match-out{margin-top:22px}
+@media (max-width:760px){
+  .match-panel{padding:18px 16px}
+  .match-grid{grid-template-columns:1fr 1fr}
+  .mod-head::after{width:76px;height:76px;right:40px;opacity:.045}
+}

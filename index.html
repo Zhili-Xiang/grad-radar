@@ -6,7 +6,7 @@
 <title>升学雷达 — 2026–27 招生信息聚合</title>
 <meta name="description" content="聚合清北复交浙、中科院、中科大、西湖大学等院校 2026–27 招生周期的硕博简章、直博、联培、冬令营与暑校信息，每周一更新。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%230071e3' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%230071e3' stroke-width='2' opacity='.6'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%230071e3'/%3E%3Cpath d='M16 16 L28 7 A15 15 0 0 0 16 1 Z' fill='%230071e3' opacity='.28'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=6">
 </head><body id="top">
 
 <nav id="nav">
@@ -18,6 +18,8 @@
     <div class="nav-links">
       <a href="#programs">招生项目</a>
       <a href="#joint">联培专区</a>
+      <a href="#intl">国际联培</a>
+      <a href="#overseas">海外专区</a>
       <a href="#camps">冬夏令营</a>
       <a href="#ask">AI 问答</a>
       <a href="#about">关于</a>
@@ -32,7 +34,7 @@
   <p class="hero-sub">收录各校最新硕博招生与冬夏令营信息。</p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="#programs">浏览招生项目</a>
-    <a class="btn btn-ghost" href="#ask">使用 AI 问答 →</a>
+    <a class="btn btn-ghost" href="#overseas">海外专区 · 生物医药优先收录 →</a>
   </div>
   <div class="hero-digest" id="hero-digest"></div>
 </header>
@@ -54,6 +56,7 @@
     <div class="toolbar">
       <input id="search" type="search" placeholder="搜索学院、项目、关键词…" autocomplete="off">
       <select id="school-select" aria-label="按院校筛选"></select>
+      <select id="subfield-select" aria-label="按细分方向筛选"></select>
       <select id="degree-select" aria-label="按类型筛选">
         <option value="全部">全部类型</option>
         <option value="直博">直博</option>
@@ -99,6 +102,104 @@
   </div>
 </section>
 
+<section class="section section-white" id="intl">
+  <div class="section-head reveal">
+    <h2>国际联培</h2>
+  </div>
+  <div class="filters reveal">
+    <div class="chip-row" id="intl-chips" role="tablist" aria-label="按地区筛选"></div>
+    <div class="chip-row chip-row-sub" id="intl-country-chips" role="tablist" aria-label="按国家/地区细分" hidden></div>
+    <div class="toolbar">
+      <input id="intl-search" type="search" placeholder="搜索学校、合作方、项目…" autocomplete="off">
+      <select id="intl-subfield" aria-label="按细分方向筛选"></select>
+      <select id="intl-degree" aria-label="按类型筛选">
+        <option value="全部">全部类型</option>
+        <option value="博士">博士</option>
+        <option value="硕士">硕士</option>
+        <option value="双学位">双学位</option>
+      </select>
+      <select id="intl-sort" aria-label="排序">
+        <option value="tier">名校优先</option>
+        <option value="urgency">截止临近优先</option>
+      </select>
+      <label class="check"><input type="checkbox" id="intl-hide-expired" checked>隐藏已截止</label>
+    </div>
+  </div>
+  <div class="mods" id="intl-mods"></div>
+  <p class="empty" id="intl-empty" hidden>没有匹配的国际联培条目。</p>
+</section>
+
+<section class="section" id="overseas">
+  <div class="section-head reveal">
+    <h2>海外专区</h2>
+  </div>
+  <div class="match-panel reveal" id="match-panel">
+    <div class="match-head">
+      <h3>背景匹配</h3>
+      <p>填入你的背景，筛出够得着的项目。未标注要求的条目也会保留并标出。</p>
+    </div>
+    <div class="match-grid">
+      <select id="m-field" aria-label="方向大类"></select>
+      <select id="m-sub" aria-label="细分方向"></select>
+      <select id="m-region" aria-label="目标地区"></select>
+      <select id="m-ielts" aria-label="雅思">
+        <option value="">雅思不限</option>
+        <option value="6">6.0</option>
+        <option value="6.5">6.5</option>
+        <option value="7">7.0</option>
+        <option value="7.5">7.5+</option>
+      </select>
+      <select id="m-gpa" aria-label="均分">
+        <option value="">均分不限</option>
+        <option value="75">75+（3.0）</option>
+        <option value="80">80+（3.3）</option>
+        <option value="85">85+（3.5）</option>
+        <option value="90">90+（3.7）</option>
+      </select>
+      <select id="m-bg" aria-label="本科层次">
+        <option value="">本科不限</option>
+        <option value="985">985</option>
+        <option value="211">211</option>
+        <option value="双非">双非</option>
+        <option value="海本">海外本科</option>
+      </select>
+      <select id="m-fund" aria-label="资助">
+        <option value="">资助不限</option>
+        <option value="全奖优先">全奖优先</option>
+        <option value="仅全奖">仅全奖</option>
+        <option value="CSC可申请">可走 CSC</option>
+      </select>
+    </div>
+    <div class="match-foot">
+      <button class="btn btn-primary btn-sm" id="m-run">匹配项目</button>
+      <span class="match-sum" id="match-sum"></span>
+    </div>
+    <div class="match-out" id="match-out" hidden>
+      <div class="card-grid" id="match-grid"></div>
+    </div>
+  </div>
+  <div class="filters reveal">
+    <div class="chip-row" id="overseas-chips" role="tablist" aria-label="按地区筛选"></div>
+    <div class="chip-row chip-row-sub" id="overseas-country-chips" role="tablist" aria-label="按国家细分" hidden></div>
+    <div class="toolbar">
+      <input id="overseas-search" type="search" placeholder="搜索学校、项目、关键词…" autocomplete="off">
+      <select id="overseas-subfield" aria-label="按细分方向筛选"></select>
+      <select id="overseas-degree" aria-label="按类型筛选">
+        <option value="全部">全部类型</option>
+        <option value="博士">博士</option>
+        <option value="硕士">硕士</option>
+      </select>
+      <select id="overseas-sort" aria-label="排序">
+        <option value="tier">名校优先</option>
+        <option value="urgency">截止临近优先</option>
+      </select>
+      <label class="check"><input type="checkbox" id="overseas-hide-expired" checked>隐藏已截止</label>
+    </div>
+  </div>
+  <div class="mods" id="overseas-mods"></div>
+  <p class="empty" id="overseas-empty" hidden>该条件下暂无条目。</p>
+</section>
+
 <section class="section section-white" id="camps">
   <div class="section-head reveal">
     <h2>冬令营 · 夏令营 · 暑校</h2>
@@ -115,6 +216,7 @@
         <option value="电子信息">电子信息</option>
         <option value="其他交叉">其他交叉</option>
       </select>
+      <select id="camp-subfield-select" aria-label="按细分方向筛选"></select>
     </div>
   </div>
   <div class="mods" id="camp-mods"></div>
@@ -172,6 +274,6 @@
   <p>所有招生信息以各校官网原文为准；本站不收集任何数据，API Key 仅存于你的浏览器本地。</p>
 </footer>
 
-<script src="assets/app.js?v=8"></script>
+<script src="assets/app.js?v=9"></script>
 </body>
 </html>

@@ -13,10 +13,44 @@ const daysUntil = d => {
 };
 const fmtMD = d => d ? `${+d.slice(5, 7)}/${+d.slice(8, 10)}` : '';
 
+/* ---------- 板块/地区/二级学科 ---------- */
+const REGION_ORDER = ['港澳', '欧陆', '英国', '美国', '加拿大', '澳大利亚', '新西兰', '日本', '韩国', '东南亚', '中东', '拉美', '中亚'];
+const FLAG = {
+  '中国香港': '🇭🇰', '中国澳门': '🇲🇴', '德国': '🇩🇪', '法国': '🇫🇷', '瑞士': '🇨🇭', '奥地利': '🇦🇹',
+  '荷兰': '🇳🇱', '比利时': '🇧🇪', '瑞典': '🇸🇪', '丹麦': '🇩🇰', '挪威': '🇳🇴', '芬兰': '🇫🇮',
+  '意大利': '🇮🇹', '西班牙': '🇪🇸', '葡萄牙': '🇵🇹', '波兰': '🇵🇱', '俄罗斯': '🇷🇺', '英国': '🇬🇧',
+  '美国': '🇺🇸', '加拿大': '🇨🇦', '澳大利亚': '🇦🇺', '新西兰': '🇳🇿', '日本': '🇯🇵', '韩国': '🇰🇷',
+  '新加坡': '🇸🇬', '马来西亚': '🇲🇾', '泰国': '🇹🇭', '以色列': '🇮🇱', '爱尔兰': '🇮🇪',
+  '巴西': '🇧🇷', '哈萨克斯坦': '🇰🇿', '其他': '🌍',
+};
+const FIELDS_ALL = ['数学物理', '生物医学', '化学材料', '计科软工', '电子信息', '其他交叉'];
+const SUBFIELDS = {
+  '数学物理': ['数学', '物理学', '天文学', '核科学与技术', '量子科技', '力学与精密测量'],
+  '生物医学': ['分子生物学', '细胞生物学', '神经科学', '计算生物学', '免疫学', '遗传与基因组学',
+    '微生物与病原', '药学与转化医学', '生物医学工程', '生态与演化', '生物综合'],
+  '化学材料': ['化学', '材料科学', '化学工程'],
+  '计科软工': ['人工智能', '计算机系统', '软件工程', '数据科学', '网络安全'],
+  '电子信息': ['微电子与集成电路', '通信', '光电', '自动化与机器人', '仪器', '电气'],
+  '其他交叉': ['综合'],
+};
+const subLabel = s => s === '生物综合' ? '生物·综合' : (s === '综合' ? '综合' : s);
+const logoFor = e => {
+  try {
+    let h = new URL(e.url).hostname;
+    h = h.replace(/^(www|yzb|zsb|zs|gs|gradschool|graduate|yjs|admission|admissions|grad)\./, '');
+    return `https://icons.duckduckgo.com/ip3/${h}.ico`;
+  } catch (_) { return ''; }
+};
+const boardOf = e => e.board || 'domestic';
+
 let DATA = null;
 const state = {
-  school: '全部', degree: '全部', field: '全部', q: '', sort: 'urgency', hideExpired: true,
-  camp: '全部', campField: '全部',
+  school: '全部', degree: '全部', field: '全部', subfield: '全部', q: '', sort: 'urgency', hideExpired: true,
+  camp: '全部', campField: '全部', campSub: '全部',
+};
+const boardState = {
+  intl: { region: '全部', country: '全部', subfield: '全部', degree: '全部', q: '', sort: 'tier', hideExpired: true },
+  overseas: { region: '全部', country: '全部', subfield: '全部', degree: '全部', q: '', sort: 'tier', hideExpired: true },
 };
 
 /* ---------- 数据加载 ---------- */
@@ -41,6 +75,8 @@ async function boot() {
   renderPrograms();
   renderCamps();
   renderJoint();
+  renderBoard('intl');
+  renderBoard('overseas');
   renderStats(all);
   renderDigest(all);
   observeReveals();
@@ -58,10 +94,10 @@ function chipRow(el, items, active, onPick) {
 }
 
 function buildFilters(all) {
-  // 院校下拉只列“招生项目”区可见条目（未过期）出现过的院校，
+  // 院校下拉只列“招生项目”区（国内板块）可见条目（未过期）出现过的院校，
   // 避免只有夏令营/已截止条目的单位点了显示为空
   const schoolCount = new Map();
-  (DATA.programs || []).forEach(e => {
+  (DATA.programs || []).filter(e => boardOf(e) === 'domestic').forEach(e => {
     const d = daysUntil(e.deadline);
     if (d !== null && d < 0) return;
     const k = e.schoolShort || e.school || '其他';
@@ -75,22 +111,47 @@ function buildFilters(all) {
 
   $('#degree-select').onchange = e => { state.degree = e.target.value; renderPrograms(); };
 
-  const fields = ['全部', '数学物理', '生物医学', '化学材料', '计科软工', '电子信息', '其他交叉'];
+  const fields = ['全部', ...FIELDS_ALL];
   chipRow($('#field-chips'), fields, state.field, v => {
     state.field = v;
     $$('#field-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.v === state.field));
     renderPrograms();
   });
 
+  fillSubfieldSelect($('#subfield-select'), (DATA.programs || []).filter(e => boardOf(e) === 'domestic'));
+  $('#subfield-select').onchange = e => { state.subfield = e.target.value; renderPrograms(); };
+
   const campTypes = ['全部', '冬令营', '夏令营', '暑校', '学习班'];
   chipRow($('#camp-chips'), campTypes, state.camp, v => {
     state.camp = v; renderCamps();
   });
   $('#camp-field-select').onchange = e => { state.campField = e.target.value; renderCamps(); };
+  fillSubfieldSelect($('#camp-subfield-select'), DATA.camps || []);
+  $('#camp-subfield-select').onchange = e => { state.campSub = e.target.value; renderCamps(); };
+
+  wireBoard('intl');
+  wireBoard('overseas');
+  wireMatcher();
+}
+
+/* 二级学科下拉：只列该数据集里出现过的方向，按大类 optgroup */
+function fillSubfieldSelect(sel, pool) {
+  const present = new Map(FIELDS_ALL.map(f => [f, new Set()]));
+  pool.forEach(e => {
+    if (e.subfield && present.has(e.field)) present.get(e.field).add(e.subfield);
+  });
+  sel.innerHTML = `<option value="全部">全部方向</option>` + FIELDS_ALL.map(f => {
+    const subs = SUBFIELDS[f].length ? SUBFIELDS[f].filter(s => present.get(f).has(s)) : [];
+    if (!subs.length) return '';
+    return `<optgroup label="${esc(f)}">` +
+      subs.map(s => `<option value="${esc(s)}">${esc(subLabel(s))}</option>`).join('') + `</optgroup>`;
+  }).join('');
 }
 
 /* ---------- 卡片 ---------- */
 function deadlineChip(e) {
+  if (e.deadline === '滚动') return `<span class="chip-dl dl-open">滚动招生</span>`;
+  if (e.deadline === '长期') return `<span class="chip-dl dl-open">长期有效</span>`;
   const days = daysUntil(e.deadline);
   if (days === null) return `<span class="chip-dl dl-none">截止未注明</span>`;
   if (days < 0) return `<span class="chip-dl dl-none">已截止</span>`;
@@ -105,26 +166,43 @@ function cardHTML(e, i) {
   const expired = days !== null && days < 0;
   const isNew = e.firstSeen && daysUntil(e.firstSeen) >= -1 && daysUntil(e.firstSeen) <= 7;
   const isPast = (e.tags || []).includes('往期参考');
+  const bd = boardOf(e);
+  const foreign = bd !== 'domestic';
   const degree = e.degree || '';
   const tags = (e.tags || []).filter(t => t !== '往期参考').slice(0, 3);
   const pastBadge = e.lastCycle
     ? '<span class="badge-past">去年通知 · 今年未发</span>'
     : (isPast ? '<span class="badge-past">往期参考</span>' : '');
+  const logo = logoFor(e);
+  const tierBadge = e.tier === 0 ? '<span class="chip-tier t0">★ 顶尖</span>'
+    : (e.tier === 1 ? '<span class="chip-tier t1">知名</span>' : '');
+  const reach = e._reach ? '<span class="chip-tier t0">冲刺位</span>' : '';
+  const partner = foreign && e.partner ? `<span class="chip-partner">× ${esc(e.partner)}</span>` : '';
+  const place = foreign && e.country ? `<span class="chip-place">${FLAG[e.country] || ''} ${esc(e.country)}</span>` : '';
+  const fund = e.funding && e.funding !== '未知' ? `<span class="chip-fund fu-${esc(e.funding)}">${esc(e.funding)}</span>` : '';
+  const ielts = e.ielts ? `<span class="chip-ielts">IELTS ${esc(e.ielts)}</span>` : '';
+  const sub = foreign && e.subfield && e.subfield !== '综合' && e.subfield !== '生物综合'
+    ? `<span class="chip-sub f-${esc(e.field)}">${esc(subLabel(e.subfield))}</span>` : '';
   return `
-<article class="card reveal${expired ? ' expired' : ''}" style="transition-delay:${Math.min((i % 9) * 45, 360)}ms">
+<article class="card reveal${expired ? ' expired' : ''}${foreign ? ' card-foreign' : ''}" data-field="${esc(e.field)}" style="transition-delay:${Math.min((i % 9) * 45, 360)}ms">
   <div class="card-top">
-    <span class="chip-school">${esc(e.schoolShort || e.school || '')}</span>
-    ${(e.fields || [e.field]).filter(Boolean).slice(0, 2).map(f => `<span class="chip-field f-${esc(f)}">${esc(f)}</span>`).join('')}
-    ${(e.fields || []).length > 2 ? `<span class="chip-field f-其他交叉">+${(e.fields || []).length - 2}</span>` : ''}
+    ${logo ? `<img class="sch-logo" src="${esc(logo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}
+    <span class="chip-school">${esc(foreign ? (e.school || '') : (e.schoolShort || e.school || ''))}</span>
+    ${partner}
+    ${(e.fields || [e.field]).filter(Boolean).slice(0, foreign ? 1 : 2).map(f => `<span class="chip-field f-${esc(f)}">${esc(f)}</span>`).join('')}
+    ${(e.fields || []).length > (foreign ? 1 : 2) ? `<span class="chip-field f-其他交叉">+${(e.fields || []).length - (foreign ? 1 : 2)}</span>` : ''}
     ${degree ? `<span class="chip-degree d-${esc(degree)}">${esc(degree)}</span>` : ''}
+    ${tierBadge}${reach}
     ${isNew ? '<span class="badge-new">新</span>' : ''}
     ${pastBadge}
   </div>
   <h3 class="card-title">${esc(e.title)}</h3>
   ${e.institute ? `<p class="card-inst">${esc(e.institute)}</p>` : ''}
-  <p class="card-hl">${esc(e.highlights || e.snippet || '')}</p>
+  <p class="card-hl">${esc(e.desc || e.highlights || e.snippet || '')}</p>
+  ${foreign && e.schoolDesc ? `<p class="card-schdesc">${esc(e.schoolDesc)}</p>` : ''}
   ${(e.requirements || []).length ? `<p class="card-req"><span class="req-label">报名条件</span>${esc(e.requirements.join('；'))}</p>` : ''}
   ${tags.length ? `<div class="card-tags">${tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>` : ''}
+  ${(place || fund || ielts || sub) ? `<div class="card-meta">${place}${sub}${fund}${ielts}</div>` : ''}
   <div class="card-foot">
     ${deadlineChip(e)}
     <span class="card-date">${esc(e.publishedAt || '')}${e.dateEstimated ? '*' : ''}</span>
@@ -140,16 +218,20 @@ function matchField(e, f) {
 }
 
 function searchable(e) {
-  return [e.school, e.schoolShort, e.institute, e.title, e.highlights, e.snippet, e.degree, (e.fields || [e.field]).join(' '), (e.tags || []).join(' ')].join(' ').toLowerCase();
+  return [e.school, e.schoolShort, e.institute, e.partner, e.country, e.region, e.subfield,
+    e.title, e.highlights, e.desc, e.schoolDesc, e.degree,
+    (e.fields || [e.field]).join(' '), (e.tags || []).join(' ')].join(' ').toLowerCase();
 }
 
 function renderPrograms() {
   if (!DATA) return;
   [...pgPages.keys()].filter(k => k.startsWith('pf-')).forEach(k => pgPages.delete(k));
   let list = (DATA.programs || []).filter(e =>
+    boardOf(e) === 'domestic' &&
     (state.school === '全部' || e.schoolShort === state.school || e.school === state.school) &&
     (state.degree === '全部' || e.degree === state.degree || (e.tags || []).includes(state.degree)) &&
-    matchField(e, state.field));
+    matchField(e, state.field) &&
+    (state.subfield === '全部' || (e.subfield || '') === state.subfield));
   if (state.q) list = list.filter(e => searchable(e).includes(state.q.toLowerCase()));
   if (state.hideExpired) list = list.filter(e => { const d = daysUntil(e.deadline); return d === null || d >= 0; });
   if (state.sort === 'urgency') {
@@ -180,7 +262,8 @@ function renderCamps() {
   [...pgPages.keys()].filter(k => k.startsWith('cf-')).forEach(k => pgPages.delete(k));
   let list = (DATA.camps || []).filter(e =>
     (state.camp === '全部' || e.degree === state.camp) &&
-    matchField(e, state.campField));
+    matchField(e, state.campField) &&
+    (state.campSub === '全部' || (e.subfield || '') === state.campSub));
   list.sort((a, b) => {
     const ka = daysUntil(a.startDate) ?? daysUntil(a.deadline);
     const kb = daysUntil(b.startDate) ?? daysUntil(b.deadline);
@@ -207,25 +290,30 @@ const modTouched = new Set();  // 是否被用户操作过（用于默认展开�
 const pgPages = new Map();     // 模块 → 当前页码（从 0 计）
 const pgRegistry = new Map();  // 模块 → { items, pp, grid }
 
-function perPageFor(w) {
-  if (w >= 980) return 6;
-  if (w >= 640) return 4;
-  return 2;
+function perPageFor(w, n) {
+  let pp = 0;
+  if (w >= 980) pp = 6;
+  else if (w >= 640) pp = 4;
+  else pp = 2;
+  if ((n || 0) > 150) pp *= 3;       // 大库（如 DAAD）加大页深，避免翻几十页
+  else if ((n || 0) > 40) pp *= 2;
+  return pp;
 }
 const pagesOf = rec => Math.max(1, Math.ceil(rec.items.length / rec.pp));
 
-function moduleHTML(key, name, items, open) {
+function moduleHTML(key, name, items, open, wm) {
   open = modTouched.has(key) ? modOpen.has(key) : open;
   if (!pgPages.has(key)) pgPages.set(key, 0);
-  const pp = perPageFor(innerWidth);
+  const pp = perPageFor(innerWidth, items.length);
   const reg = { items, pp, grid: null };
   pgRegistry.set(key, reg);
   const pages = pagesOf(reg);
   const page = Math.min(pgPages.get(key), pages - 1);
   pgPages.set(key, page);
   const slice = items.slice(page * pp, page * pp + pp);
+  const wmField = wm || (items[0] && items[0].field) || '';
   return `
-<section class="mod${open ? ' open' : ''}" data-mod="${esc(key)}">
+<section class="mod${open ? ' open' : ''} wm-${esc(wmField)}" data-mod="${esc(key)}">
   <button class="mod-head" aria-expanded="${open}">
     <span class="mod-name">${esc(name)}</span>
     <span class="mod-count">${items.length} 条</span>
@@ -298,9 +386,170 @@ addEventListener('resize', () => {
   rsTimer = setTimeout(() => {
     pgPages.clear();
     renderPrograms(); renderCamps();
+    renderBoard('intl'); renderBoard('overseas');
+    if (!$('#match-out').hidden) runMatch();
     if (curHub) openHub(curHub); else renderJoint();
   }, 180);
 });
+
+/* ---------- 国际联培 / 海外专区 ---------- */
+const boardPrograms = board => (DATA.programs || []).filter(e => boardOf(e) === board);
+const tierCmp = (a, b) => {
+  const ta = a.tier ?? 9, tb = b.tier ?? 9;
+  if (ta !== tb) return ta - tb;
+  const da = daysUntil(a.deadline), db = daysUntil(b.deadline);
+  const va = da === null ? 1e9 : (da < 0 ? 1e9 + da : da);
+  const vb = db === null ? 1e9 : (db < 0 ? 1e9 + db : db);
+  if (va !== vb) return va - vb;
+  return (b.publishedAt || '').localeCompare(a.publishedAt || '');
+};
+const urgencyCmp = (a, b) => {
+  const da = daysUntil(a.deadline), db = daysUntil(b.deadline);
+  const va = da === null ? 1e9 : (da < 0 ? 1e9 + da : da);
+  const vb = db === null ? 1e9 : (db < 0 ? 1e9 + db : db);
+  if (va !== vb) return va - vb;
+  return (b.publishedAt || '').localeCompare(a.publishedAt || '');
+};
+
+function renderBoard(board) {
+  if (!DATA) return;
+  const st = boardState[board];
+  const pre = board === 'intl' ? 'if-' : 'of-';
+  [...pgPages.keys()].filter(k => k.startsWith(pre)).forEach(k => pgPages.delete(k));
+  let list = boardPrograms(board);
+  if (st.region !== '全部') list = list.filter(e => (e.region || '') === st.region);
+  if (st.country !== '全部') list = list.filter(e => (e.country || '') === st.country);
+  if (st.degree !== '全部') list = list.filter(e => e.degree === st.degree || (e.tags || []).includes(st.degree));
+  if (st.subfield !== '全部') list = list.filter(e => (e.subfield || '') === st.subfield);
+  if (st.q) list = list.filter(e => searchable(e).includes(st.q.toLowerCase()));
+  if (st.hideExpired) list = list.filter(e => { const d = daysUntil(e.deadline); return d === null || d >= 0; });
+  list.sort(st.sort === 'urgency' ? urgencyCmp : tierCmp);
+
+  let groups;
+  if (st.region === '全部') {
+    groups = REGION_ORDER.filter(r => list.some(e => e.region === r))
+      .map(r => [r, list.filter(e => e.region === r)]);
+  } else {
+    const countries = [...new Set(list.map(e => e.country).filter(Boolean))];
+    groups = countries.length > 1
+      ? countries.map(c => [`${st.region} · ${c}`, list.filter(e => e.country === c)])
+      : [[st.region, list]];
+  }
+  const forceOpen = st.region !== '全部' || st.subfield !== '全部' || !!st.q;
+  const modsEl = $(`#${board}-mods`);
+  modsEl.innerHTML = groups.length
+    ? groups.map(([name, items], i) => moduleHTML(pre + name, name, items, forceOpen || i === 0)).join('')
+    : '';
+  registerGrids(modsEl);
+  $(`#${board}-empty`).hidden = list.length > 0;
+}
+
+function wireBoard(board) {
+  const st = boardState[board];
+  const pool = boardPrograms(board);
+  const regions = REGION_ORDER.filter(r => pool.some(e => e.region === r));
+  chipRow($(`#${board}-chips`), ['全部', ...regions], st.region, v => {
+    st.region = v; st.country = '全部';
+    updateCountryChips(board);
+    renderBoard(board);
+  });
+  updateCountryChips(board);
+  fillSubfieldSelect($(`#${board}-subfield`), pool);
+  $(`#${board}-subfield`).value = '全部';
+  $(`#${board}-search`).addEventListener('input', e => { st.q = e.target.value.trim(); renderBoard(board); });
+  $(`#${board}-degree`).onchange = e => { st.degree = e.target.value; renderBoard(board); };
+  $(`#${board}-sort`).onchange = e => { st.sort = e.target.value; renderBoard(board); };
+  $(`#${board}-hide-expired`).addEventListener('change', e => { st.hideExpired = e.target.checked; renderBoard(board); });
+}
+
+function updateCountryChips(board) {
+  const st = boardState[board];
+  const row = $(`#${board}-country-chips`);
+  if (st.region === '全部') { row.hidden = true; return; }
+  const pool = boardPrograms(board).filter(e => e.region === st.region);
+  const counts = new Map();
+  pool.forEach(e => { if (e.country) counts.set(e.country, (counts.get(e.country) || 0) + 1); });
+  const countries = [...counts.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
+  const multi = countries.length > 1;
+  row.hidden = !multi;
+  if (multi) {
+    chipRow(row, ['全部', ...countries], st.country, v => {
+      st.country = v;
+      [...row.querySelectorAll('.chip')].forEach(c => c.classList.toggle('on', c.dataset.v === st.country));
+      renderBoard(board);
+    });
+  } else if (st.country !== '全部') {
+    st.country = '全部';
+  }
+}
+
+/* ---------- 背景匹配器 ---------- */
+function wireMatcher() {
+  const pool = [...boardPrograms('overseas'), ...boardPrograms('intl')];
+  const fieldSel = $('#m-field'), subSel = $('#m-sub');
+  fieldSel.innerHTML = `<option value="">全部大类</option>` +
+    FIELDS_ALL.map(f => `<option value="${esc(f)}">${esc(f)}</option>`).join('');
+  const refreshSub = () => {
+    const f = fieldSel.value;
+    const subs = f ? (SUBFIELDS[f] || []).filter(s => pool.some(e => e.subfield === s)) : [];
+    subSel.innerHTML = `<option value="">${f ? '全部方向' : '先选大类'}</option>` +
+      subs.map(s => `<option value="${esc(s)}">${esc(subLabel(s))}</option>`).join('');
+    subSel.disabled = !f;
+  };
+  refreshSub();
+  fieldSel.onchange = refreshSub;
+  const regions = REGION_ORDER.filter(r => pool.some(e => e.region === r));
+  $('#m-region').innerHTML = `<option value="">全部地区</option>` +
+    regions.map(r => `<option value="${esc(r)}">${esc(r)}</option>`).join('');
+  $('#m-run').addEventListener('click', runMatch);
+}
+
+function runMatch() {
+  if (!DATA) return;
+  const field = $('#m-field').value;
+  const sub = $('#m-sub').value;
+  const region = $('#m-region').value;
+  const ielts = parseFloat($('#m-ielts').value);
+  const gpa = parseFloat($('#m-gpa').value);
+  const bg = $('#m-bg').value;
+  const fund = $('#m-fund').value;
+
+  let pool = [...boardPrograms('overseas'), ...boardPrograms('intl')];
+  if (field) pool = pool.filter(e => (e.fields || []).includes(field));
+  if (sub) pool = pool.filter(e => (e.subfield || '') === sub);
+  if (region) pool = pool.filter(e => (e.region || '') === region);
+
+  const ok = [];
+  let failedLang = 0, failedFund = 0, unknown = 0;
+  pool.forEach(e => {
+    if (Number.isFinite(ielts) && e.ielts && e.ielts > ielts + 1e-9) { failedLang++; return; }
+    if (Number.isFinite(gpa) && e.gpa && e.gpa > gpa + 1e-9) { failedLang++; return; }
+    if (fund === '仅全奖' && e.funding !== '全奖') { failedFund++; return; }
+    if (fund === 'CSC可申请' && !(e.funding || '').includes('CSC')) { failedFund++; return; }
+    if (!e.ielts && !e.gpa) unknown++;
+    if (bg === '双非' && e.tier === 0) e._reach = true; else e._reach = false;
+    ok.push(e);
+  });
+  ok.sort((a, b) => {
+    if (fund === '全奖优先') {
+      const fa = (a.funding === '全奖') ? 0 : 1, fb = (b.funding === '全奖') ? 0 : 1;
+      if (fa !== fb) return fa - fb;
+    }
+    return tierCmp(a, b);
+  });
+
+  const out = $('#match-out'), grid = $('#match-grid'), sum = $('#match-sum');
+  out.hidden = false;
+  grid.innerHTML = ok.slice(0, 18).map((e, i) => cardHTML(e, i)).join('');
+  const bits = [`可选 ${ok.length} 条`];
+  if (unknown) bits.push(`${unknown} 条要求未标注（保留展示）`);
+  if (failedLang) bits.push(`${failedLang} 条因语言/均分不够被筛掉`);
+  if (failedFund) bits.push(`${failedFund} 条不满足资助条件`);
+  if (bg === '双非') bits.push('顶尖档已标「冲刺位」');
+  sum.textContent = bits.join(' · ');
+  out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  observeReveals();
+}
 
 /* ---------- 联培专区 ---------- */
 const HUB_TEST = {
@@ -386,7 +635,7 @@ function openHub(hub) {
     const vb = db === null ? 1e9 : (db < 0 ? 1e9 + db : db);
     return va - vb;
   });
-  const pp = perPageFor(innerWidth);
+  const pp = perPageFor(innerWidth, all.length);
   const key = 'jd-' + hub;
   if (!pgPages.has(key)) pgPages.set(key, 0);
   const reg = { items: all, pp, grid: $('#joint-cards') };
@@ -425,6 +674,7 @@ function renderDigest(all) {
   const box = $('#hero-digest');
   if (!box) return;
   const soon = all
+    .filter(e => boardOf(e) === 'domestic')
     .filter(e => { const d = daysUntil(e.deadline); return d !== null && d >= 0 && d <= 30; })
     .sort((a, b) => daysUntil(a.deadline) - daysUntil(b.deadline))
     .slice(0, 3);
@@ -493,6 +743,11 @@ const ALIAS = {
   '浙大': '浙江大学', '西湖': '西湖大学', '中科大': '中国科学技术大学', '科大': '中国科学技术大学',
   '国科大': '中国科学院大学', '中科院': '中国科学院', '南科大': '南方科技大学', '上科大': '上海科技大学',
   '港中深': '香港中文大学（深圳）', 'smart': '深圳医学科学院', '深医科院': '深圳医学科学院',
+  '冷泉港': 'Cold Spring Harbor Laboratory', '洛克菲勒': 'Rockefeller', '马普': 'Max Planck',
+  '苏黎世联邦理工': 'ETH', 'eth': 'ETH Zürich', '洛桑联邦理工': 'EPFL', 'embl': 'EMBL',
+  '卡罗林斯卡': 'Karolinska', '巴斯德': 'Pasteur', 'crick': 'Crick', '桑格': 'Sanger',
+  '京都': '京都大学', '东大': '东京大学', '东京大学': '東京大学', '理研': 'RIKEN',
+  'kaist': 'KAIST', '首尔大学': '서울대학교', 'nus': 'NUS', 'ntu': 'NTU', 'duke-nus': 'Duke-NUS',
 };
 
 function buildContext(question) {
@@ -525,10 +780,13 @@ function buildContext(question) {
 }
 
 function systemPrompt(ctx) {
-  const lines = ctx.map((e, i) =>
-    `[${i + 1}] ${e.school || ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${(e.fields || [e.field]).join('/')}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}${(e.requirements || []).length ? '｜报名条件:' + e.requirements.join('；') : ''}｜${e.url}`);
+  const lines = ctx.map((e, i) => {
+    const place = e.country || e.region || '';
+    const sub = e.subfield && e.subfield !== '综合' && e.subfield !== '生物综合' ? '/' + e.subfield : '';
+    return `[${i + 1}] ${e.school || ''}${e.partner ? '×' + e.partner : ''}${e.institute ? '·' + e.institute : ''}｜${e.title}｜${e.degree || ''}｜${(e.fields || [e.field]).join('/')}${sub}${place ? '｜' + place : ''}｜${e.deadline ? '截止' + e.deadline : '截止未注明'}${e.funding && e.funding !== '未知' ? '｜资助:' + e.funding : ''}${e.lastCycle ? '｜注意:此为去年版通知,今年新版未发布' : ''}${(e.tags || []).includes('往期参考') ? '｜注意:往期参考' : ''}${(e.requirements || []).length ? '｜报名条件:' + e.requirements.join('；') : ''}｜${e.url}`;
+  });
   return `你是"升学雷达"网站的招生咨询助手。今天是 ${todayISO()}。
-【站内数据库】以下是本周抓取的招生/冬夏令营条目（编号、截止日期、原文链接）：
+【站内数据库】以下是本周抓取的招生/冬夏令营条目（编号、截止日期、原文链接；含国内项目、国际联培与海外直申项目）：
 ${lines.join('\n')}
 
 回答规则：
@@ -653,9 +911,9 @@ $('#chat-form').addEventListener('submit', e => {
 
 const SUGGESTS = [
   '30 天内截止的项目有哪些',
+  '生物方向欧洲有哪些全奖博士',
   '有哪些联培博士项目',
-  '西湖大学博士怎么申请',
-  '数学方向有哪些暑校可以关注',
+  '双非背景能冲哪些海外项目',
 ];
 $('#suggest-row').innerHTML = SUGGESTS.map(s => `<button class="suggest">${esc(s)}</button>`).join('');
 $('#suggest-row').addEventListener('click', e => {
